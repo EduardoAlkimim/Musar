@@ -8,3 +8,5 @@ coverage
 !.env.example
 *.tsbuildinfo
 packages/db/src/generated
+apps/web/out-estatico
+apps/web/.build-estatico

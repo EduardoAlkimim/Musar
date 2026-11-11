@@ -1,0 +1,5838 @@
+{
+ "geradoEm": "2026-11-11T16:46:43.645Z",
+ "me": {
+  "ana": {
+   "id": "3d71c4d7-63b1-4a4f-9762-277f432d404f",
+   "nome": "Ana Moura",
+   "email": "ana@musar.local",
+   "escola": {
+    "id": "f5ac0f39-a91e-49aa-a92d-69e065f9c33f",
+    "nome": "Escola de demonstração",
+    "slug": "demo"
+   },
+   "papeis": [
+    "DIRETOR"
+   ],
+   "escolas": [
+    {
+     "id": "f5ac0f39-a91e-49aa-a92d-69e065f9c33f",
+     "nome": "Escola de demonstração",
+     "slug": "demo",
+     "papeis": [
+      "DIRETOR"
+     ]
+    }
+   ]
+  },
+  "marta": {
+   "id": "da78d0eb-d0f3-4b67-b5a8-030dbc673507",
+   "nome": "Marta Ribeiro",
+   "email": "marta@musar.local",
+   "escola": {
+    "id": "f5ac0f39-a91e-49aa-a92d-69e065f9c33f",
+    "nome": "Escola de demonstração",
+    "slug": "demo"
+   },
+   "papeis": [
+    "PROFESSOR"
+   ],
+   "escolas": [
+    {
+     "id": "f5ac0f39-a91e-49aa-a92d-69e065f9c33f",
+     "nome": "Escola de demonstração",
+     "slug": "demo",
+     "papeis": [
+      "PROFESSOR"
+     ]
+    }
+   ]
+  },
+  "renato": {
+   "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+   "nome": "Renato Siqueira",
+   "email": "renato@musar.local",
+   "escola": {
+    "id": "f5ac0f39-a91e-49aa-a92d-69e065f9c33f",
+    "nome": "Escola de demonstração",
+    "slug": "demo"
+   },
+   "papeis": [
+    "PROFESSOR_REFORCO"
+   ],
+   "escolas": [
+    {
+     "id": "f5ac0f39-a91e-49aa-a92d-69e065f9c33f",
+     "nome": "Escola de demonstração",
+     "slug": "demo",
+     "papeis": [
+      "PROFESSOR_REFORCO"
+     ]
+    }
+   ]
+  },
+  "helena": {
+   "id": "dea8d0f1-e65e-4dd2-bd93-7702d52c8e60",
+   "nome": "Helena Gomes",
+   "email": "helena@musar.local",
+   "escola": {
+    "id": "f5ac0f39-a91e-49aa-a92d-69e065f9c33f",
+    "nome": "Escola de demonstração",
+    "slug": "demo"
+   },
+   "papeis": [
+    "RESPONSAVEL"
+   ],
+   "escolas": [
+    {
+     "id": "f5ac0f39-a91e-49aa-a92d-69e065f9c33f",
+     "nome": "Escola de demonstração",
+     "slug": "demo",
+     "papeis": [
+      "RESPONSAVEL"
+     ]
+    }
+   ]
+  },
+  "joao": {
+   "id": "fffc76ae-b135-426a-83a0-223d35bbde6f",
+   "nome": "João Gomes",
+   "email": "joao@musar.local",
+   "escola": {
+    "id": "f5ac0f39-a91e-49aa-a92d-69e065f9c33f",
+    "nome": "Escola de demonstração",
+    "slug": "demo"
+   },
+   "papeis": [
+    "ALUNO"
+   ],
+   "escolas": [
+    {
+     "id": "f5ac0f39-a91e-49aa-a92d-69e065f9c33f",
+     "nome": "Escola de demonstração",
+     "slug": "demo",
+     "papeis": [
+      "ALUNO"
+     ]
+    }
+   ]
+  },
+  "admin": {
+   "id": "514e6a14-e96b-4dfc-ae3a-bf8ecf1f4691",
+   "nome": "Admin Escola",
+   "email": "admin@musar.local",
+   "escola": {
+    "id": "f5ac0f39-a91e-49aa-a92d-69e065f9c33f",
+    "nome": "Escola de demonstração",
+    "slug": "demo"
+   },
+   "papeis": [
+    "ADMIN",
+    "COORDENADOR"
+   ],
+   "escolas": [
+    {
+     "id": "f5ac0f39-a91e-49aa-a92d-69e065f9c33f",
+     "nome": "Escola de demonstração",
+     "slug": "demo",
+     "papeis": [
+      "ADMIN",
+      "COORDENADOR"
+     ]
+    }
+   ]
+  }
+ },
+ "ids": {
+  "turmas": [
+   "3d2daaa6-47e1-4a4e-af25-c88946e3e49d",
+   "f0be6f7a-e6c8-47c9-ab55-21a642601a60",
+   "d8029fdd-bf21-4bd8-ae3b-314e513e3a00",
+   "13e7afea-76a2-4e6d-96ec-67098595aa74"
+  ],
+  "provas": [
+   "976eeb19-41b0-4a44-8336-906d7d5487d4"
+  ]
+ },
+ "respostas": {
+  "/gestao/visao-geral": {
+   "escola": "Escola de demonstração",
+   "bimestre": 4,
+   "indicadores": {
+    "alunos": 96,
+    "emRisco": 14,
+    "intervencoes": 2,
+    "taxaRecuperacao": 84,
+    "mediaGeral": 7,
+    "mediaAnterior": 7.2,
+    "turmas": 4
+   },
+   "evolucao": {
+    "meses": [
+     "set",
+     "out",
+     "nov"
+    ],
+    "escola": [
+     7.2,
+     6.8,
+     7.1
+    ],
+    "turmas": [
+     {
+      "id": "3d2daaa6-47e1-4a4e-af25-c88946e3e49d",
+      "nome": "6º ano A",
+      "valores": [
+       7.5,
+       7.4,
+       7.5
+      ]
+     },
+     {
+      "id": "f0be6f7a-e6c8-47c9-ab55-21a642601a60",
+      "nome": "6º ano B",
+      "valores": [
+       7.2,
+       6.8,
+       6.9
+      ]
+     },
+     {
+      "id": "d8029fdd-bf21-4bd8-ae3b-314e513e3a00",
+      "nome": "6º ano C",
+      "valores": [
+       7.2,
+       6.1,
+       7
+      ]
+     },
+     {
+      "id": "13e7afea-76a2-4e6d-96ec-67098595aa74",
+      "nome": "6º ano D",
+      "valores": [
+       6.9,
+       6.8,
+       7.2
+      ]
+     }
+    ]
+   },
+   "riscoPorMateria": [
+    {
+     "materia": "Ciências",
+     "percentual": 18
+    },
+    {
+     "materia": "Matemática",
+     "percentual": 17
+    },
+    {
+     "materia": "Português",
+     "percentual": 13
+    },
+    {
+     "materia": "História",
+     "percentual": 10
+    },
+    {
+     "materia": "Geografia",
+     "percentual": 7
+    }
+   ],
+   "alunosComAlerta": [
+    {
+     "id": "fb7ed7f1-118b-4295-b2f6-1bad9f836514",
+     "aluno": "João Gomes",
+     "turma": "6º ano B",
+     "habilidade": "frações",
+     "materia": "Matemática",
+     "score": 68,
+     "nivel": "alto",
+     "situacao": "Aguardando decisão"
+    },
+    {
+     "id": "d4582dec-1bc7-42c6-9cf3-1ec4b40c068e",
+     "aluno": "Rafaela Teixeira",
+     "turma": "6º ano C",
+     "habilidade": "frações",
+     "materia": "Matemática",
+     "score": 67,
+     "nivel": "alto",
+     "situacao": "Aguardando decisão"
+    },
+    {
+     "id": "159b0e14-de75-4d5c-97bd-e3db65253e6e",
+     "aluno": "Ana Cardoso",
+     "turma": "6º ano B",
+     "habilidade": "frações",
+     "materia": "Matemática",
+     "score": 63,
+     "nivel": "medio",
+     "situacao": "Aguardando decisão"
+    },
+    {
+     "id": "c410dd15-ceb5-4667-b107-66be87b76230",
+     "aluno": "Gabriela Almeida",
+     "turma": "6º ano B",
+     "habilidade": "porcentagem",
+     "materia": "Matemática",
+     "score": 63,
+     "nivel": "medio",
+     "situacao": "Aguardando decisão"
+    },
+    {
+     "id": "01d1e142-5ffd-4161-a12c-93e80e50a173",
+     "aluno": "Manuela Martins",
+     "turma": "6º ano B",
+     "habilidade": "porcentagem",
+     "materia": "Matemática",
+     "score": 63,
+     "nivel": "medio",
+     "situacao": "Aguardando decisão"
+    },
+    {
+     "id": "8f3fa4b6-d97a-4d22-b5e5-e03164c9696f",
+     "aluno": "Valentina Santos",
+     "turma": "6º ano B",
+     "habilidade": "frações",
+     "materia": "Matemática",
+     "score": 63,
+     "nivel": "medio",
+     "situacao": "Aguardando decisão"
+    },
+    {
+     "id": "4a8b00f2-9e46-467b-95a5-801a53f4dfd4",
+     "aluno": "Elisa Ribeiro",
+     "turma": "6º ano C",
+     "habilidade": "porcentagem",
+     "materia": "Matemática",
+     "score": 62,
+     "nivel": "medio",
+     "situacao": "Aguardando decisão"
+    },
+    {
+     "id": "8b175590-1a46-4b00-8959-6973d0c4d06f",
+     "aluno": "Bruno Oliveira",
+     "turma": "6º ano B",
+     "habilidade": "porcentagem",
+     "materia": "Matemática",
+     "score": 62,
+     "nivel": "medio",
+     "situacao": "Aguardando decisão"
+    }
+   ],
+   "notificacoes": [
+    {
+     "tipo": "reforco",
+     "texto": "Jorge Tavares indicou Renato Siqueira para o reforço",
+     "em": "2026-11-11T16:46:16.367Z"
+    },
+    {
+     "tipo": "reforco",
+     "texto": "Marta Ribeiro indicou Renato Siqueira para o reforço",
+     "em": "2026-11-11T16:46:16.351Z"
+    },
+    {
+     "tipo": "alerta",
+     "texto": "Isabela precisa de apoio em decimais (6º ano D)",
+     "em": "2026-11-11T16:46:15.843Z"
+    },
+    {
+     "tipo": "alerta",
+     "texto": "Rafaela precisa de apoio em frações (6º ano C)",
+     "em": "2026-11-11T16:46:15.256Z"
+    },
+    {
+     "tipo": "alerta",
+     "texto": "Pedro precisa de apoio em problemas com naturais (6º ano C)",
+     "em": "2026-11-11T16:46:15.195Z"
+    },
+    {
+     "tipo": "alerta",
+     "texto": "Elisa precisa de apoio em porcentagem (6º ano C)",
+     "em": "2026-11-11T16:46:14.756Z"
+    }
+   ]
+  },
+  "/gestao/alertas": {
+   "tutores": [
+    {
+     "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+     "nome": "Renato Siqueira",
+     "especialidades": [
+      "frações",
+      "decimais"
+     ],
+     "horarios": [
+      "ter 14:00",
+      "qui 14:00",
+      "qui 15:00"
+     ],
+     "modo": "ambos",
+     "carga": 2,
+     "taxa": 87
+    },
+    {
+     "id": "a201b162-0189-4ef0-b658-300122692a9c",
+     "nome": "Luíza Carvalho",
+     "especialidades": [
+      "frações",
+      "porcentagem"
+     ],
+     "horarios": [
+      "seg 15:00",
+      "qua 15:00"
+     ],
+     "modo": "online",
+     "carga": 0,
+     "taxa": 85
+    },
+    {
+     "id": "55556051-87f1-42c6-a5a0-c1445c4f9c46",
+     "nome": "Paulo Menezes",
+     "especialidades": [
+      "problemas com naturais",
+      "medidas"
+     ],
+     "horarios": [
+      "seg 14:00",
+      "ter 14:00",
+      "sex 10:00"
+     ],
+     "modo": "presencial",
+     "carga": 0,
+     "taxa": 82
+    },
+    {
+     "id": "581d5a4d-31e7-4be8-914f-d355858eb637",
+     "nome": "Inês Barros",
+     "especialidades": [
+      "triângulos",
+      "porcentagem"
+     ],
+     "horarios": [
+      "qua 14:00",
+      "sex 14:00"
+     ],
+     "modo": "presencial",
+     "carga": 0,
+     "taxa": 80
+    }
+   ],
+   "alertas": [
+    {
+     "id": "fb7ed7f1-118b-4295-b2f6-1bad9f836514",
+     "aluno": "João Gomes",
+     "turma": "6º ano B",
+     "habilidade": {
+      "nome": "frações",
+      "codigo": "EF06MA07",
+      "materia": "Matemática"
+     },
+     "frase": "João precisa de apoio em frações",
+     "score": 68,
+     "nivel": "alto",
+     "dominio": 39,
+     "motivos": [
+      {
+       "text": "Acertos em frações caíram 56% nas 3 últimas atividades",
+       "points": 50
+      },
+      {
+       "text": "Frequência de 78% no período",
+       "points": 7
+      },
+      {
+       "text": "Domínio atual em frações: 39 de 100",
+       "points": 6
+      },
+      {
+       "text": "1 tarefa não entregue em 14 dias",
+       "points": 5
+      }
+     ],
+     "status": "ABERTO",
+     "sugeridos": [
+      {
+       "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+       "score": 96,
+       "motivos": [
+        "Especialista em frações",
+        "Livre ter 14:00",
+        "17 de 19 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "a201b162-0189-4ef0-b658-300122692a9c",
+       "score": 93,
+       "motivos": [
+        "Especialista em frações",
+        "Livre seg 15:00",
+        "11 de 14 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "55556051-87f1-42c6-a5a0-c1445c4f9c46",
+       "score": 35,
+       "motivos": [
+        "Livre seg 14:00",
+        "3 de 6 alunos fecharam o reforço nessa habilidade"
+       ]
+      }
+     ],
+     "criadoEm": "2026-11-11T16:46:14.181Z"
+    },
+    {
+     "id": "d4582dec-1bc7-42c6-9cf3-1ec4b40c068e",
+     "aluno": "Rafaela Teixeira",
+     "turma": "6º ano C",
+     "habilidade": {
+      "nome": "frações",
+      "codigo": "EF06MA07",
+      "materia": "Matemática"
+     },
+     "frase": "Rafaela precisa de apoio em frações",
+     "score": 67,
+     "nivel": "alto",
+     "dominio": 52,
+     "motivos": [
+      {
+       "text": "Acertos em frações caíram 42% nas 3 últimas atividades",
+       "points": 50
+      },
+      {
+       "text": "2 tarefas não entregues em 14 dias",
+       "points": 10
+      },
+      {
+       "text": "Frequência de 78% no período",
+       "points": 7
+      }
+     ],
+     "status": "ABERTO",
+     "sugeridos": [
+      {
+       "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+       "score": 96,
+       "motivos": [
+        "Especialista em frações",
+        "Livre ter 14:00",
+        "17 de 19 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "a201b162-0189-4ef0-b658-300122692a9c",
+       "score": 93,
+       "motivos": [
+        "Especialista em frações",
+        "Livre seg 15:00",
+        "11 de 14 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "55556051-87f1-42c6-a5a0-c1445c4f9c46",
+       "score": 35,
+       "motivos": [
+        "Livre seg 14:00",
+        "3 de 6 alunos fecharam o reforço nessa habilidade"
+       ]
+      }
+     ],
+     "criadoEm": "2026-11-11T16:46:15.256Z"
+    },
+    {
+     "id": "159b0e14-de75-4d5c-97bd-e3db65253e6e",
+     "aluno": "Ana Cardoso",
+     "turma": "6º ano B",
+     "habilidade": {
+      "nome": "frações",
+      "codigo": "EF06MA07",
+      "materia": "Matemática"
+     },
+     "frase": "Ana precisa de apoio em frações",
+     "score": 63,
+     "nivel": "medio",
+     "dominio": 25,
+     "motivos": [
+      {
+       "text": "Acertos em frações caíram 41% nas 3 últimas atividades",
+       "points": 50
+      },
+      {
+       "text": "Domínio atual em frações: 25 de 100",
+       "points": 13
+      }
+     ],
+     "status": "ABERTO",
+     "sugeridos": [
+      {
+       "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+       "score": 96,
+       "motivos": [
+        "Especialista em frações",
+        "Livre ter 14:00",
+        "17 de 19 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "a201b162-0189-4ef0-b658-300122692a9c",
+       "score": 93,
+       "motivos": [
+        "Especialista em frações",
+        "Livre seg 15:00",
+        "11 de 14 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "55556051-87f1-42c6-a5a0-c1445c4f9c46",
+       "score": 35,
+       "motivos": [
+        "Livre seg 14:00",
+        "3 de 6 alunos fecharam o reforço nessa habilidade"
+       ]
+      }
+     ],
+     "criadoEm": "2026-11-11T16:46:13.901Z"
+    },
+    {
+     "id": "c410dd15-ceb5-4667-b107-66be87b76230",
+     "aluno": "Gabriela Almeida",
+     "turma": "6º ano B",
+     "habilidade": {
+      "nome": "porcentagem",
+      "codigo": "EF06MA13",
+      "materia": "Matemática"
+     },
+     "frase": "Gabriela precisa de apoio em porcentagem",
+     "score": 63,
+     "nivel": "medio",
+     "dominio": 54,
+     "motivos": [
+      {
+       "text": "Acertos em porcentagem caíram 33% nas 3 últimas atividades",
+       "points": 43
+      },
+      {
+       "text": "Frequência de 69% no período",
+       "points": 15
+      },
+      {
+       "text": "1 tarefa não entregue em 14 dias",
+       "points": 5
+      }
+     ],
+     "status": "ABERTO",
+     "sugeridos": [
+      {
+       "id": "a201b162-0189-4ef0-b658-300122692a9c",
+       "score": 96,
+       "motivos": [
+        "Especialista em porcentagem",
+        "Livre seg 15:00",
+        "12 de 13 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "581d5a4d-31e7-4be8-914f-d355858eb637",
+       "score": 93,
+       "motivos": [
+        "Especialista em porcentagem",
+        "Livre qua 14:00",
+        "8 de 10 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+       "score": 20,
+       "motivos": [
+        "Livre ter 14:00"
+       ]
+      }
+     ],
+     "criadoEm": "2026-11-11T16:46:14.091Z"
+    },
+    {
+     "id": "01d1e142-5ffd-4161-a12c-93e80e50a173",
+     "aluno": "Manuela Martins",
+     "turma": "6º ano B",
+     "habilidade": {
+      "nome": "porcentagem",
+      "codigo": "EF06MA13",
+      "materia": "Matemática"
+     },
+     "frase": "Manuela precisa de apoio em porcentagem",
+     "score": 63,
+     "nivel": "medio",
+     "dominio": 25,
+     "motivos": [
+      {
+       "text": "Acertos em porcentagem caíram 41% nas 3 últimas atividades",
+       "points": 50
+      },
+      {
+       "text": "Domínio atual em porcentagem: 25 de 100",
+       "points": 13
+      }
+     ],
+     "status": "ABERTO",
+     "sugeridos": [
+      {
+       "id": "a201b162-0189-4ef0-b658-300122692a9c",
+       "score": 96,
+       "motivos": [
+        "Especialista em porcentagem",
+        "Livre seg 15:00",
+        "12 de 13 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "581d5a4d-31e7-4be8-914f-d355858eb637",
+       "score": 93,
+       "motivos": [
+        "Especialista em porcentagem",
+        "Livre qua 14:00",
+        "8 de 10 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+       "score": 20,
+       "motivos": [
+        "Livre ter 14:00"
+       ]
+      }
+     ],
+     "criadoEm": "2026-11-11T16:46:14.258Z"
+    },
+    {
+     "id": "8f3fa4b6-d97a-4d22-b5e5-e03164c9696f",
+     "aluno": "Valentina Santos",
+     "turma": "6º ano B",
+     "habilidade": {
+      "nome": "frações",
+      "codigo": "EF06MA07",
+      "materia": "Matemática"
+     },
+     "frase": "Valentina precisa de apoio em frações",
+     "score": 63,
+     "nivel": "medio",
+     "dominio": 50,
+     "motivos": [
+      {
+       "text": "Acertos em frações caíram 38% nas 3 últimas atividades",
+       "points": 49
+      },
+      {
+       "text": "2 tarefas não entregues em 14 dias",
+       "points": 10
+      },
+      {
+       "text": "Frequência de 81% no período",
+       "points": 4
+      }
+     ],
+     "status": "ABERTO",
+     "sugeridos": [
+      {
+       "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+       "score": 96,
+       "motivos": [
+        "Especialista em frações",
+        "Livre ter 14:00",
+        "17 de 19 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "a201b162-0189-4ef0-b658-300122692a9c",
+       "score": 93,
+       "motivos": [
+        "Especialista em frações",
+        "Livre seg 15:00",
+        "11 de 14 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "55556051-87f1-42c6-a5a0-c1445c4f9c46",
+       "score": 35,
+       "motivos": [
+        "Livre seg 14:00",
+        "3 de 6 alunos fecharam o reforço nessa habilidade"
+       ]
+      }
+     ],
+     "criadoEm": "2026-11-11T16:46:14.546Z"
+    },
+    {
+     "id": "4a8b00f2-9e46-467b-95a5-801a53f4dfd4",
+     "aluno": "Elisa Ribeiro",
+     "turma": "6º ano C",
+     "habilidade": {
+      "nome": "porcentagem",
+      "codigo": "EF06MA13",
+      "materia": "Matemática"
+     },
+     "frase": "Elisa precisa de apoio em porcentagem",
+     "score": 62,
+     "nivel": "medio",
+     "dominio": 52,
+     "motivos": [
+      {
+       "text": "Acertos em porcentagem caíram 42% nas 3 últimas atividades",
+       "points": 50
+      },
+      {
+       "text": "Frequência de 78% no período",
+       "points": 7
+      },
+      {
+       "text": "1 tarefa não entregue em 14 dias",
+       "points": 5
+      }
+     ],
+     "status": "ABERTO",
+     "sugeridos": [
+      {
+       "id": "a201b162-0189-4ef0-b658-300122692a9c",
+       "score": 96,
+       "motivos": [
+        "Especialista em porcentagem",
+        "Livre seg 15:00",
+        "12 de 13 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "581d5a4d-31e7-4be8-914f-d355858eb637",
+       "score": 93,
+       "motivos": [
+        "Especialista em porcentagem",
+        "Livre qua 14:00",
+        "8 de 10 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+       "score": 20,
+       "motivos": [
+        "Livre ter 14:00"
+       ]
+      }
+     ],
+     "criadoEm": "2026-11-11T16:46:14.756Z"
+    },
+    {
+     "id": "8b175590-1a46-4b00-8959-6973d0c4d06f",
+     "aluno": "Bruno Oliveira",
+     "turma": "6º ano B",
+     "habilidade": {
+      "nome": "porcentagem",
+      "codigo": "EF06MA13",
+      "materia": "Matemática"
+     },
+     "frase": "Bruno precisa de apoio em porcentagem",
+     "score": 62,
+     "nivel": "medio",
+     "dominio": 27,
+     "motivos": [
+      {
+       "text": "Acertos em porcentagem caíram 52% nas 3 últimas atividades",
+       "points": 50
+      },
+      {
+       "text": "Domínio atual em porcentagem: 27 de 100",
+       "points": 12
+      }
+     ],
+     "status": "ABERTO",
+     "sugeridos": [
+      {
+       "id": "a201b162-0189-4ef0-b658-300122692a9c",
+       "score": 96,
+       "motivos": [
+        "Especialista em porcentagem",
+        "Livre seg 15:00",
+        "12 de 13 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "581d5a4d-31e7-4be8-914f-d355858eb637",
+       "score": 93,
+       "motivos": [
+        "Especialista em porcentagem",
+        "Livre qua 14:00",
+        "8 de 10 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+       "score": 20,
+       "motivos": [
+        "Livre ter 14:00"
+       ]
+      }
+     ],
+     "criadoEm": "2026-11-11T16:46:13.935Z"
+    },
+    {
+     "id": "17799e7c-1783-49e1-a1d8-e7c43939141c",
+     "aluno": "Sofia Queiroz",
+     "turma": "6º ano B",
+     "habilidade": {
+      "nome": "frações",
+      "codigo": "EF06MA07",
+      "materia": "Matemática"
+     },
+     "frase": "Sofia precisa de apoio em frações",
+     "score": 56,
+     "nivel": "medio",
+     "dominio": 24,
+     "motivos": [
+      {
+       "text": "Acertos em frações caíram 33% nas 3 últimas atividades",
+       "points": 43
+      },
+      {
+       "text": "Domínio atual em frações: 24 de 100",
+       "points": 13
+      }
+     ],
+     "status": "ABERTO",
+     "sugeridos": [
+      {
+       "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+       "score": 96,
+       "motivos": [
+        "Especialista em frações",
+        "Livre ter 14:00",
+        "17 de 19 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "a201b162-0189-4ef0-b658-300122692a9c",
+       "score": 93,
+       "motivos": [
+        "Especialista em frações",
+        "Livre seg 15:00",
+        "11 de 14 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "55556051-87f1-42c6-a5a0-c1445c4f9c46",
+       "score": 35,
+       "motivos": [
+        "Livre seg 14:00",
+        "3 de 6 alunos fecharam o reforço nessa habilidade"
+       ]
+      }
+     ],
+     "criadoEm": "2026-11-11T16:46:14.499Z"
+    },
+    {
+     "id": "d91f59df-a1ca-41e8-958b-130219f1f840",
+     "aluno": "Rafaela Cardoso",
+     "turma": "6º ano B",
+     "habilidade": {
+      "nome": "frações",
+      "codigo": "EF06MA07",
+      "materia": "Matemática"
+     },
+     "frase": "Rafaela precisa de apoio em frações",
+     "score": 56,
+     "nivel": "medio",
+     "dominio": 24,
+     "motivos": [
+      {
+       "text": "Acertos em frações caíram 33% nas 3 últimas atividades",
+       "points": 43
+      },
+      {
+       "text": "Domínio atual em frações: 24 de 100",
+       "points": 13
+      }
+     ],
+     "status": "ABERTO",
+     "sugeridos": [
+      {
+       "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+       "score": 96,
+       "motivos": [
+        "Especialista em frações",
+        "Livre ter 14:00",
+        "17 de 19 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "a201b162-0189-4ef0-b658-300122692a9c",
+       "score": 93,
+       "motivos": [
+        "Especialista em frações",
+        "Livre seg 15:00",
+        "11 de 14 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "55556051-87f1-42c6-a5a0-c1445c4f9c46",
+       "score": 35,
+       "motivos": [
+        "Livre seg 14:00",
+        "3 de 6 alunos fecharam o reforço nessa habilidade"
+       ]
+      }
+     ],
+     "criadoEm": "2026-11-11T16:46:14.438Z"
+    },
+    {
+     "id": "7fcda5b7-0cde-416f-b7bd-c0bf1d021a3e",
+     "aluno": "Bruno Teixeira",
+     "turma": "6º ano C",
+     "habilidade": {
+      "nome": "frações",
+      "codigo": "EF06MA07",
+      "materia": "Matemática"
+     },
+     "frase": "Bruno precisa de apoio em frações",
+     "score": 55,
+     "nivel": "medio",
+     "dominio": 56,
+     "motivos": [
+      {
+       "text": "Acertos em frações caíram 33% nas 3 últimas atividades",
+       "points": 43
+      },
+      {
+       "text": "Frequência de 78% no período",
+       "points": 7
+      },
+      {
+       "text": "1 tarefa não entregue em 14 dias",
+       "points": 5
+      }
+     ],
+     "status": "ABERTO",
+     "sugeridos": [
+      {
+       "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+       "score": 96,
+       "motivos": [
+        "Especialista em frações",
+        "Livre ter 14:00",
+        "17 de 19 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "a201b162-0189-4ef0-b658-300122692a9c",
+       "score": 93,
+       "motivos": [
+        "Especialista em frações",
+        "Livre seg 15:00",
+        "11 de 14 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "55556051-87f1-42c6-a5a0-c1445c4f9c46",
+       "score": 35,
+       "motivos": [
+        "Livre seg 14:00",
+        "3 de 6 alunos fecharam o reforço nessa habilidade"
+       ]
+      }
+     ],
+     "criadoEm": "2026-11-11T16:46:14.671Z"
+    },
+    {
+     "id": "7bf27a04-dcd5-4ebe-b699-ac255b40333a",
+     "aluno": "Pedro Ribeiro",
+     "turma": "6º ano C",
+     "habilidade": {
+      "nome": "problemas com naturais",
+      "codigo": "EF06MA03",
+      "materia": "Matemática"
+     },
+     "frase": "Pedro precisa de apoio em problemas com naturais",
+     "score": 55,
+     "nivel": "medio",
+     "dominio": 38,
+     "motivos": [
+      {
+       "text": "Acertos em problemas com naturais caíram 38% nas 3 últimas atividades",
+       "points": 49
+      },
+      {
+       "text": "Domínio atual em problemas com naturais: 38 de 100",
+       "points": 6
+      }
+     ],
+     "status": "ABERTO",
+     "sugeridos": [
+      {
+       "id": "55556051-87f1-42c6-a5a0-c1445c4f9c46",
+       "score": 96,
+       "motivos": [
+        "Especialista em problemas com naturais",
+        "Livre seg 14:00",
+        "20 de 22 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+       "score": 20,
+       "motivos": [
+        "Livre ter 14:00"
+       ]
+      },
+      {
+       "id": "a201b162-0189-4ef0-b658-300122692a9c",
+       "score": 20,
+       "motivos": [
+        "Livre seg 15:00"
+       ]
+      }
+     ],
+     "criadoEm": "2026-11-11T16:46:15.195Z"
+    },
+    {
+     "id": "5ee3f419-28df-4531-978c-f3532e7c880e",
+     "aluno": "Lucas Ferreira",
+     "turma": "6º ano A",
+     "habilidade": {
+      "nome": "frações",
+      "codigo": "EF06MA07",
+      "materia": "Matemática"
+     },
+     "frase": "Lucas precisa de apoio em frações",
+     "score": 55,
+     "nivel": "medio",
+     "dominio": 56,
+     "motivos": [
+      {
+       "text": "Acertos em frações caíram 33% nas 3 últimas atividades",
+       "points": 43
+      },
+      {
+       "text": "Frequência de 78% no período",
+       "points": 7
+      },
+      {
+       "text": "1 tarefa não entregue em 14 dias",
+       "points": 5
+      }
+     ],
+     "status": "ENCAMINHADO",
+     "pedido": {
+      "status": "EM_ANDAMENTO",
+      "tutor": "Renato Siqueira"
+     },
+     "sugeridos": [
+      {
+       "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+       "score": 96,
+       "motivos": [
+        "Especialista em frações",
+        "Livre ter 14:00",
+        "17 de 19 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "a201b162-0189-4ef0-b658-300122692a9c",
+       "score": 93,
+       "motivos": [
+        "Especialista em frações",
+        "Livre seg 15:00",
+        "11 de 14 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "55556051-87f1-42c6-a5a0-c1445c4f9c46",
+       "score": 35,
+       "motivos": [
+        "Livre seg 14:00",
+        "3 de 6 alunos fecharam o reforço nessa habilidade"
+       ]
+      }
+     ],
+     "criadoEm": "2026-11-11T16:46:13.326Z"
+    },
+    {
+     "id": "7de1045d-ccd7-402e-acc9-ac5ad0ad2057",
+     "aluno": "Isabela Gomes",
+     "turma": "6º ano D",
+     "habilidade": {
+      "nome": "decimais",
+      "codigo": "EF06MA08",
+      "materia": "Matemática"
+     },
+     "frase": "Isabela precisa de apoio em decimais",
+     "score": 54,
+     "nivel": "baixo",
+     "dominio": 56,
+     "motivos": [
+      {
+       "text": "Acertos em decimais caíram 33% nas 3 últimas atividades",
+       "points": 43
+      },
+      {
+       "text": "2 tarefas não entregues em 14 dias",
+       "points": 10
+      },
+      {
+       "text": "Frequência de 84% no período",
+       "points": 1
+      }
+     ],
+     "status": "ENCAMINHADO",
+     "pedido": {
+      "status": "EM_ANDAMENTO",
+      "tutor": "Renato Siqueira"
+     },
+     "sugeridos": [
+      {
+       "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+       "score": 93,
+       "motivos": [
+        "Especialista em decimais",
+        "Livre ter 14:00",
+        "9 de 11 alunos fecharam o reforço nessa habilidade"
+       ]
+      },
+      {
+       "id": "a201b162-0189-4ef0-b658-300122692a9c",
+       "score": 20,
+       "motivos": [
+        "Livre seg 15:00"
+       ]
+      },
+      {
+       "id": "55556051-87f1-42c6-a5a0-c1445c4f9c46",
+       "score": 20,
+       "motivos": [
+        "Livre seg 14:00"
+       ]
+      }
+     ],
+     "criadoEm": "2026-11-11T16:46:15.843Z"
+    }
+   ]
+  },
+  "/gestao/turmas": [
+   {
+    "id": "3d2daaa6-47e1-4a4e-af25-c88946e3e49d",
+    "nome": "6º ano A",
+    "serie": "6º ano",
+    "turno": "MANHA",
+    "alunos": 24,
+    "media": 7.5,
+    "frequencia": 95,
+    "comAlerta": 1,
+    "professores": [
+     {
+      "materia": "Matemática",
+      "nome": "Marta Ribeiro"
+     },
+     {
+      "materia": "Português",
+      "nome": "Cecília Prado"
+     },
+     {
+      "materia": "Ciências",
+      "nome": "André Nunes"
+     },
+     {
+      "materia": "História",
+      "nome": "Rita Moraes"
+     },
+     {
+      "materia": "Geografia",
+      "nome": "Caio Freitas"
+     }
+    ]
+   },
+   {
+    "id": "f0be6f7a-e6c8-47c9-ab55-21a642601a60",
+    "nome": "6º ano B",
+    "serie": "6º ano",
+    "turno": "MANHA",
+    "alunos": 24,
+    "media": 6.9,
+    "frequencia": 92,
+    "comAlerta": 8,
+    "professores": [
+     {
+      "materia": "Matemática",
+      "nome": "Marta Ribeiro"
+     },
+     {
+      "materia": "Português",
+      "nome": "Cecília Prado"
+     },
+     {
+      "materia": "Ciências",
+      "nome": "André Nunes"
+     },
+     {
+      "materia": "História",
+      "nome": "Rita Moraes"
+     },
+     {
+      "materia": "Geografia",
+      "nome": "Caio Freitas"
+     }
+    ]
+   },
+   {
+    "id": "d8029fdd-bf21-4bd8-ae3b-314e513e3a00",
+    "nome": "6º ano C",
+    "serie": "6º ano",
+    "turno": "TARDE",
+    "alunos": 24,
+    "media": 6.7,
+    "frequencia": 92,
+    "comAlerta": 4,
+    "professores": [
+     {
+      "materia": "Matemática",
+      "nome": "Jorge Tavares"
+     },
+     {
+      "materia": "Português",
+      "nome": "Cecília Prado"
+     },
+     {
+      "materia": "Ciências",
+      "nome": "André Nunes"
+     },
+     {
+      "materia": "História",
+      "nome": "Rita Moraes"
+     },
+     {
+      "materia": "Geografia",
+      "nome": "Caio Freitas"
+     }
+    ]
+   },
+   {
+    "id": "13e7afea-76a2-4e6d-96ec-67098595aa74",
+    "nome": "6º ano D",
+    "serie": "6º ano",
+    "turno": "TARDE",
+    "alunos": 24,
+    "media": 7.1,
+    "frequencia": 95,
+    "comAlerta": 1,
+    "professores": [
+     {
+      "materia": "Matemática",
+      "nome": "Jorge Tavares"
+     },
+     {
+      "materia": "Português",
+      "nome": "Cecília Prado"
+     },
+     {
+      "materia": "Ciências",
+      "nome": "André Nunes"
+     },
+     {
+      "materia": "História",
+      "nome": "Rita Moraes"
+     },
+     {
+      "materia": "Geografia",
+      "nome": "Caio Freitas"
+     }
+    ]
+   }
+  ],
+  "/gestao/equipe": {
+   "professores": [
+    {
+     "id": "171e8bad-572a-42ca-80a9-cad581309c9e",
+     "nome": "André Nunes",
+     "materias": [
+      "Ciências"
+     ],
+     "turmas": [
+      "6º ano A",
+      "6º ano B",
+      "6º ano C",
+      "6º ano D"
+     ],
+     "ultimaAtividade": "2026-11-05T00:00:00.000Z",
+     "diasSemAtividade": 6
+    },
+    {
+     "id": "24acf069-b618-41ed-beef-690b01653473",
+     "nome": "Caio Freitas",
+     "materias": [
+      "Geografia"
+     ],
+     "turmas": [
+      "6º ano A",
+      "6º ano B",
+      "6º ano C",
+      "6º ano D"
+     ],
+     "ultimaAtividade": "2026-11-05T00:00:00.000Z",
+     "diasSemAtividade": 6
+    },
+    {
+     "id": "15342e54-fcfa-4d2a-9cc1-3684c6ce5211",
+     "nome": "Cecília Prado",
+     "materias": [
+      "Português"
+     ],
+     "turmas": [
+      "6º ano A",
+      "6º ano B",
+      "6º ano C",
+      "6º ano D"
+     ],
+     "ultimaAtividade": "2026-11-05T00:00:00.000Z",
+     "diasSemAtividade": 6
+    },
+    {
+     "id": "da39c26d-ea4f-4b67-8a66-80f78cea04e4",
+     "nome": "Jorge Tavares",
+     "materias": [
+      "Matemática"
+     ],
+     "turmas": [
+      "6º ano C",
+      "6º ano D"
+     ],
+     "ultimaAtividade": "2026-11-09T00:00:00.000Z",
+     "diasSemAtividade": 2
+    },
+    {
+     "id": "da78d0eb-d0f3-4b67-b5a8-030dbc673507",
+     "nome": "Marta Ribeiro",
+     "materias": [
+      "Matemática"
+     ],
+     "turmas": [
+      "6º ano A",
+      "6º ano B"
+     ],
+     "ultimaAtividade": "2026-11-09T00:00:00.000Z",
+     "diasSemAtividade": 2
+    },
+    {
+     "id": "eb48a847-ad02-46d7-ab3b-e6114d329578",
+     "nome": "Rita Moraes",
+     "materias": [
+      "História"
+     ],
+     "turmas": [
+      "6º ano A",
+      "6º ano B",
+      "6º ano C",
+      "6º ano D"
+     ],
+     "ultimaAtividade": "2026-11-05T00:00:00.000Z",
+     "diasSemAtividade": 6
+    }
+   ],
+   "reforco": [
+    {
+     "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+     "nome": "Renato Siqueira",
+     "especialidades": [
+      "frações",
+      "decimais"
+     ],
+     "horarios": [
+      "ter 14:00",
+      "qui 14:00",
+      "qui 15:00"
+     ],
+     "modo": "ambos",
+     "alunosAtivos": 2,
+     "atendidos": 30,
+     "taxa": 87
+    },
+    {
+     "id": "a201b162-0189-4ef0-b658-300122692a9c",
+     "nome": "Luíza Carvalho",
+     "especialidades": [
+      "frações",
+      "porcentagem"
+     ],
+     "horarios": [
+      "seg 15:00",
+      "qua 15:00"
+     ],
+     "modo": "online",
+     "alunosAtivos": 0,
+     "atendidos": 27,
+     "taxa": 85
+    },
+    {
+     "id": "55556051-87f1-42c6-a5a0-c1445c4f9c46",
+     "nome": "Paulo Menezes",
+     "especialidades": [
+      "problemas com naturais",
+      "medidas"
+     ],
+     "horarios": [
+      "seg 14:00",
+      "ter 14:00",
+      "sex 10:00"
+     ],
+     "modo": "presencial",
+     "alunosAtivos": 0,
+     "atendidos": 28,
+     "taxa": 82
+    },
+    {
+     "id": "581d5a4d-31e7-4be8-914f-d355858eb637",
+     "nome": "Inês Barros",
+     "especialidades": [
+      "triângulos",
+      "porcentagem"
+     ],
+     "horarios": [
+      "qua 14:00",
+      "sex 14:00"
+     ],
+     "modo": "presencial",
+     "alunosAtivos": 0,
+     "atendidos": 10,
+     "taxa": 80
+    }
+   ]
+  },
+  "/gestao/reforcos": [
+   {
+    "id": "29c1cfed-e72a-462d-bd2e-1538afd9ae63",
+    "aluno": "Isabela Gomes",
+    "turma": "6º ano D",
+    "habilidade": "decimais",
+    "tutor": "Renato Siqueira",
+    "indicadoPor": "Jorge Tavares",
+    "status": "EM_ANDAMENTO",
+    "sessoes": 1,
+    "realizadas": 0,
+    "planejadas": 4,
+    "criadoEm": "2026-11-11T16:46:16.367Z"
+   },
+   {
+    "id": "c048dcc8-6c53-41f9-8567-81c3981b06ff",
+    "aluno": "Lucas Ferreira",
+    "turma": "6º ano A",
+    "habilidade": "frações",
+    "tutor": "Renato Siqueira",
+    "indicadoPor": "Marta Ribeiro",
+    "status": "EM_ANDAMENTO",
+    "sessoes": 1,
+    "realizadas": 0,
+    "planejadas": 4,
+    "criadoEm": "2026-11-11T16:46:16.351Z"
+   }
+  ],
+  "/coordenacao": {
+   "bimestre": 4,
+   "materias": [
+    "Matemática",
+    "Ciências",
+    "Geografia",
+    "História",
+    "Português"
+   ],
+   "tabela": [
+    {
+     "turma": {
+      "id": "3d2daaa6-47e1-4a4e-af25-c88946e3e49d",
+      "nome": "6º ano A"
+     },
+     "materias": [
+      {
+       "materia": "Matemática",
+       "atual": 7.439716312056736,
+       "anterior": 7.451388888888888
+      },
+      {
+       "materia": "Ciências",
+       "atual": 6.416666666666667,
+       "anterior": 6.583333333333333
+      },
+      {
+       "materia": "Geografia",
+       "atual": 7.083333333333333,
+       "anterior": 7.416666666666667
+      },
+      {
+       "materia": "História",
+       "atual": 7.916666666666667,
+       "anterior": 8
+      },
+      {
+       "materia": "Português",
+       "atual": 8.708333333333334,
+       "anterior": 8.041666666666666
+      }
+     ]
+    },
+    {
+     "turma": {
+      "id": "f0be6f7a-e6c8-47c9-ab55-21a642601a60",
+      "nome": "6º ano B"
+     },
+     "materias": [
+      {
+       "materia": "Matemática",
+       "atual": 6.704166666666664,
+       "anterior": 6.784722222222222
+      },
+      {
+       "materia": "Ciências",
+       "atual": 6.458333333333333,
+       "anterior": 6.208333333333333
+      },
+      {
+       "materia": "Geografia",
+       "atual": 6.708333333333333,
+       "anterior": 7.291666666666667
+      },
+      {
+       "materia": "História",
+       "atual": 7.5,
+       "anterior": 7.333333333333333
+      },
+      {
+       "materia": "Português",
+       "atual": 8.083333333333334,
+       "anterior": 8.625
+      }
+     ]
+    },
+    {
+     "turma": {
+      "id": "d8029fdd-bf21-4bd8-ae3b-314e513e3a00",
+      "nome": "6º ano C"
+     },
+     "materias": [
+      {
+       "materia": "Matemática",
+       "atual": 6.132352941176467,
+       "anterior": 6.1180555555555545
+      },
+      {
+       "materia": "Ciências",
+       "atual": 8.333333333333334,
+       "anterior": 8.666666666666666
+      },
+      {
+       "materia": "Geografia",
+       "atual": 7.5,
+       "anterior": 7.875
+      },
+      {
+       "materia": "História",
+       "atual": 7.458333333333333,
+       "anterior": 7.625
+      },
+      {
+       "materia": "Português",
+       "atual": 6.583333333333333,
+       "anterior": 6.583333333333333
+      }
+     ]
+    },
+    {
+     "turma": {
+      "id": "13e7afea-76a2-4e6d-96ec-67098595aa74",
+      "nome": "6º ano D"
+     },
+     "materias": [
+      {
+       "materia": "Matemática",
+       "atual": 7.123188405797099,
+       "anterior": 6.805555555555557
+      },
+      {
+       "materia": "Ciências",
+       "atual": 7.083333333333333,
+       "anterior": 7
+      },
+      {
+       "materia": "Geografia",
+       "atual": 7.583333333333333,
+       "anterior": 7.5
+      },
+      {
+       "materia": "História",
+       "atual": 6.541666666666667,
+       "anterior": 7.25
+      },
+      {
+       "materia": "Português",
+       "atual": 6.75,
+       "anterior": 5.958333333333333
+      }
+     ]
+    }
+   ],
+   "alertasPorTurma": [
+    {
+     "turma": "6º ano A",
+     "alunos": 1,
+     "habilidades": [
+      "frações"
+     ]
+    },
+    {
+     "turma": "6º ano B",
+     "alunos": 8,
+     "habilidades": [
+      "frações",
+      "porcentagem"
+     ]
+    },
+    {
+     "turma": "6º ano C",
+     "alunos": 4,
+     "habilidades": [
+      "frações",
+      "porcentagem",
+      "problemas com naturais"
+     ]
+    },
+    {
+     "turma": "6º ano D",
+     "alunos": 1,
+     "habilidades": [
+      "decimais"
+     ]
+    }
+   ],
+   "professores": [
+    {
+     "id": "da78d0eb-d0f3-4b67-b5a8-030dbc673507",
+     "nome": "Marta Ribeiro",
+     "turmas": [
+      "6º ano A",
+      "6º ano B"
+     ],
+     "materias": [
+      "Matemática"
+     ],
+     "ultimaAtividade": "2026-11-09T00:00:00.000Z",
+     "diasSemAtividade": 2
+    },
+    {
+     "id": "da39c26d-ea4f-4b67-8a66-80f78cea04e4",
+     "nome": "Jorge Tavares",
+     "turmas": [
+      "6º ano C",
+      "6º ano D"
+     ],
+     "materias": [
+      "Matemática"
+     ],
+     "ultimaAtividade": "2026-11-09T00:00:00.000Z",
+     "diasSemAtividade": 2
+    },
+    {
+     "id": "15342e54-fcfa-4d2a-9cc1-3684c6ce5211",
+     "nome": "Cecília Prado",
+     "turmas": [
+      "6º ano A",
+      "6º ano B",
+      "6º ano C",
+      "6º ano D"
+     ],
+     "materias": [
+      "Português"
+     ],
+     "ultimaAtividade": "2026-11-05T00:00:00.000Z",
+     "diasSemAtividade": 6
+    },
+    {
+     "id": "171e8bad-572a-42ca-80a9-cad581309c9e",
+     "nome": "André Nunes",
+     "turmas": [
+      "6º ano A",
+      "6º ano B",
+      "6º ano C",
+      "6º ano D"
+     ],
+     "materias": [
+      "Ciências"
+     ],
+     "ultimaAtividade": "2026-11-05T00:00:00.000Z",
+     "diasSemAtividade": 6
+    },
+    {
+     "id": "eb48a847-ad02-46d7-ab3b-e6114d329578",
+     "nome": "Rita Moraes",
+     "turmas": [
+      "6º ano A",
+      "6º ano B",
+      "6º ano C",
+      "6º ano D"
+     ],
+     "materias": [
+      "História"
+     ],
+     "ultimaAtividade": "2026-11-05T00:00:00.000Z",
+     "diasSemAtividade": 6
+    },
+    {
+     "id": "24acf069-b618-41ed-beef-690b01653473",
+     "nome": "Caio Freitas",
+     "turmas": [
+      "6º ano A",
+      "6º ano B",
+      "6º ano C",
+      "6º ano D"
+     ],
+     "materias": [
+      "Geografia"
+     ],
+     "ultimaAtividade": "2026-11-05T00:00:00.000Z",
+     "diasSemAtividade": 6
+    }
+   ],
+   "comparacao": [
+    {
+     "habilidade": {
+      "codigo": "EF06MA03",
+      "nome": "problemas com naturais"
+     },
+     "porProfessor": [
+      {
+       "professor": "Marta Ribeiro",
+       "turmas": [
+        "6º ano A",
+        "6º ano B"
+       ],
+       "media": 71
+      },
+      {
+       "professor": "Jorge Tavares",
+       "turmas": [
+        "6º ano C",
+        "6º ano D"
+       ],
+       "media": 67
+      }
+     ]
+    },
+    {
+     "habilidade": {
+      "codigo": "EF06MA07",
+      "nome": "frações"
+     },
+     "porProfessor": [
+      {
+       "professor": "Marta Ribeiro",
+       "turmas": [
+        "6º ano A",
+        "6º ano B"
+       ],
+       "media": 63
+      },
+      {
+       "professor": "Jorge Tavares",
+       "turmas": [
+        "6º ano C",
+        "6º ano D"
+       ],
+       "media": 57
+      }
+     ]
+    },
+    {
+     "habilidade": {
+      "codigo": "EF06MA08",
+      "nome": "decimais"
+     },
+     "porProfessor": [
+      {
+       "professor": "Marta Ribeiro",
+       "turmas": [
+        "6º ano A",
+        "6º ano B"
+       ],
+       "media": 76
+      },
+      {
+       "professor": "Jorge Tavares",
+       "turmas": [
+        "6º ano C",
+        "6º ano D"
+       ],
+       "media": 68
+      }
+     ]
+    },
+    {
+     "habilidade": {
+      "codigo": "EF06MA13",
+      "nome": "porcentagem"
+     },
+     "porProfessor": [
+      {
+       "professor": "Marta Ribeiro",
+       "turmas": [
+        "6º ano A",
+        "6º ano B"
+       ],
+       "media": 70
+      },
+      {
+       "professor": "Jorge Tavares",
+       "turmas": [
+        "6º ano C",
+        "6º ano D"
+       ],
+       "media": 60
+      }
+     ]
+    },
+    {
+     "habilidade": {
+      "codigo": "EF06MA19",
+      "nome": "triângulos"
+     },
+     "porProfessor": [
+      {
+       "professor": "Marta Ribeiro",
+       "turmas": [
+        "6º ano A",
+        "6º ano B"
+       ],
+       "media": 75
+      },
+      {
+       "professor": "Jorge Tavares",
+       "turmas": [
+        "6º ano C",
+        "6º ano D"
+       ],
+       "media": 68
+      }
+     ]
+    },
+    {
+     "habilidade": {
+      "codigo": "EF06MA24",
+      "nome": "medidas"
+     },
+     "porProfessor": [
+      {
+       "professor": "Marta Ribeiro",
+       "turmas": [
+        "6º ano A",
+        "6º ano B"
+       ],
+       "media": 72
+      },
+      {
+       "professor": "Jorge Tavares",
+       "turmas": [
+        "6º ano C",
+        "6º ano D"
+       ],
+       "media": 66
+      }
+     ]
+    }
+   ]
+  },
+  "/gestao/turmas/3d2daaa6-47e1-4a4e-af25-c88946e3e49d": {
+   "turma": {
+    "id": "3d2daaa6-47e1-4a4e-af25-c88946e3e49d",
+    "nome": "6º ano A",
+    "serie": "6º ano",
+    "turno": "MANHA"
+   },
+   "materias": [
+    "Matemática",
+    "Português",
+    "História",
+    "Geografia",
+    "Ciências"
+   ],
+   "alunos": [
+    {
+     "id": "eae70286-52c5-480f-83d5-c46953f2e1ac",
+     "nome": "Ana Dias",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.8,
+      "Português": 7,
+      "História": 7,
+      "Geografia": 6,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "806358f1-e12a-4a02-99e8-6e4531a287ae",
+     "nome": "Bruno Santos",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 8.6,
+      "Português": 9,
+      "História": 7,
+      "Geografia": 8,
+      "Ciências": 6
+     }
+    },
+    {
+     "id": "e67cec7f-5345-4b94-a93a-eafa753114b6",
+     "nome": "Clara Almeida",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.6,
+      "Português": 8,
+      "História": 9,
+      "Geografia": 6,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "2d7f1096-4a32-4880-b0ad-5979d0a94ca1",
+     "nome": "Davi Martins",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 8.3,
+      "Português": 10,
+      "História": 8,
+      "Geografia": 5,
+      "Ciências": 6
+     }
+    },
+    {
+     "id": "146bdd70-4793-4a79-baa1-8532d586ea4a",
+     "nome": "Elisa Cardoso",
+     "frequencia": 88,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.6,
+      "Português": 9,
+      "História": 10,
+      "Geografia": 6,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "f674d8e3-8b10-487d-ad69-b95cc84a6a7f",
+     "nome": "Felipe Teixeira",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 5.8,
+      "Português": 10,
+      "História": 6,
+      "Geografia": 7,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "35aacec8-eff4-405e-a57b-07ab4cfcabc3",
+     "nome": "Gabriela Dias",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.3,
+      "Português": 9,
+      "História": 8,
+      "Geografia": 6,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "deca785e-5b63-4dba-bbf1-081ffa6e882e",
+     "nome": "Heitor Nogueira",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 9.1,
+      "Português": 9,
+      "História": 7,
+      "Geografia": 7,
+      "Ciências": 5
+     }
+    },
+    {
+     "id": "89ff54fa-4ab9-4b8a-a201-b04ba978bed8",
+     "nome": "Isabela Oliveira",
+     "frequencia": 91,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.9,
+      "Português": 8,
+      "História": 8,
+      "Geografia": 8,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "94d5ffed-be75-43c1-a535-e434545a8a67",
+     "nome": "João Cardoso",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.7,
+      "Português": 9,
+      "História": 9,
+      "Geografia": 7,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "be2bd4d4-c4e4-4566-b548-ad9a2122835c",
+     "nome": "Laura Teixeira",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 8.6,
+      "Português": 10,
+      "História": 8,
+      "Geografia": 8,
+      "Ciências": 5
+     }
+    },
+    {
+     "id": "5360e1fc-9287-42e1-8767-2a12d29207eb",
+     "nome": "Lucas Ferreira",
+     "frequencia": 78,
+     "alertas": 1,
+     "notas": {
+      "Matemática": 7.3,
+      "Português": 10,
+      "História": 6,
+      "Geografia": 7,
+      "Ciências": 6
+     }
+    },
+    {
+     "id": "982b46c4-b785-4597-8796-a9af5de65e6a",
+     "nome": "Manuela Cardoso",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.3,
+      "Português": 8,
+      "História": 7,
+      "Geografia": 6,
+      "Ciências": 5
+     }
+    },
+    {
+     "id": "d3c1808f-69d2-4c98-ad7f-f5d321c581fb",
+     "nome": "Miguel Santos",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.6,
+      "Português": 9,
+      "História": 7,
+      "Geografia": 8,
+      "Ciências": 6
+     }
+    },
+    {
+     "id": "4a1966de-0260-4c6a-b93c-49d87311d70e",
+     "nome": "Nina Queiroz",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 8.8,
+      "Português": 10,
+      "História": 9,
+      "Geografia": 8,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "28a198db-8c12-4254-bf7b-0b0676335fc7",
+     "nome": "Otávio Esteves",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.8,
+      "Português": 7,
+      "História": 7,
+      "Geografia": 8,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "da5d20c8-e379-49fe-8671-2b32c0da948e",
+     "nome": "Pedro Oliveira",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.3,
+      "Português": 10,
+      "História": 10,
+      "Geografia": 8,
+      "Ciências": 5
+     }
+    },
+    {
+     "id": "16019a83-0cd4-4f18-aa4c-15fb7810befd",
+     "nome": "Rafaela Pereira",
+     "frequencia": 84,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.7,
+      "Português": 8,
+      "História": 8,
+      "Geografia": 7,
+      "Ciências": 5
+     }
+    },
+    {
+     "id": "9005e13e-ef2b-4901-9035-c940eef23623",
+     "nome": "Samuel Cardoso",
+     "frequencia": 91,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.6,
+      "Português": 8,
+      "História": 8,
+      "Geografia": 7,
+      "Ciências": 6
+     }
+    },
+    {
+     "id": "6bc5fa53-e93b-43f1-828e-18a11c9485cd",
+     "nome": "Sofia Dias",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.8,
+      "Português": 7,
+      "História": 9,
+      "Geografia": 8,
+      "Ciências": 5
+     }
+    },
+    {
+     "id": "6cdf4b81-73e4-483e-9bd3-ff41f2e0c43d",
+     "nome": "Theo Teixeira",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.1,
+      "Português": 9,
+      "História": 6,
+      "Geografia": 7,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "03c31df8-9e7a-45fc-a22c-e981baa647cd",
+     "nome": "Valentina Gomes",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.9,
+      "Português": 8,
+      "História": 9,
+      "Geografia": 8,
+      "Ciências": 6
+     }
+    },
+    {
+     "id": "3362396f-e7e4-440c-a0b1-8b6ebea8fd2c",
+     "nome": "Vitor Almeida",
+     "frequencia": 88,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.4,
+      "Português": 10,
+      "História": 10,
+      "Geografia": 5,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "a2453050-6358-4477-8d02-18b07a46a4a9",
+     "nome": "Yasmin Lima",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.5,
+      "Português": 7,
+      "História": 7,
+      "Geografia": 9,
+      "Ciências": 5
+     }
+    }
+   ]
+  },
+  "/gestao/turmas/f0be6f7a-e6c8-47c9-ab55-21a642601a60": {
+   "turma": {
+    "id": "f0be6f7a-e6c8-47c9-ab55-21a642601a60",
+    "nome": "6º ano B",
+    "serie": "6º ano",
+    "turno": "MANHA"
+   },
+   "materias": [
+    "Matemática",
+    "Português",
+    "História",
+    "Geografia",
+    "Ciências"
+   ],
+   "alunos": [
+    {
+     "id": "91cba331-c989-446c-a053-8b24b51a1379",
+     "nome": "Ana Cardoso",
+     "frequencia": 100,
+     "alertas": 1,
+     "notas": {
+      "Matemática": 6.6,
+      "Português": 9,
+      "História": 6,
+      "Geografia": 5,
+      "Ciências": 5
+     }
+    },
+    {
+     "id": "3f877cec-ec11-4877-9af3-d122b52421c3",
+     "nome": "Bruno Oliveira",
+     "frequencia": 94,
+     "alertas": 1,
+     "notas": {
+      "Matemática": 6.3,
+      "Português": 8,
+      "História": 7,
+      "Geografia": 9,
+      "Ciências": 5
+     }
+    },
+    {
+     "id": "9d92e3d9-bfe9-4883-ba26-4b224cf8e5e9",
+     "nome": "Clara Nogueira",
+     "frequencia": 69,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.4,
+      "Português": 9,
+      "História": 7,
+      "Geografia": 6,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "9cf9d86c-fdc0-4188-9220-427dd62bb5ba",
+     "nome": "Davi Barbosa",
+     "frequencia": 88,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.6,
+      "Português": 7,
+      "História": 9,
+      "Geografia": 8,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "4195f253-519b-4693-a598-a608118e1db7",
+     "nome": "Elisa Gomes",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.2,
+      "Português": 10,
+      "História": 8,
+      "Geografia": 8,
+      "Ciências": 6
+     }
+    },
+    {
+     "id": "5b387780-ce54-414c-a551-d80a13f63fc5",
+     "nome": "Felipe Barbosa",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.1,
+      "Português": 6,
+      "História": 7,
+      "Geografia": 6,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "fa8138bf-b698-4bc7-a6cb-e349cb394fc4",
+     "nome": "Gabriela Almeida",
+     "frequencia": 69,
+     "alertas": 1,
+     "notas": {
+      "Matemática": 7.2,
+      "Português": 9,
+      "História": 8,
+      "Geografia": 9,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "7d809fba-82e6-42cb-8104-15c1cb0f2786",
+     "nome": "Heitor Esteves",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.1,
+      "Português": 8,
+      "História": 6,
+      "Geografia": 5,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "7f2a03cb-e69c-45da-b42c-aa30cb17cf9a",
+     "nome": "Isabela Almeida",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.2,
+      "Português": 10,
+      "História": 7,
+      "Geografia": 6,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "fffc76ae-b135-426a-83a0-223d35bbde6f",
+     "nome": "João Gomes",
+     "frequencia": 78,
+     "alertas": 1,
+     "notas": {
+      "Matemática": 6.4,
+      "Português": 8,
+      "História": 7,
+      "Geografia": 7,
+      "Ciências": 6
+     }
+    },
+    {
+     "id": "76324895-0856-4013-b0a9-f87a5d1a977e",
+     "nome": "Laura Pereira",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.7,
+      "Português": 7,
+      "História": 6,
+      "Geografia": 5,
+      "Ciências": 5
+     }
+    },
+    {
+     "id": "c460ecd0-7f68-42f9-b5d9-8a53a87e6a43",
+     "nome": "Lucas Barbosa",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.2,
+      "Português": 9,
+      "História": 9,
+      "Geografia": 7,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "6fde9edf-5ff2-4f94-bd5d-60ca88de49ab",
+     "nome": "Manuela Martins",
+     "frequencia": 100,
+     "alertas": 1,
+     "notas": {
+      "Matemática": 5.6,
+      "Português": 7,
+      "História": 9,
+      "Geografia": 5,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "cf11cf0e-342f-418f-bad5-860548bb2d21",
+     "nome": "Miguel Barbosa",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.5,
+      "Português": 7,
+      "História": 9,
+      "Geografia": 8,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "f27d69c1-2fe6-4476-9664-21cbef6ea655",
+     "nome": "Nina Teixeira",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.3,
+      "Português": 8,
+      "História": 5,
+      "Geografia": 8,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "0ed59855-a2b3-44ee-9375-f8717bc75c18",
+     "nome": "Otávio Queiroz",
+     "frequencia": 84,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.8,
+      "Português": 7,
+      "História": 8,
+      "Geografia": 8,
+      "Ciências": 5
+     }
+    },
+    {
+     "id": "ea330a99-766e-4544-b1b3-bf0bad73ce4b",
+     "nome": "Pedro Dias",
+     "frequencia": 91,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6,
+      "Português": 7,
+      "História": 8,
+      "Geografia": 6,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "e8c8e05d-8d19-4817-bb6f-3f8c4779ca44",
+     "nome": "Rafaela Cardoso",
+     "frequencia": 97,
+     "alertas": 1,
+     "notas": {
+      "Matemática": 5.6,
+      "Português": 8,
+      "História": 5,
+      "Geografia": 6,
+      "Ciências": 6
+     }
+    },
+    {
+     "id": "1836976b-af88-4625-8f0e-fbb0cf9a545e",
+     "nome": "Samuel Teixeira",
+     "frequencia": 88,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 8.2,
+      "Português": 8,
+      "História": 9,
+      "Geografia": 6,
+      "Ciências": 6
+     }
+    },
+    {
+     "id": "281052a8-6de8-4eb0-8ca8-b2a9c05f523c",
+     "nome": "Sofia Queiroz",
+     "frequencia": 100,
+     "alertas": 1,
+     "notas": {
+      "Matemática": 5.7,
+      "Português": 9,
+      "História": 8,
+      "Geografia": 8,
+      "Ciências": 5
+     }
+    },
+    {
+     "id": "27f0cb7f-02e5-4133-9014-7408d1a6706a",
+     "nome": "Theo Oliveira",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.6,
+      "Português": 6,
+      "História": 8,
+      "Geografia": 7,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "3e2cb6ea-26ee-4f82-974b-f2fb483a123c",
+     "nome": "Valentina Santos",
+     "frequencia": 81,
+     "alertas": 1,
+     "notas": {
+      "Matemática": 6.9,
+      "Português": 8,
+      "História": 7,
+      "Geografia": 7,
+      "Ciências": 6
+     }
+    },
+    {
+     "id": "22076372-ed14-4681-af80-bc78d12e8b3d",
+     "nome": "Vitor Cardoso",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.1,
+      "Português": 10,
+      "História": 8,
+      "Geografia": 5,
+      "Ciências": 5
+     }
+    },
+    {
+     "id": "191b9bd7-e6f9-4221-8498-db1d99576351",
+     "nome": "Yasmin Oliveira",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.6,
+      "Português": 9,
+      "História": 9,
+      "Geografia": 6,
+      "Ciências": 7
+     }
+    }
+   ]
+  },
+  "/gestao/turmas/d8029fdd-bf21-4bd8-ae3b-314e513e3a00": {
+   "turma": {
+    "id": "d8029fdd-bf21-4bd8-ae3b-314e513e3a00",
+    "nome": "6º ano C",
+    "serie": "6º ano",
+    "turno": "TARDE"
+   },
+   "materias": [
+    "Matemática",
+    "Português",
+    "Geografia",
+    "História",
+    "Ciências"
+   ],
+   "alunos": [
+    {
+     "id": "81cc39f8-d5d1-4575-9f43-9aabf91311b8",
+     "nome": "Ana Pereira",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.8,
+      "Português": 5,
+      "Geografia": 8,
+      "História": 8,
+      "Ciências": 10
+     }
+    },
+    {
+     "id": "bf3eb174-dda4-451f-8fa1-661205597eb8",
+     "nome": "Bruno Teixeira",
+     "frequencia": 78,
+     "alertas": 1,
+     "notas": {
+      "Matemática": 7.3,
+      "Português": 7,
+      "Geografia": 8,
+      "História": 6,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "173d11d1-e80d-4107-8a31-9d29b20188a4",
+     "nome": "Clara Oliveira",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.3,
+      "Português": 6,
+      "Geografia": 8,
+      "História": 6,
+      "Ciências": 6
+     }
+    },
+    {
+     "id": "db208877-d438-4208-baa7-38f62a231cf1",
+     "nome": "Davi Cardoso",
+     "frequencia": 84,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.2,
+      "Português": 6,
+      "Geografia": 9,
+      "História": 7,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "214372b0-a5cd-4ac9-bcd8-ae411a3888d9",
+     "nome": "Elisa Ribeiro",
+     "frequencia": 78,
+     "alertas": 1,
+     "notas": {
+      "Matemática": 6.4,
+      "Português": 7,
+      "Geografia": 8,
+      "História": 8,
+      "Ciências": 10
+     }
+    },
+    {
+     "id": "2a2f7d7c-af48-40c8-882b-a5578d5ab365",
+     "nome": "Felipe Queiroz",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 5.6,
+      "Português": 8,
+      "Geografia": 6,
+      "História": 9,
+      "Ciências": 9
+     }
+    },
+    {
+     "id": "de7f753a-aa0f-4054-a1cf-1e8452d3cb6c",
+     "nome": "Gabriela Barbosa",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 5.3,
+      "Português": 8,
+      "Geografia": 6,
+      "História": 6,
+      "Ciências": 9
+     }
+    },
+    {
+     "id": "2f506cf2-673f-4539-860e-c416df9fbda4",
+     "nome": "Heitor Santos",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.4,
+      "Português": 8,
+      "Geografia": 9,
+      "História": 8,
+      "Ciências": 6
+     }
+    },
+    {
+     "id": "ca98b135-b3bd-4ae5-9979-2cf53ba6237d",
+     "nome": "Isabela Santos",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 5.4,
+      "Português": 8,
+      "Geografia": 8,
+      "História": 6,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "71525cc5-2300-416a-b6d2-14158d35234e",
+     "nome": "João Ribeiro",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.7,
+      "Português": 5,
+      "Geografia": 8,
+      "História": 7,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "8736ab99-ad55-4bf5-bab3-146657148d48",
+     "nome": "Laura Esteves",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 5.5,
+      "Português": 7,
+      "Geografia": 7,
+      "História": 9,
+      "Ciências": 9
+     }
+    },
+    {
+     "id": "69a3a065-25dd-4c40-aacc-58fde71b2d09",
+     "nome": "Lucas Cardoso",
+     "frequencia": 81,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.1,
+      "Português": 5,
+      "Geografia": 8,
+      "História": 6,
+      "Ciências": 10
+     }
+    },
+    {
+     "id": "512adedd-4031-4eb5-841e-d69f8acba918",
+     "nome": "Manuela Lima",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7,
+      "Português": 9,
+      "Geografia": 8,
+      "História": 9,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "cb38bc36-8495-474a-bb45-e8cf767ea68e",
+     "nome": "Miguel Lima",
+     "frequencia": 91,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 5.9,
+      "Português": 5,
+      "Geografia": 6,
+      "História": 8,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "b75a0a00-70a1-4072-9a93-504fae5a0a58",
+     "nome": "Nina Barbosa",
+     "frequencia": 88,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 5.7,
+      "Português": 7,
+      "Geografia": 9,
+      "História": 8,
+      "Ciências": 7
+     }
+    },
+    {
+     "id": "cec7fb3f-8f36-4a3c-9c85-8360c5853950",
+     "nome": "Otávio Pereira",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 5.4,
+      "Português": 5,
+      "Geografia": 8,
+      "História": 9,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "e7ad5bf3-bd76-4b25-ad23-d05def288db3",
+     "nome": "Pedro Ribeiro",
+     "frequencia": 97,
+     "alertas": 1,
+     "notas": {
+      "Matemática": 5.1,
+      "Português": 5,
+      "Geografia": 9,
+      "História": 9,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "6a0856f3-e1e0-4fe0-8279-5f0b76b48942",
+     "nome": "Rafaela Teixeira",
+     "frequencia": 78,
+     "alertas": 1,
+     "notas": {
+      "Matemática": 6,
+      "Português": 5,
+      "Geografia": 9,
+      "História": 7,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "72d3484c-9b78-4390-8b49-7761023472c0",
+     "nome": "Samuel Teixeira",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.1,
+      "Português": 9,
+      "Geografia": 6,
+      "História": 6,
+      "Ciências": 8
+     }
+    },
+    {
+     "id": "82673eec-157a-41c1-8d46-fbe3df803de9",
+     "nome": "Sofia Ferreira",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.4,
+      "Português": 7,
+      "Geografia": 6,
+      "História": 8,
+      "Ciências": 10
+     }
+    },
+    {
+     "id": "f5af5539-5433-4395-a1b6-6825a3a8c87c",
+     "nome": "Theo Ribeiro",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.1,
+      "Português": 6,
+      "Geografia": 6,
+      "História": 7,
+      "Ciências": 10
+     }
+    },
+    {
+     "id": "673401d8-da6d-49d5-8819-8814fe58d249",
+     "nome": "Valentina Nogueira",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.3,
+      "Português": 6,
+      "Geografia": 6,
+      "História": 8,
+      "Ciências": 10
+     }
+    },
+    {
+     "id": "39561ede-ecd1-4dc1-ae8a-721aa00b3613",
+     "nome": "Vitor Santos",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6,
+      "Português": 8,
+      "Geografia": 6,
+      "História": 7,
+      "Ciências": 9
+     }
+    },
+    {
+     "id": "a051f02f-96e4-48a1-af4a-b95a024a2303",
+     "nome": "Yasmin Pereira",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 5.3,
+      "Português": 6,
+      "Geografia": 8,
+      "História": 7,
+      "Ciências": 7
+     }
+    }
+   ]
+  },
+  "/gestao/turmas/13e7afea-76a2-4e6d-96ec-67098595aa74": {
+   "turma": {
+    "id": "13e7afea-76a2-4e6d-96ec-67098595aa74",
+    "nome": "6º ano D",
+    "serie": "6º ano",
+    "turno": "TARDE"
+   },
+   "materias": [
+    "Matemática",
+    "Geografia",
+    "História",
+    "Ciências",
+    "Português"
+   ],
+   "alunos": [
+    {
+     "id": "20a49555-e50d-42aa-98a8-a9c988bb1e7c",
+     "nome": "Ana Esteves",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.6,
+      "Geografia": 8,
+      "História": 8,
+      "Ciências": 5,
+      "Português": 7
+     }
+    },
+    {
+     "id": "55b68a35-7a2c-4dbe-8f6e-791aaf4131d7",
+     "nome": "Bruno Santos",
+     "frequencia": 91,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.8,
+      "Geografia": 9,
+      "História": 7,
+      "Ciências": 8,
+      "Português": 7
+     }
+    },
+    {
+     "id": "a91a5558-23cc-4dea-ad15-e9be4bc0115f",
+     "nome": "Clara Lima",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 5.7,
+      "Geografia": 7,
+      "História": 8,
+      "Ciências": 6,
+      "Português": 8
+     }
+    },
+    {
+     "id": "92edf9b0-0977-48e6-a0cf-f6cc0e4f94c7",
+     "nome": "Davi Cardoso",
+     "frequencia": 84,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.7,
+      "Geografia": 9,
+      "História": 7,
+      "Ciências": 8,
+      "Português": 5
+     }
+    },
+    {
+     "id": "15cf382d-b34b-41be-933b-48ac01295bc8",
+     "nome": "Elisa Dias",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.5,
+      "Geografia": 6,
+      "História": 5,
+      "Ciências": 7,
+      "Português": 7
+     }
+    },
+    {
+     "id": "8369fc4e-5ba3-4a3e-b8f0-c66ed067e4a7",
+     "nome": "Felipe Almeida",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7,
+      "Geografia": 9,
+      "História": 5,
+      "Ciências": 5,
+      "Português": 9
+     }
+    },
+    {
+     "id": "fe2d2c2a-64d4-4f21-91a2-b20bb2d4aa45",
+     "nome": "Gabriela Queiroz",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.2,
+      "Geografia": 6,
+      "História": 5,
+      "Ciências": 7,
+      "Português": 7
+     }
+    },
+    {
+     "id": "50473363-11db-4451-ac5e-d4ebd7c0d74d",
+     "nome": "Heitor Oliveira",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.6,
+      "Geografia": 7,
+      "História": 6,
+      "Ciências": 5,
+      "Português": 7
+     }
+    },
+    {
+     "id": "4e46f5dc-786b-4154-a418-5b7eb2b60493",
+     "nome": "Isabela Gomes",
+     "frequencia": 84,
+     "alertas": 1,
+     "notas": {
+      "Matemática": 6.3,
+      "Geografia": 8,
+      "História": 5,
+      "Ciências": 5,
+      "Português": 5
+     }
+    },
+    {
+     "id": "d89143e2-4ebc-4769-97b0-5095b50649f9",
+     "nome": "João Teixeira",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 8.2,
+      "Geografia": 8,
+      "História": 8,
+      "Ciências": 8,
+      "Português": 5
+     }
+    },
+    {
+     "id": "b888bd00-8fcb-4a0a-ae3c-8f6198bb6c91",
+     "nome": "Laura Lima",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 8.1,
+      "Geografia": 6,
+      "História": 8,
+      "Ciências": 8,
+      "Português": 7
+     }
+    },
+    {
+     "id": "10535d3c-eb18-40d8-9968-786011a080ff",
+     "nome": "Lucas Queiroz",
+     "frequencia": 88,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 8.2,
+      "Geografia": 7,
+      "História": 5,
+      "Ciências": 8,
+      "Português": 6
+     }
+    },
+    {
+     "id": "5e78b7c4-267e-4d09-a00d-34c91621006d",
+     "nome": "Manuela Esteves",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.4,
+      "Geografia": 7,
+      "História": 8,
+      "Ciências": 7,
+      "Português": 7
+     }
+    },
+    {
+     "id": "93f18c69-1321-4b24-b2f5-f8590188f0c6",
+     "nome": "Miguel Oliveira",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 5.7,
+      "Geografia": 8,
+      "História": 6,
+      "Ciências": 8,
+      "Português": 7
+     }
+    },
+    {
+     "id": "0d75cc3f-fcf3-4233-a91b-79d72bb62257",
+     "nome": "Nina Esteves",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.9,
+      "Geografia": 8,
+      "História": 7,
+      "Ciências": 7,
+      "Português": 5
+     }
+    },
+    {
+     "id": "118ab6d9-9963-45bd-a915-25719bcc2503",
+     "nome": "Otávio Dias",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.8,
+      "Geografia": 7,
+      "História": 6,
+      "Ciências": 7,
+      "Português": 7
+     }
+    },
+    {
+     "id": "5ab20cdd-df36-4650-bbbb-460ef0942e56",
+     "nome": "Pedro Lima",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.3,
+      "Geografia": 9,
+      "História": 6,
+      "Ciências": 7,
+      "Português": 8
+     }
+    },
+    {
+     "id": "3e68b877-7c70-4efc-88d1-3c24795a878c",
+     "nome": "Rafaela Esteves",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 8.2,
+      "Geografia": 8,
+      "História": 7,
+      "Ciências": 6,
+      "Português": 5
+     }
+    },
+    {
+     "id": "6a510883-c7c4-4d8e-80d9-56c8548103b3",
+     "nome": "Samuel Lima",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.4,
+      "Geografia": 9,
+      "História": 9,
+      "Ciências": 8,
+      "Português": 8
+     }
+    },
+    {
+     "id": "aff854ed-7354-4812-ad8c-48af97bdbf68",
+     "nome": "Sofia Esteves",
+     "frequencia": 91,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 8.4,
+      "Geografia": 6,
+      "História": 5,
+      "Ciências": 8,
+      "Português": 8
+     }
+    },
+    {
+     "id": "96d3a8f0-bc45-4879-ae92-0843592ee9fd",
+     "nome": "Theo Lima",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.3,
+      "Geografia": 7,
+      "História": 8,
+      "Ciências": 7,
+      "Português": 7
+     }
+    },
+    {
+     "id": "95c70e90-468b-4529-8226-837d40afe407",
+     "nome": "Valentina Nogueira",
+     "frequencia": 97,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 7.6,
+      "Geografia": 9,
+      "História": 8,
+      "Ciências": 7,
+      "Português": 7
+     }
+    },
+    {
+     "id": "bacc787d-013f-4dfa-9dcf-4d7f426951e7",
+     "nome": "Vitor Barbosa",
+     "frequencia": 94,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.3,
+      "Geografia": 6,
+      "História": 5,
+      "Ciências": 9,
+      "Português": 6
+     }
+    },
+    {
+     "id": "f6e8096f-ba6d-421a-9e52-49acb0550648",
+     "nome": "Yasmin Cardoso",
+     "frequencia": 100,
+     "alertas": 0,
+     "notas": {
+      "Matemática": 6.2,
+      "Geografia": 8,
+      "História": 5,
+      "Ciências": 9,
+      "Português": 7
+     }
+    }
+   ]
+  },
+  "/admin/resumo": {
+   "escola": {
+    "id": "f5ac0f39-a91e-49aa-a92d-69e065f9c33f",
+    "nome": "Escola de demonstração",
+    "slug": "demo"
+   },
+   "turmas": 4,
+   "alunos": 96,
+   "pessoas": 110,
+   "colunas": [
+    "nome",
+    "email",
+    "data_nascimento",
+    "turma",
+    "serie",
+    "turno",
+    "responsavel_nome",
+    "responsavel_email"
+   ]
+  },
+  "/professor/painel": {
+   "turmas": [
+    {
+     "id": "b0db6174-5c74-4357-a0ec-4db5d12ada83",
+     "turma": "6º ano A",
+     "materia": "Matemática",
+     "alertas": 0
+    },
+    {
+     "id": "c24bbddf-b8a3-4452-b902-a0920dfc6202",
+     "turma": "6º ano B",
+     "materia": "Matemática",
+     "alertas": 7
+    }
+   ],
+   "turma": {
+    "id": "c24bbddf-b8a3-4452-b902-a0920dfc6202",
+    "classId": "f0be6f7a-e6c8-47c9-ab55-21a642601a60",
+    "nome": "6º ano B",
+    "materia": "Matemática"
+   },
+   "resumo": {
+    "skill": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+    "count": 4,
+    "sentence": "4 alunos precisam de reforço em frações",
+    "studentIds": [
+     "91cba331-c989-446c-a053-8b24b51a1379",
+     "3e2cb6ea-26ee-4f82-974b-f2fb483a123c",
+     "281052a8-6de8-4eb0-8ca8-b2a9c05f523c",
+     "e8c8e05d-8d19-4817-bb6f-3f8c4779ca44"
+    ],
+    "habilidade": "frações",
+    "nomes": [
+     "Ana",
+     "Valentina",
+     "Sofia",
+     "Rafaela"
+    ]
+   },
+   "alertas": [
+    {
+     "id": "c410dd15-ceb5-4667-b107-66be87b76230",
+     "aluno": {
+      "id": "fa8138bf-b698-4bc7-a6cb-e349cb394fc4",
+      "nome": "Gabriela Almeida"
+     },
+     "habilidade": {
+      "id": "004717ba-df7c-4e29-8c64-73352f2cf9ca",
+      "codigo": "EF06MA13",
+      "nome": "porcentagem"
+     },
+     "frase": "Gabriela precisa de apoio em porcentagem",
+     "score": 63,
+     "motivos": [
+      {
+       "text": "Acertos em porcentagem caíram 33% nas 3 últimas atividades",
+       "points": 43
+      },
+      {
+       "text": "Frequência de 69% no período",
+       "points": 15
+      },
+      {
+       "text": "1 tarefa não entregue em 14 dias",
+       "points": 5
+      }
+     ],
+     "dominio": 54
+    },
+    {
+     "id": "01d1e142-5ffd-4161-a12c-93e80e50a173",
+     "aluno": {
+      "id": "6fde9edf-5ff2-4f94-bd5d-60ca88de49ab",
+      "nome": "Manuela Martins"
+     },
+     "habilidade": {
+      "id": "004717ba-df7c-4e29-8c64-73352f2cf9ca",
+      "codigo": "EF06MA13",
+      "nome": "porcentagem"
+     },
+     "frase": "Manuela precisa de apoio em porcentagem",
+     "score": 63,
+     "motivos": [
+      {
+       "text": "Acertos em porcentagem caíram 41% nas 3 últimas atividades",
+       "points": 50
+      },
+      {
+       "text": "Domínio atual em porcentagem: 25 de 100",
+       "points": 13
+      }
+     ],
+     "dominio": 25
+    },
+    {
+     "id": "159b0e14-de75-4d5c-97bd-e3db65253e6e",
+     "aluno": {
+      "id": "91cba331-c989-446c-a053-8b24b51a1379",
+      "nome": "Ana Cardoso"
+     },
+     "habilidade": {
+      "id": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+      "codigo": "EF06MA07",
+      "nome": "frações"
+     },
+     "frase": "Ana precisa de apoio em frações",
+     "score": 63,
+     "motivos": [
+      {
+       "text": "Acertos em frações caíram 41% nas 3 últimas atividades",
+       "points": 50
+      },
+      {
+       "text": "Domínio atual em frações: 25 de 100",
+       "points": 13
+      }
+     ],
+     "dominio": 25
+    },
+    {
+     "id": "8f3fa4b6-d97a-4d22-b5e5-e03164c9696f",
+     "aluno": {
+      "id": "3e2cb6ea-26ee-4f82-974b-f2fb483a123c",
+      "nome": "Valentina Santos"
+     },
+     "habilidade": {
+      "id": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+      "codigo": "EF06MA07",
+      "nome": "frações"
+     },
+     "frase": "Valentina precisa de apoio em frações",
+     "score": 63,
+     "motivos": [
+      {
+       "text": "Acertos em frações caíram 38% nas 3 últimas atividades",
+       "points": 49
+      },
+      {
+       "text": "2 tarefas não entregues em 14 dias",
+       "points": 10
+      },
+      {
+       "text": "Frequência de 81% no período",
+       "points": 4
+      }
+     ],
+     "dominio": 50
+    },
+    {
+     "id": "8b175590-1a46-4b00-8959-6973d0c4d06f",
+     "aluno": {
+      "id": "3f877cec-ec11-4877-9af3-d122b52421c3",
+      "nome": "Bruno Oliveira"
+     },
+     "habilidade": {
+      "id": "004717ba-df7c-4e29-8c64-73352f2cf9ca",
+      "codigo": "EF06MA13",
+      "nome": "porcentagem"
+     },
+     "frase": "Bruno precisa de apoio em porcentagem",
+     "score": 62,
+     "motivos": [
+      {
+       "text": "Acertos em porcentagem caíram 52% nas 3 últimas atividades",
+       "points": 50
+      },
+      {
+       "text": "Domínio atual em porcentagem: 27 de 100",
+       "points": 12
+      }
+     ],
+     "dominio": 27
+    },
+    {
+     "id": "17799e7c-1783-49e1-a1d8-e7c43939141c",
+     "aluno": {
+      "id": "281052a8-6de8-4eb0-8ca8-b2a9c05f523c",
+      "nome": "Sofia Queiroz"
+     },
+     "habilidade": {
+      "id": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+      "codigo": "EF06MA07",
+      "nome": "frações"
+     },
+     "frase": "Sofia precisa de apoio em frações",
+     "score": 56,
+     "motivos": [
+      {
+       "text": "Acertos em frações caíram 33% nas 3 últimas atividades",
+       "points": 43
+      },
+      {
+       "text": "Domínio atual em frações: 24 de 100",
+       "points": 13
+      }
+     ],
+     "dominio": 24
+    },
+    {
+     "id": "d91f59df-a1ca-41e8-958b-130219f1f840",
+     "aluno": {
+      "id": "e8c8e05d-8d19-4817-bb6f-3f8c4779ca44",
+      "nome": "Rafaela Cardoso"
+     },
+     "habilidade": {
+      "id": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+      "codigo": "EF06MA07",
+      "nome": "frações"
+     },
+     "frase": "Rafaela precisa de apoio em frações",
+     "score": 56,
+     "motivos": [
+      {
+       "text": "Acertos em frações caíram 33% nas 3 últimas atividades",
+       "points": 43
+      },
+      {
+       "text": "Domínio atual em frações: 24 de 100",
+       "points": 13
+      }
+     ],
+     "dominio": 24
+    }
+   ],
+   "encaminhados": 1,
+   "sugestoes": {
+    "004717ba-df7c-4e29-8c64-73352f2cf9ca": [
+     {
+      "id": "a201b162-0189-4ef0-b658-300122692a9c",
+      "nome": "Luíza Carvalho",
+      "score": 96,
+      "motivos": [
+       "Especialista em porcentagem",
+       "Livre seg 15:00",
+       "12 de 13 alunos fecharam o reforço nessa habilidade"
+      ],
+      "horario": "seg 15:00",
+      "modo": "online"
+     },
+     {
+      "id": "581d5a4d-31e7-4be8-914f-d355858eb637",
+      "nome": "Inês Barros",
+      "score": 93,
+      "motivos": [
+       "Especialista em porcentagem",
+       "Livre qua 14:00",
+       "8 de 10 alunos fecharam o reforço nessa habilidade"
+      ],
+      "horario": "qua 14:00",
+      "modo": "presencial"
+     },
+     {
+      "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+      "nome": "Renato Siqueira",
+      "score": 20,
+      "motivos": [
+       "Livre ter 14:00"
+      ],
+      "horario": "ter 14:00",
+      "modo": "presencial ou online"
+     }
+    ],
+    "3fe652c1-e972-4473-9d4b-f85f27979f60": [
+     {
+      "id": "21430505-0e23-48d1-9bac-4dc1bf1b1872",
+      "nome": "Renato Siqueira",
+      "score": 96,
+      "motivos": [
+       "Especialista em frações",
+       "Livre ter 14:00",
+       "17 de 19 alunos fecharam o reforço nessa habilidade"
+      ],
+      "horario": "ter 14:00",
+      "modo": "presencial ou online"
+     },
+     {
+      "id": "a201b162-0189-4ef0-b658-300122692a9c",
+      "nome": "Luíza Carvalho",
+      "score": 93,
+      "motivos": [
+       "Especialista em frações",
+       "Livre seg 15:00",
+       "11 de 14 alunos fecharam o reforço nessa habilidade"
+      ],
+      "horario": "seg 15:00",
+      "modo": "online"
+     },
+     {
+      "id": "55556051-87f1-42c6-a5a0-c1445c4f9c46",
+      "nome": "Paulo Menezes",
+      "score": 35,
+      "motivos": [
+       "Livre seg 14:00",
+       "3 de 6 alunos fecharam o reforço nessa habilidade"
+      ],
+      "horario": "seg 14:00",
+      "modo": "presencial"
+     }
+    ]
+   },
+   "mapa": {
+    "habilidades": [
+     {
+      "id": "34aad10c-71c1-44be-a10e-d46e29b56c62",
+      "codigo": "EF06MA03",
+      "nome": "problemas com naturais"
+     },
+     {
+      "id": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+      "codigo": "EF06MA07",
+      "nome": "frações"
+     },
+     {
+      "id": "569963cd-cd5e-40a4-bbd2-e83ee24b6a89",
+      "codigo": "EF06MA08",
+      "nome": "decimais"
+     },
+     {
+      "id": "004717ba-df7c-4e29-8c64-73352f2cf9ca",
+      "codigo": "EF06MA13",
+      "nome": "porcentagem"
+     },
+     {
+      "id": "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6",
+      "codigo": "EF06MA19",
+      "nome": "triângulos"
+     },
+     {
+      "id": "f09accf5-eed4-4cb6-b61d-0cf164602795",
+      "codigo": "EF06MA24",
+      "nome": "medidas"
+     }
+    ],
+    "alunos": [
+     {
+      "id": "91cba331-c989-446c-a053-8b24b51a1379",
+      "nome": "Ana Cardoso"
+     },
+     {
+      "id": "3f877cec-ec11-4877-9af3-d122b52421c3",
+      "nome": "Bruno Oliveira"
+     },
+     {
+      "id": "9d92e3d9-bfe9-4883-ba26-4b224cf8e5e9",
+      "nome": "Clara Nogueira"
+     },
+     {
+      "id": "9cf9d86c-fdc0-4188-9220-427dd62bb5ba",
+      "nome": "Davi Barbosa"
+     },
+     {
+      "id": "4195f253-519b-4693-a598-a608118e1db7",
+      "nome": "Elisa Gomes"
+     },
+     {
+      "id": "5b387780-ce54-414c-a551-d80a13f63fc5",
+      "nome": "Felipe Barbosa"
+     },
+     {
+      "id": "fa8138bf-b698-4bc7-a6cb-e349cb394fc4",
+      "nome": "Gabriela Almeida"
+     },
+     {
+      "id": "7d809fba-82e6-42cb-8104-15c1cb0f2786",
+      "nome": "Heitor Esteves"
+     },
+     {
+      "id": "7f2a03cb-e69c-45da-b42c-aa30cb17cf9a",
+      "nome": "Isabela Almeida"
+     },
+     {
+      "id": "fffc76ae-b135-426a-83a0-223d35bbde6f",
+      "nome": "João Gomes"
+     },
+     {
+      "id": "76324895-0856-4013-b0a9-f87a5d1a977e",
+      "nome": "Laura Pereira"
+     },
+     {
+      "id": "c460ecd0-7f68-42f9-b5d9-8a53a87e6a43",
+      "nome": "Lucas Barbosa"
+     },
+     {
+      "id": "6fde9edf-5ff2-4f94-bd5d-60ca88de49ab",
+      "nome": "Manuela Martins"
+     },
+     {
+      "id": "cf11cf0e-342f-418f-bad5-860548bb2d21",
+      "nome": "Miguel Barbosa"
+     },
+     {
+      "id": "f27d69c1-2fe6-4476-9664-21cbef6ea655",
+      "nome": "Nina Teixeira"
+     },
+     {
+      "id": "0ed59855-a2b3-44ee-9375-f8717bc75c18",
+      "nome": "Otávio Queiroz"
+     },
+     {
+      "id": "ea330a99-766e-4544-b1b3-bf0bad73ce4b",
+      "nome": "Pedro Dias"
+     },
+     {
+      "id": "e8c8e05d-8d19-4817-bb6f-3f8c4779ca44",
+      "nome": "Rafaela Cardoso"
+     },
+     {
+      "id": "1836976b-af88-4625-8f0e-fbb0cf9a545e",
+      "nome": "Samuel Teixeira"
+     },
+     {
+      "id": "281052a8-6de8-4eb0-8ca8-b2a9c05f523c",
+      "nome": "Sofia Queiroz"
+     },
+     {
+      "id": "27f0cb7f-02e5-4133-9014-7408d1a6706a",
+      "nome": "Theo Oliveira"
+     },
+     {
+      "id": "3e2cb6ea-26ee-4f82-974b-f2fb483a123c",
+      "nome": "Valentina Santos"
+     },
+     {
+      "id": "22076372-ed14-4681-af80-bc78d12e8b3d",
+      "nome": "Vitor Cardoso"
+     },
+     {
+      "id": "191b9bd7-e6f9-4221-8498-db1d99576351",
+      "nome": "Yasmin Oliveira"
+     }
+    ],
+    "dominio": {
+     "91cba331-c989-446c-a053-8b24b51a1379": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 85,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 77,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 25,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 61,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 88,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 58
+     },
+     "3f877cec-ec11-4877-9af3-d122b52421c3": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 27,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 59,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 87,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 91,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 80,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 42
+     },
+     "9d92e3d9-bfe9-4883-ba26-4b224cf8e5e9": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 53,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 71,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 66,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 74,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 75,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 80
+     },
+     "9cf9d86c-fdc0-4188-9220-427dd62bb5ba": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 72,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 50,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 88,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 66,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 76,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 68
+     },
+     "4195f253-519b-4693-a598-a608118e1db7": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 77,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 73,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 72,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 76,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 80,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 60
+     },
+     "5b387780-ce54-414c-a551-d80a13f63fc5": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 56,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 73,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 60,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 45,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 50,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 60
+     },
+     "fa8138bf-b698-4bc7-a6cb-e349cb394fc4": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 54,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 77,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 84,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 70,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 62,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 80
+     },
+     "7d809fba-82e6-42cb-8104-15c1cb0f2786": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 88,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 52,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 61,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 76,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 80,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 80
+     },
+     "7f2a03cb-e69c-45da-b42c-aa30cb17cf9a": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 76,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 76,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 85,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 63,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 60,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 80
+     },
+     "fffc76ae-b135-426a-83a0-223d35bbde6f": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 76,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 69,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 39,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 74,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 60,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 80
+     },
+     "76324895-0856-4013-b0a9-f87a5d1a977e": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 88,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 55,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 46,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 86,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 75,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 56
+     },
+     "c460ecd0-7f68-42f9-b5d9-8a53a87e6a43": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 76,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 84,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 60,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 76,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 75,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 60
+     },
+     "6fde9edf-5ff2-4f94-bd5d-60ca88de49ab": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 25,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 50,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 50,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 88,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 46,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 80
+     },
+     "cf11cf0e-342f-418f-bad5-860548bb2d21": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 84,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 64,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 52,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 63,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 57,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 80
+     },
+     "f27d69c1-2fe6-4476-9664-21cbef6ea655": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 86,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 37,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 88,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 72,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 76,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 60
+     },
+     "0ed59855-a2b3-44ee-9375-f8717bc75c18": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 56,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 75,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 66,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 60,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 70,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 80
+     },
+     "ea330a99-766e-4544-b1b3-bf0bad73ce4b": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 82,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 45,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 68,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 75,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 60,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 80
+     },
+     "e8c8e05d-8d19-4817-bb6f-3f8c4779ca44": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 80,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 59,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 24,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 85,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 55,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 60
+     },
+     "1836976b-af88-4625-8f0e-fbb0cf9a545e": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 87,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 91,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 60,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 75,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 83,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 80
+     },
+     "281052a8-6de8-4eb0-8ca8-b2a9c05f523c": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 79,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 50,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 24,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 96,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 48,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 68
+     },
+     "27f0cb7f-02e5-4133-9014-7408d1a6706a": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 78,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 81,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 52,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 80,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 60,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 82
+     },
+     "3e2cb6ea-26ee-4f82-974b-f2fb483a123c": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 56,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 80,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 50,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 90,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 66,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 80
+     },
+     "22076372-ed14-4681-af80-bc78d12e8b3d": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 50,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 80,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 78,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 75,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 57,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 68
+     },
+     "191b9bd7-e6f9-4221-8498-db1d99576351": {
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": 88,
+      "34aad10c-71c1-44be-a10e-d46e29b56c62": 79,
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": 59,
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": 68,
+      "f09accf5-eed4-4cb6-b61d-0cf164602795": 80,
+      "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6": 88
+     }
+    }
+   },
+   "prova": {
+    "id": "976eeb19-41b0-4a44-8336-906d7d5487d4",
+    "titulo": "Avaliação do 4º bimestre — Frações, decimais e porcentagem",
+    "media": 6.8,
+    "questoesComAtencao": 3
+   },
+   "mensagensNaoLidas": 0
+  },
+  "/professor/atribuicoes": {
+   "atribuicoes": [
+    {
+     "id": "b0db6174-5c74-4357-a0ec-4db5d12ada83",
+     "turma": "6º ano A",
+     "materia": "Matemática",
+     "habilidades": [
+      {
+       "id": "34aad10c-71c1-44be-a10e-d46e29b56c62",
+       "codigo": "EF06MA03",
+       "nome": "problemas com naturais",
+       "descricao": "Resolver e elaborar problemas que envolvam cálculos com números naturais."
+      },
+      {
+       "id": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+       "codigo": "EF06MA07",
+       "nome": "frações",
+       "descricao": "Compreender, comparar e ordenar frações associadas às ideias de partes de inteiros."
+      },
+      {
+       "id": "569963cd-cd5e-40a4-bbd2-e83ee24b6a89",
+       "codigo": "EF06MA08",
+       "nome": "decimais",
+       "descricao": "Reconhecer que os números racionais positivos podem ser expressos nas formas fracionária e decimal."
+      },
+      {
+       "id": "004717ba-df7c-4e29-8c64-73352f2cf9ca",
+       "codigo": "EF06MA13",
+       "nome": "porcentagem",
+       "descricao": "Resolver e elaborar problemas que envolvam porcentagens."
+      },
+      {
+       "id": "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6",
+       "codigo": "EF06MA19",
+       "nome": "triângulos",
+       "descricao": "Identificar características dos triângulos e classificá-los."
+      },
+      {
+       "id": "f09accf5-eed4-4cb6-b61d-0cf164602795",
+       "codigo": "EF06MA24",
+       "nome": "medidas",
+       "descricao": "Resolver e elaborar problemas que envolvam grandezas como comprimento, massa e capacidade."
+      }
+     ]
+    },
+    {
+     "id": "c24bbddf-b8a3-4452-b902-a0920dfc6202",
+     "turma": "6º ano B",
+     "materia": "Matemática",
+     "habilidades": [
+      {
+       "id": "34aad10c-71c1-44be-a10e-d46e29b56c62",
+       "codigo": "EF06MA03",
+       "nome": "problemas com naturais",
+       "descricao": "Resolver e elaborar problemas que envolvam cálculos com números naturais."
+      },
+      {
+       "id": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+       "codigo": "EF06MA07",
+       "nome": "frações",
+       "descricao": "Compreender, comparar e ordenar frações associadas às ideias de partes de inteiros."
+      },
+      {
+       "id": "569963cd-cd5e-40a4-bbd2-e83ee24b6a89",
+       "codigo": "EF06MA08",
+       "nome": "decimais",
+       "descricao": "Reconhecer que os números racionais positivos podem ser expressos nas formas fracionária e decimal."
+      },
+      {
+       "id": "004717ba-df7c-4e29-8c64-73352f2cf9ca",
+       "codigo": "EF06MA13",
+       "nome": "porcentagem",
+       "descricao": "Resolver e elaborar problemas que envolvam porcentagens."
+      },
+      {
+       "id": "fc266e99-1c6a-47e1-b5fc-6196eeff5fd6",
+       "codigo": "EF06MA19",
+       "nome": "triângulos",
+       "descricao": "Identificar características dos triângulos e classificá-los."
+      },
+      {
+       "id": "f09accf5-eed4-4cb6-b61d-0cf164602795",
+       "codigo": "EF06MA24",
+       "nome": "medidas",
+       "descricao": "Resolver e elaborar problemas que envolvam grandezas como comprimento, massa e capacidade."
+      }
+     ]
+    }
+   ],
+   "provas": [
+    {
+     "id": "976eeb19-41b0-4a44-8336-906d7d5487d4",
+     "titulo": "Avaliação do 4º bimestre — Frações, decimais e porcentagem",
+     "data": "2026-11-06T00:00:00.000Z",
+     "tipo": "PROVA",
+     "turma": "6º ano B"
+    }
+   ]
+  },
+  "/provas/976eeb19-41b0-4a44-8336-906d7d5487d4/relatorio": {
+   "prova": {
+    "id": "976eeb19-41b0-4a44-8336-906d7d5487d4",
+    "titulo": "Avaliação do 4º bimestre — Frações, decimais e porcentagem",
+    "data": "2026-11-06",
+    "turma": "6º ano B",
+    "materia": "Matemática"
+   },
+   "questoes": [
+    {
+     "id": "b480af09-9180-4528-8437-8a7ff95d83ce",
+     "number": 1,
+     "statement": "Qual fração representa a parte pintada de uma pizza dividida em 8 pedaços, com 3 pintados?",
+     "options": [
+      "3/8",
+      "8/3",
+      "3/5",
+      "5/8"
+     ],
+     "correct": 0,
+     "skill": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+     "distractors": {
+      "1": "inverte numerador e denominador",
+      "3": "conta a parte não pintada"
+     },
+     "stats": {
+      "questionId": "b480af09-9180-4528-8437-8a7ff95d83ce",
+      "number": 1,
+      "skill": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+      "pctCorrect": 0.88,
+      "discrimination": 0.5,
+      "optionCounts": [
+       21,
+       1,
+       0,
+       2
+      ],
+      "blank": 0,
+      "topDistractor": {
+       "option": 3,
+       "count": 2,
+       "meaning": "conta a parte não pintada"
+      },
+      "flags": []
+     }
+    },
+    {
+     "id": "9c04407e-4546-45af-97b5-c34127b08474",
+     "number": 2,
+     "statement": "Qual é maior: 2/3 ou 3/5?",
+     "options": [
+      "3/5",
+      "2/3",
+      "São iguais",
+      "Não dá para comparar"
+     ],
+     "correct": 1,
+     "skill": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+     "distractors": {
+      "0": "compara só os numeradores"
+     },
+     "stats": {
+      "questionId": "9c04407e-4546-45af-97b5-c34127b08474",
+      "number": 2,
+      "skill": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+      "pctCorrect": 0.58,
+      "discrimination": 0.83,
+      "optionCounts": [
+       7,
+       14,
+       0,
+       1
+      ],
+      "blank": 2,
+      "topDistractor": {
+       "option": 0,
+       "count": 7,
+       "meaning": "compara só os numeradores"
+      },
+      "flags": []
+     }
+    },
+    {
+     "id": "f413c67c-d25b-4ee5-b60c-a6a9e9fa6ede",
+     "number": 3,
+     "statement": "Como se escreve 3/4 na forma decimal?",
+     "options": [
+      "0,34",
+      "0,75",
+      "3,4",
+      "0,43"
+     ],
+     "correct": 1,
+     "skill": "569963cd-cd5e-40a4-bbd2-e83ee24b6a89",
+     "distractors": {
+      "0": "junta numerador e denominador como dígitos"
+     },
+     "stats": {
+      "questionId": "f413c67c-d25b-4ee5-b60c-a6a9e9fa6ede",
+      "number": 3,
+      "skill": "569963cd-cd5e-40a4-bbd2-e83ee24b6a89",
+      "pctCorrect": 0.96,
+      "discrimination": 0.17,
+      "optionCounts": [
+       1,
+       23,
+       0,
+       0
+      ],
+      "blank": 0,
+      "topDistractor": {
+       "option": 0,
+       "count": 1,
+       "meaning": "junta numerador e denominador como dígitos"
+      },
+      "flags": []
+     }
+    },
+    {
+     "id": "1179c9e7-2e2b-4bad-aab8-96a1c9458148",
+     "number": 4,
+     "statement": "Quanto é 1/2 + 1/4?",
+     "options": [
+      "2/6",
+      "1/6",
+      "3/4",
+      "2/4"
+     ],
+     "correct": 2,
+     "skill": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+     "distractors": {
+      "0": "soma numeradores e denominadores"
+     },
+     "stats": {
+      "questionId": "1179c9e7-2e2b-4bad-aab8-96a1c9458148",
+      "number": 4,
+      "skill": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+      "pctCorrect": 0.46,
+      "discrimination": 1,
+      "optionCounts": [
+       10,
+       2,
+       11,
+       0
+      ],
+      "blank": 1,
+      "topDistractor": {
+       "option": 0,
+       "count": 10,
+       "meaning": "soma numeradores e denominadores"
+      },
+      "flags": []
+     }
+    },
+    {
+     "id": "dbc12b06-828c-45fe-bae5-677fed9f356f",
+     "number": 5,
+     "statement": "Quanto é 25% de 80?",
+     "options": [
+      "25",
+      "20",
+      "40",
+      "55"
+     ],
+     "correct": 1,
+     "skill": "004717ba-df7c-4e29-8c64-73352f2cf9ca",
+     "distractors": {
+      "0": "confunde a porcentagem com o resultado"
+     },
+     "stats": {
+      "questionId": "dbc12b06-828c-45fe-bae5-677fed9f356f",
+      "number": 5,
+      "skill": "004717ba-df7c-4e29-8c64-73352f2cf9ca",
+      "pctCorrect": 0.92,
+      "discrimination": 0,
+      "optionCounts": [
+       2,
+       22,
+       0,
+       0
+      ],
+      "blank": 0,
+      "topDistractor": {
+       "option": 0,
+       "count": 2,
+       "meaning": "confunde a porcentagem com o resultado"
+      },
+      "flags": []
+     }
+    },
+    {
+     "id": "dcdabe40-d4c1-4047-99ff-e19fa99fe83d",
+     "number": 6,
+     "statement": "Ordene: 0,5 — 0,45 — 0,405",
+     "options": [
+      "0,405 < 0,45 < 0,5",
+      "0,5 < 0,45 < 0,405",
+      "0,405 ≤ 0,45 ≤ 0,5",
+      "0,405 < 0,5 < 0,45"
+     ],
+     "correct": 0,
+     "skill": "569963cd-cd5e-40a4-bbd2-e83ee24b6a89",
+     "distractors": {
+      "1": "acha que mais casas decimais é maior",
+      "2": "enunciado ambíguo: aceita igualdade"
+     },
+     "stats": {
+      "questionId": "dcdabe40-d4c1-4047-99ff-e19fa99fe83d",
+      "number": 6,
+      "skill": "569963cd-cd5e-40a4-bbd2-e83ee24b6a89",
+      "pctCorrect": 0.42,
+      "discrimination": -0.67,
+      "optionCounts": [
+       10,
+       0,
+       14,
+       0
+      ],
+      "blank": 0,
+      "topDistractor": {
+       "option": 2,
+       "count": 14,
+       "meaning": "enunciado ambíguo: aceita igualdade"
+      },
+      "flags": [
+       "nao-discrimina"
+      ]
+     }
+    },
+    {
+     "id": "7fa57ccc-66a4-4656-8502-494ba8e85b9a",
+     "number": 7,
+     "statement": "Uma camisa de R$ 60 tem desconto de 10%. Qual o novo preço?",
+     "options": [
+      "R$ 50",
+      "R$ 54",
+      "R$ 6",
+      "R$ 66"
+     ],
+     "correct": 1,
+     "skill": "004717ba-df7c-4e29-8c64-73352f2cf9ca",
+     "distractors": {
+      "2": "calcula o desconto e não subtrai",
+      "3": "soma em vez de subtrair"
+     },
+     "stats": {
+      "questionId": "7fa57ccc-66a4-4656-8502-494ba8e85b9a",
+      "number": 7,
+      "skill": "004717ba-df7c-4e29-8c64-73352f2cf9ca",
+      "pctCorrect": 0.67,
+      "discrimination": 0.17,
+      "optionCounts": [
+       1,
+       16,
+       2,
+       5
+      ],
+      "blank": 0,
+      "topDistractor": {
+       "option": 3,
+       "count": 5,
+       "meaning": "soma em vez de subtrair"
+      },
+      "flags": [
+       "nao-discrimina"
+      ]
+     }
+    },
+    {
+     "id": "9d51cd6f-1411-45aa-b22f-a488e39692d2",
+     "number": 8,
+     "statement": "Qual fração é equivalente a 2/5?",
+     "options": [
+      "4/10",
+      "2/10",
+      "4/5",
+      "5/2"
+     ],
+     "correct": 0,
+     "skill": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+     "distractors": {
+      "1": "multiplica só o denominador"
+     },
+     "stats": {
+      "questionId": "9d51cd6f-1411-45aa-b22f-a488e39692d2",
+      "number": 8,
+      "skill": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+      "pctCorrect": 0.79,
+      "discrimination": 0.5,
+      "optionCounts": [
+       19,
+       3,
+       0,
+       0
+      ],
+      "blank": 2,
+      "topDistractor": {
+       "option": 1,
+       "count": 3,
+       "meaning": "multiplica só o denominador"
+      },
+      "flags": []
+     }
+    },
+    {
+     "id": "06251a55-a498-4626-afa7-760a4664bf04",
+     "number": 9,
+     "statement": "Quanto é 2/3 de 3/4?",
+     "options": [
+      "5/7",
+      "6/7",
+      "1/2",
+      "8/9"
+     ],
+     "correct": 2,
+     "skill": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+     "distractors": {
+      "0": "soma numeradores e denominadores",
+      "1": "multiplica os numeradores e soma os denominadores"
+     },
+     "stats": {
+      "questionId": "06251a55-a498-4626-afa7-760a4664bf04",
+      "number": 9,
+      "skill": "3fe652c1-e972-4473-9d4b-f85f27979f60",
+      "pctCorrect": 0.25,
+      "discrimination": 0.83,
+      "optionCounts": [
+       10,
+       6,
+       6,
+       2
+      ],
+      "blank": 0,
+      "topDistractor": {
+       "option": 0,
+       "count": 10,
+       "meaning": "soma numeradores e denominadores"
+      },
+      "flags": [
+       "todos-erram"
+      ]
+     }
+    },
+    {
+     "id": "13444665-bb86-4df9-bbae-a7d66213e0af",
+     "number": 10,
+     "statement": "Quanto é 1,2 + 0,35?",
+     "options": [
+      "1,55",
+      "1,37",
+      "4,7",
+      "0,47"
+     ],
+     "correct": 0,
+     "skill": "569963cd-cd5e-40a4-bbd2-e83ee24b6a89",
+     "distractors": {
+      "1": "alinha pela direita, não pela vírgula"
+     },
+     "stats": {
+      "questionId": "13444665-bb86-4df9-bbae-a7d66213e0af",
+      "number": 10,
+      "skill": "569963cd-cd5e-40a4-bbd2-e83ee24b6a89",
+      "pctCorrect": 0.92,
+      "discrimination": 0.33,
+      "optionCounts": [
+       22,
+       1,
+       0,
+       0
+      ],
+      "blank": 1,
+      "topDistractor": {
+       "option": 1,
+       "count": 1,
+       "meaning": "alinha pela direita, não pela vírgula"
+      },
+      "flags": []
+     }
+    }
+   ],
+   "alunos": [
+    {
+     "studentId": "91cba331-c989-446c-a053-8b24b51a1379",
+     "correct": 3,
+     "total": 10,
+     "score": 3,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 0,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 1,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "b480af09-9180-4528-8437-8a7ff95d83ce",
+      "9c04407e-4546-45af-97b5-c34127b08474",
+      "1179c9e7-2e2b-4bad-aab8-96a1c9458148",
+      "dcdabe40-d4c1-4047-99ff-e19fa99fe83d",
+      "9d51cd6f-1411-45aa-b22f-a488e39692d2",
+      "06251a55-a498-4626-afa7-760a4664bf04",
+      "13444665-bb86-4df9-bbae-a7d66213e0af"
+     ],
+     "nome": "Ana Cardoso"
+    },
+    {
+     "studentId": "3f877cec-ec11-4877-9af3-d122b52421c3",
+     "correct": 8,
+     "total": 10,
+     "score": 8,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 5,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 3,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 0,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "dbc12b06-828c-45fe-bae5-677fed9f356f",
+      "7fa57ccc-66a4-4656-8502-494ba8e85b9a"
+     ],
+     "nome": "Bruno Oliveira"
+    },
+    {
+     "studentId": "9d92e3d9-bfe9-4883-ba26-4b224cf8e5e9",
+     "correct": 7,
+     "total": 10,
+     "score": 7,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 4,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 2,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 1,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "dcdabe40-d4c1-4047-99ff-e19fa99fe83d",
+      "7fa57ccc-66a4-4656-8502-494ba8e85b9a",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "Clara Nogueira"
+    },
+    {
+     "studentId": "9cf9d86c-fdc0-4188-9220-427dd62bb5ba",
+     "correct": 9,
+     "total": 10,
+     "score": 9,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 5,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 2,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "dcdabe40-d4c1-4047-99ff-e19fa99fe83d"
+     ],
+     "nome": "Davi Barbosa"
+    },
+    {
+     "studentId": "4195f253-519b-4693-a598-a608118e1db7",
+     "correct": 8,
+     "total": 10,
+     "score": 8,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 4,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 2,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "dcdabe40-d4c1-4047-99ff-e19fa99fe83d",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "Elisa Gomes"
+    },
+    {
+     "studentId": "5b387780-ce54-414c-a551-d80a13f63fc5",
+     "correct": 5,
+     "total": 10,
+     "score": 5,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 3,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 1,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 1,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "f413c67c-d25b-4ee5-b60c-a6a9e9fa6ede",
+      "1179c9e7-2e2b-4bad-aab8-96a1c9458148",
+      "7fa57ccc-66a4-4656-8502-494ba8e85b9a",
+      "06251a55-a498-4626-afa7-760a4664bf04",
+      "13444665-bb86-4df9-bbae-a7d66213e0af"
+     ],
+     "nome": "Felipe Barbosa"
+    },
+    {
+     "studentId": "fa8138bf-b698-4bc7-a6cb-e349cb394fc4",
+     "correct": 8,
+     "total": 10,
+     "score": 8,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 5,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 2,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 1,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "dcdabe40-d4c1-4047-99ff-e19fa99fe83d",
+      "7fa57ccc-66a4-4656-8502-494ba8e85b9a"
+     ],
+     "nome": "Gabriela Almeida"
+    },
+    {
+     "studentId": "7d809fba-82e6-42cb-8104-15c1cb0f2786",
+     "correct": 7,
+     "total": 10,
+     "score": 7,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 3,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 2,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "9c04407e-4546-45af-97b5-c34127b08474",
+      "dcdabe40-d4c1-4047-99ff-e19fa99fe83d",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "Heitor Esteves"
+    },
+    {
+     "studentId": "7f2a03cb-e69c-45da-b42c-aa30cb17cf9a",
+     "correct": 9,
+     "total": 10,
+     "score": 9,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 5,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 2,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "dcdabe40-d4c1-4047-99ff-e19fa99fe83d"
+     ],
+     "nome": "Isabela Almeida"
+    },
+    {
+     "studentId": "fffc76ae-b135-426a-83a0-223d35bbde6f",
+     "correct": 6,
+     "total": 10,
+     "score": 6,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 1,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 3,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "9c04407e-4546-45af-97b5-c34127b08474",
+      "1179c9e7-2e2b-4bad-aab8-96a1c9458148",
+      "9d51cd6f-1411-45aa-b22f-a488e39692d2",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "João Gomes"
+    },
+    {
+     "studentId": "76324895-0856-4013-b0a9-f87a5d1a977e",
+     "correct": 7,
+     "total": 10,
+     "score": 7,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 2,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 3,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "9c04407e-4546-45af-97b5-c34127b08474",
+      "1179c9e7-2e2b-4bad-aab8-96a1c9458148",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "Laura Pereira"
+    },
+    {
+     "studentId": "c460ecd0-7f68-42f9-b5d9-8a53a87e6a43",
+     "correct": 8,
+     "total": 10,
+     "score": 8,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 3,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 3,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "1179c9e7-2e2b-4bad-aab8-96a1c9458148",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "Lucas Barbosa"
+    },
+    {
+     "studentId": "6fde9edf-5ff2-4f94-bd5d-60ca88de49ab",
+     "correct": 5,
+     "total": 10,
+     "score": 5,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 2,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 3,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 0,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "9c04407e-4546-45af-97b5-c34127b08474",
+      "1179c9e7-2e2b-4bad-aab8-96a1c9458148",
+      "dbc12b06-828c-45fe-bae5-677fed9f356f",
+      "7fa57ccc-66a4-4656-8502-494ba8e85b9a",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "Manuela Martins"
+    },
+    {
+     "studentId": "cf11cf0e-342f-418f-bad5-860548bb2d21",
+     "correct": 6,
+     "total": 10,
+     "score": 6,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 2,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 2,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "1179c9e7-2e2b-4bad-aab8-96a1c9458148",
+      "dcdabe40-d4c1-4047-99ff-e19fa99fe83d",
+      "9d51cd6f-1411-45aa-b22f-a488e39692d2",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "Miguel Barbosa"
+    },
+    {
+     "studentId": "f27d69c1-2fe6-4476-9664-21cbef6ea655",
+     "correct": 9,
+     "total": 10,
+     "score": 9,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 5,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 2,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "dcdabe40-d4c1-4047-99ff-e19fa99fe83d"
+     ],
+     "nome": "Nina Teixeira"
+    },
+    {
+     "studentId": "0ed59855-a2b3-44ee-9375-f8717bc75c18",
+     "correct": 7,
+     "total": 10,
+     "score": 7,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 4,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 2,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 1,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "dcdabe40-d4c1-4047-99ff-e19fa99fe83d",
+      "7fa57ccc-66a4-4656-8502-494ba8e85b9a",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "Otávio Queiroz"
+    },
+    {
+     "studentId": "ea330a99-766e-4544-b1b3-bf0bad73ce4b",
+     "correct": 8,
+     "total": 10,
+     "score": 8,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 4,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 2,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "dcdabe40-d4c1-4047-99ff-e19fa99fe83d",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "Pedro Dias"
+    },
+    {
+     "studentId": "e8c8e05d-8d19-4817-bb6f-3f8c4779ca44",
+     "correct": 5,
+     "total": 10,
+     "score": 5,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 0,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 3,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "b480af09-9180-4528-8437-8a7ff95d83ce",
+      "9c04407e-4546-45af-97b5-c34127b08474",
+      "1179c9e7-2e2b-4bad-aab8-96a1c9458148",
+      "9d51cd6f-1411-45aa-b22f-a488e39692d2",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "Rafaela Cardoso"
+    },
+    {
+     "studentId": "1836976b-af88-4625-8f0e-fbb0cf9a545e",
+     "correct": 7,
+     "total": 10,
+     "score": 7,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 3,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 2,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "1179c9e7-2e2b-4bad-aab8-96a1c9458148",
+      "dcdabe40-d4c1-4047-99ff-e19fa99fe83d",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "Samuel Teixeira"
+    },
+    {
+     "studentId": "281052a8-6de8-4eb0-8ca8-b2a9c05f523c",
+     "correct": 5,
+     "total": 10,
+     "score": 5,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 0,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 3,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "b480af09-9180-4528-8437-8a7ff95d83ce",
+      "9c04407e-4546-45af-97b5-c34127b08474",
+      "1179c9e7-2e2b-4bad-aab8-96a1c9458148",
+      "9d51cd6f-1411-45aa-b22f-a488e39692d2",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "Sofia Queiroz"
+    },
+    {
+     "studentId": "27f0cb7f-02e5-4133-9014-7408d1a6706a",
+     "correct": 7,
+     "total": 10,
+     "score": 7,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 2,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 3,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "9c04407e-4546-45af-97b5-c34127b08474",
+      "1179c9e7-2e2b-4bad-aab8-96a1c9458148",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "Theo Oliveira"
+    },
+    {
+     "studentId": "3e2cb6ea-26ee-4f82-974b-f2fb483a123c",
+     "correct": 6,
+     "total": 10,
+     "score": 6,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 2,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 3,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 1,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "9c04407e-4546-45af-97b5-c34127b08474",
+      "1179c9e7-2e2b-4bad-aab8-96a1c9458148",
+      "7fa57ccc-66a4-4656-8502-494ba8e85b9a",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "Valentina Santos"
+    },
+    {
+     "studentId": "22076372-ed14-4681-af80-bc78d12e8b3d",
+     "correct": 7,
+     "total": 10,
+     "score": 7,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 4,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 2,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 1,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "9c04407e-4546-45af-97b5-c34127b08474",
+      "dcdabe40-d4c1-4047-99ff-e19fa99fe83d",
+      "7fa57ccc-66a4-4656-8502-494ba8e85b9a"
+     ],
+     "nome": "Vitor Cardoso"
+    },
+    {
+     "studentId": "191b9bd7-e6f9-4221-8498-db1d99576351",
+     "correct": 7,
+     "total": 10,
+     "score": 7,
+     "bySkill": {
+      "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+       "correct": 3,
+       "total": 5
+      },
+      "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+       "correct": 2,
+       "total": 3
+      },
+      "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+       "correct": 2,
+       "total": 2
+      }
+     },
+     "wrongQuestionIds": [
+      "1179c9e7-2e2b-4bad-aab8-96a1c9458148",
+      "dcdabe40-d4c1-4047-99ff-e19fa99fe83d",
+      "06251a55-a498-4626-afa7-760a4664bf04"
+     ],
+     "nome": "Yasmin Oliveira"
+    }
+   ],
+   "media": 6.8,
+   "habilidades": {
+    "3fe652c1-e972-4473-9d4b-f85f27979f60": {
+     "codigo": "EF06MA07",
+     "nome": "frações"
+    },
+    "569963cd-cd5e-40a4-bbd2-e83ee24b6a89": {
+     "codigo": "EF06MA08",
+     "nome": "decimais"
+    },
+    "004717ba-df7c-4e29-8c64-73352f2cf9ca": {
+     "codigo": "EF06MA13",
+     "nome": "porcentagem"
+    }
+   }
+  },
+  "/provas/976eeb19-41b0-4a44-8336-906d7d5487d4/lancamento": {
+   "prova": {
+    "id": "976eeb19-41b0-4a44-8336-906d7d5487d4",
+    "titulo": "Avaliação do 4º bimestre — Frações, decimais e porcentagem",
+    "data": "2026-11-06T00:00:00.000Z",
+    "turma": "6º ano B",
+    "materia": "Matemática"
+   },
+   "questoes": [
+    {
+     "numero": 1,
+     "alternativas": 4,
+     "gabarito": 0
+    },
+    {
+     "numero": 2,
+     "alternativas": 4,
+     "gabarito": 1
+    },
+    {
+     "numero": 3,
+     "alternativas": 4,
+     "gabarito": 1
+    },
+    {
+     "numero": 4,
+     "alternativas": 4,
+     "gabarito": 2
+    },
+    {
+     "numero": 5,
+     "alternativas": 4,
+     "gabarito": 1
+    },
+    {
+     "numero": 6,
+     "alternativas": 4,
+     "gabarito": 0
+    },
+    {
+     "numero": 7,
+     "alternativas": 4,
+     "gabarito": 1
+    },
+    {
+     "numero": 8,
+     "alternativas": 4,
+     "gabarito": 0
+    },
+    {
+     "numero": 9,
+     "alternativas": 4,
+     "gabarito": 2
+    },
+    {
+     "numero": 10,
+     "alternativas": 4,
+     "gabarito": 0
+    }
+   ],
+   "alunos": [
+    {
+     "id": "91cba331-c989-446c-a053-8b24b51a1379",
+     "nome": "Ana Cardoso",
+     "respostas": [
+      3,
+      0,
+      1,
+      0,
+      1,
+      2,
+      1,
+      1,
+      3,
+      null
+     ]
+    },
+    {
+     "id": "3f877cec-ec11-4877-9af3-d122b52421c3",
+     "nome": "Bruno Oliveira",
+     "respostas": [
+      0,
+      1,
+      1,
+      2,
+      0,
+      0,
+      3,
+      0,
+      2,
+      0
+     ]
+    },
+    {
+     "id": "9d92e3d9-bfe9-4883-ba26-4b224cf8e5e9",
+     "nome": "Clara Nogueira",
+     "respostas": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      2,
+      0,
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "id": "9cf9d86c-fdc0-4188-9220-427dd62bb5ba",
+     "nome": "Davi Barbosa",
+     "respostas": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      0,
+      2,
+      0
+     ]
+    },
+    {
+     "id": "4195f253-519b-4693-a598-a608118e1db7",
+     "nome": "Elisa Gomes",
+     "respostas": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "id": "5b387780-ce54-414c-a551-d80a13f63fc5",
+     "nome": "Felipe Barbosa",
+     "respostas": [
+      0,
+      1,
+      0,
+      null,
+      1,
+      0,
+      3,
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "id": "fa8138bf-b698-4bc7-a6cb-e349cb394fc4",
+     "nome": "Gabriela Almeida",
+     "respostas": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      2,
+      2,
+      0,
+      2,
+      0
+     ]
+    },
+    {
+     "id": "7d809fba-82e6-42cb-8104-15c1cb0f2786",
+     "nome": "Heitor Esteves",
+     "respostas": [
+      0,
+      null,
+      1,
+      2,
+      1,
+      2,
+      1,
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "id": "7f2a03cb-e69c-45da-b42c-aa30cb17cf9a",
+     "nome": "Isabela Almeida",
+     "respostas": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      0,
+      2,
+      0
+     ]
+    },
+    {
+     "id": "fffc76ae-b135-426a-83a0-223d35bbde6f",
+     "nome": "João Gomes",
+     "respostas": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "id": "76324895-0856-4013-b0a9-f87a5d1a977e",
+     "nome": "Laura Pereira",
+     "respostas": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "id": "c460ecd0-7f68-42f9-b5d9-8a53a87e6a43",
+     "nome": "Lucas Barbosa",
+     "respostas": [
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "id": "6fde9edf-5ff2-4f94-bd5d-60ca88de49ab",
+     "nome": "Manuela Martins",
+     "respostas": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      3,
+      0,
+      3,
+      0
+     ]
+    },
+    {
+     "id": "cf11cf0e-342f-418f-bad5-860548bb2d21",
+     "nome": "Miguel Barbosa",
+     "respostas": [
+      0,
+      1,
+      1,
+      0,
+      1,
+      2,
+      1,
+      null,
+      0,
+      0
+     ]
+    },
+    {
+     "id": "f27d69c1-2fe6-4476-9664-21cbef6ea655",
+     "nome": "Nina Teixeira",
+     "respostas": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      0,
+      2,
+      0
+     ]
+    },
+    {
+     "id": "0ed59855-a2b3-44ee-9375-f8717bc75c18",
+     "nome": "Otávio Queiroz",
+     "respostas": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      2,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "id": "ea330a99-766e-4544-b1b3-bf0bad73ce4b",
+     "nome": "Pedro Dias",
+     "respostas": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "id": "e8c8e05d-8d19-4817-bb6f-3f8c4779ca44",
+     "nome": "Rafaela Cardoso",
+     "respostas": [
+      3,
+      3,
+      1,
+      0,
+      1,
+      0,
+      1,
+      null,
+      0,
+      0
+     ]
+    },
+    {
+     "id": "1836976b-af88-4625-8f0e-fbb0cf9a545e",
+     "nome": "Samuel Teixeira",
+     "respostas": [
+      0,
+      1,
+      1,
+      0,
+      1,
+      2,
+      1,
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "id": "281052a8-6de8-4eb0-8ca8-b2a9c05f523c",
+     "nome": "Sofia Queiroz",
+     "respostas": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "id": "27f0cb7f-02e5-4133-9014-7408d1a6706a",
+     "nome": "Theo Oliveira",
+     "respostas": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "id": "3e2cb6ea-26ee-4f82-974b-f2fb483a123c",
+     "nome": "Valentina Santos",
+     "respostas": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      3,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "id": "22076372-ed14-4681-af80-bc78d12e8b3d",
+     "nome": "Vitor Cardoso",
+     "respostas": [
+      0,
+      null,
+      1,
+      2,
+      1,
+      2,
+      3,
+      0,
+      2,
+      0
+     ]
+    },
+    {
+     "id": "191b9bd7-e6f9-4221-8498-db1d99576351",
+     "nome": "Yasmin Oliveira",
+     "respostas": [
+      0,
+      1,
+      1,
+      0,
+      1,
+      2,
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "/familia": {
+   "responsavel": "Helena Gomes",
+   "filhos": [
+    {
+     "id": "fffc76ae-b135-426a-83a0-223d35bbde6f",
+     "nome": "João Gomes",
+     "turma": "6º ano B",
+     "precisaConsentimento": false,
+     "consentimentoEm": "2026-11-11T16:46:22.702Z",
+     "versaoTermo": "v1.0",
+     "frequencia": 0.78125,
+     "alertas": [
+      {
+       "frase": "João precisa de apoio em frações",
+       "habilidade": "frações",
+       "codigo": "EF06MA07",
+       "status": "ENCAMINHADO",
+       "motivos": [
+        {
+         "text": "Acertos em frações caíram 56% nas 3 últimas atividades",
+         "points": 50
+        },
+        {
+         "text": "Frequência de 78% no período",
+         "points": 7
+        },
+        {
+         "text": "Domínio atual em frações: 39 de 100",
+         "points": 6
+        },
+        {
+         "text": "1 tarefa não entregue em 14 dias",
+         "points": 5
+        }
+       ]
+      }
+     ],
+     "reforcos": [
+      {
+       "id": "63bb0f6e-6741-498e-979a-8926ba29142d",
+       "status": "AGUARDANDO_RESPONSAVEL",
+       "habilidade": "frações",
+       "tutor": "Renato Siqueira",
+       "horarios": [
+        "ter 14:00",
+        "qui 14:00",
+        "qui 15:00"
+       ],
+       "plano": {
+        "saida": "4 de 5 acertos na mini-avaliação",
+        "minutos": 50,
+        "sessoes": 4
+       },
+       "proximaSessao": null
+      }
+     ],
+     "vaiBemEm": [
+      "leitura",
+      "triângulos"
+     ],
+     "notas": [
+      {
+       "titulo": "Avaliação do 4º bimestre — Frações, decimais e porcentagem",
+       "materia": "Matemática",
+       "data": "2026-11-06T00:00:00.000Z",
+       "nota": 6
+      },
+      {
+       "titulo": "Prova do 4º bimestre",
+       "materia": "Português",
+       "data": "2026-11-05T00:00:00.000Z",
+       "nota": 8
+      },
+      {
+       "titulo": "Prova do 4º bimestre",
+       "materia": "Ciências",
+       "data": "2026-11-05T00:00:00.000Z",
+       "nota": 6
+      }
+     ],
+     "professores": [
+      {
+       "id": "da78d0eb-d0f3-4b67-b5a8-030dbc673507",
+       "nome": "Marta Ribeiro",
+       "materia": "Matemática"
+      },
+      {
+       "id": "15342e54-fcfa-4d2a-9cc1-3684c6ce5211",
+       "nome": "Cecília Prado",
+       "materia": "Português"
+      },
+      {
+       "id": "171e8bad-572a-42ca-80a9-cad581309c9e",
+       "nome": "André Nunes",
+       "materia": "Ciências"
+      },
+      {
+       "id": "eb48a847-ad02-46d7-ab3b-e6114d329578",
+       "nome": "Rita Moraes",
+       "materia": "História"
+      },
+      {
+       "id": "24acf069-b618-41ed-beef-690b01653473",
+       "nome": "Caio Freitas",
+       "materia": "Geografia"
+      }
+     ]
+    }
+   ]
+  },
+  "/mensagens": [
+   {
+    "id": "a4c1c267-3832-4319-91c0-e09389b9ff83",
+    "de": {
+     "id": "dea8d0f1-e65e-4dd2-bd93-7702d52c8e60",
+     "nome": "Helena Gomes"
+    },
+    "para": {
+     "id": "da78d0eb-d0f3-4b67-b5a8-030dbc673507",
+     "nome": "Marta Ribeiro"
+    },
+    "aluno": {
+     "id": "fffc76ae-b135-426a-83a0-223d35bbde6f",
+     "nome": "João Gomes"
+    },
+    "texto": "Professora, o João pode fazer o reforço na terça?",
+    "recebida": true,
+    "lidaEm": null,
+    "em": "2026-11-11T16:46:23.038Z"
+   }
+  ],
+  "/reforco/fila": {
+   "horarios": [
+    "ter 14:00",
+    "qui 14:00",
+    "qui 15:00"
+   ],
+   "itens": [
+    {
+     "id": "c048dcc8-6c53-41f9-8567-81c3981b06ff",
+     "status": "EM_ANDAMENTO",
+     "aluno": {
+      "id": "5360e1fc-9287-42e1-8767-2a12d29207eb",
+      "nome": "Lucas Ferreira",
+      "turma": "6º ano A"
+     },
+     "habilidade": {
+      "codigo": "EF06MA07",
+      "nome": "frações",
+      "descricao": "Compreender, comparar e ordenar frações associadas às ideias de partes de inteiros."
+     },
+     "dominio": 56,
+     "motivos": [
+      {
+       "text": "Acertos em frações caíram 33% nas 3 últimas atividades",
+       "points": 43
+      },
+      {
+       "text": "Frequência de 78% no período",
+       "points": 7
+      },
+      {
+       "text": "1 tarefa não entregue em 14 dias",
+       "points": 5
+      }
+     ],
+     "score": 55,
+     "plano": {
+      "sessoes": 4
+     },
+     "pedidoPor": "Marta Ribeiro",
+     "pedidoEm": "2026-11-11T16:46:16.351Z",
+     "sessoes": [
+      {
+       "id": "59f614a2-3050-4313-8e16-dbcef41426ae",
+       "inicio": "2026-11-11T17:00:00.000Z",
+       "modo": "presencial",
+       "registro": null
+      }
+     ]
+    },
+    {
+     "id": "29c1cfed-e72a-462d-bd2e-1538afd9ae63",
+     "status": "EM_ANDAMENTO",
+     "aluno": {
+      "id": "4e46f5dc-786b-4154-a418-5b7eb2b60493",
+      "nome": "Isabela Gomes",
+      "turma": "6º ano D"
+     },
+     "habilidade": {
+      "codigo": "EF06MA08",
+      "nome": "decimais",
+      "descricao": "Reconhecer que os números racionais positivos podem ser expressos nas formas fracionária e decimal."
+     },
+     "dominio": 56,
+     "motivos": [
+      {
+       "text": "Acertos em decimais caíram 33% nas 3 últimas atividades",
+       "points": 43
+      },
+      {
+       "text": "2 tarefas não entregues em 14 dias",
+       "points": 10
+      },
+      {
+       "text": "Frequência de 84% no período",
+       "points": 1
+      }
+     ],
+     "score": 54,
+     "plano": {
+      "sessoes": 4
+     },
+     "pedidoPor": "Jorge Tavares",
+     "pedidoEm": "2026-11-11T16:46:16.367Z",
+     "sessoes": [
+      {
+       "id": "a0fdc7fd-32d8-471e-9625-2610a523357b",
+       "inicio": "2026-11-13T18:00:00.000Z",
+       "modo": "online",
+       "registro": null
+      }
+     ]
+    },
+    {
+     "id": "63bb0f6e-6741-498e-979a-8926ba29142d",
+     "status": "APROVADO",
+     "aluno": {
+      "id": "fffc76ae-b135-426a-83a0-223d35bbde6f",
+      "nome": "João Gomes",
+      "turma": "6º ano B"
+     },
+     "habilidade": {
+      "codigo": "EF06MA07",
+      "nome": "frações",
+      "descricao": "Compreender, comparar e ordenar frações associadas às ideias de partes de inteiros."
+     },
+     "dominio": 39,
+     "motivos": [
+      {
+       "text": "Acertos em frações caíram 56% nas 3 últimas atividades",
+       "points": 50
+      },
+      {
+       "text": "Frequência de 78% no período",
+       "points": 7
+      },
+      {
+       "text": "Domínio atual em frações: 39 de 100",
+       "points": 6
+      },
+      {
+       "text": "1 tarefa não entregue em 14 dias",
+       "points": 5
+      }
+     ],
+     "score": 68,
+     "plano": {
+      "saida": "4 de 5 acertos na mini-avaliação",
+      "minutos": 50,
+      "sessoes": 4
+     },
+     "pedidoPor": "Marta Ribeiro",
+     "pedidoEm": "2026-11-11T16:46:22.190Z",
+     "sessoes": []
+    }
+   ]
+  },
+  "/aluno": {
+   "nome": "João Gomes",
+   "turma": "6º ano B",
+   "prova": {
+    "titulo": "Avaliação do 4º bimestre — Frações, decimais e porcentagem",
+    "materia": "Matemática",
+    "data": "2026-11-06T00:00:00.000Z",
+    "nota": 6,
+    "erradas": [
+     {
+      "numero": 8,
+      "enunciado": "Qual fração é equivalente a 2/5?",
+      "alternativas": [
+       "4/10",
+       "2/10",
+       "4/5",
+       "5/2"
+      ],
+      "gabarito": 0,
+      "marcada": 1,
+      "habilidade": "frações",
+      "indica": "multiplica só o denominador",
+      "acertoDaTurma": 0.79
+     },
+     {
+      "numero": 2,
+      "enunciado": "Qual é maior: 2/3 ou 3/5?",
+      "alternativas": [
+       "3/5",
+       "2/3",
+       "São iguais",
+       "Não dá para comparar"
+      ],
+      "gabarito": 1,
+      "marcada": 0,
+      "habilidade": "frações",
+      "indica": "compara só os numeradores",
+      "acertoDaTurma": 0.58
+     },
+     {
+      "numero": 4,
+      "enunciado": "Quanto é 1/2 + 1/4?",
+      "alternativas": [
+       "2/6",
+       "1/6",
+       "3/4",
+       "2/4"
+      ],
+      "gabarito": 2,
+      "marcada": 0,
+      "habilidade": "frações",
+      "indica": "soma numeradores e denominadores",
+      "acertoDaTurma": 0.46
+     },
+     {
+      "numero": 9,
+      "enunciado": "Quanto é 2/3 de 3/4?",
+      "alternativas": [
+       "5/7",
+       "6/7",
+       "1/2",
+       "8/9"
+      ],
+      "gabarito": 2,
+      "marcada": 1,
+      "habilidade": "frações",
+      "indica": "multiplica os numeradores e soma os denominadores",
+      "acertoDaTurma": 0.25
+     }
+    ]
+   },
+   "reforcos": [
+    {
+     "status": "EM_ANDAMENTO",
+     "habilidade": "frações",
+     "tutor": "Renato Siqueira",
+     "sessoes": [
+      {
+       "inicio": "2026-11-12T17:00:00.000Z",
+       "modo": "presencial"
+      }
+     ]
+    }
+   ],
+   "agenda": []
+  }
+ }
+}
