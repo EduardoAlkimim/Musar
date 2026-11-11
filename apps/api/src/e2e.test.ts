@@ -12,12 +12,12 @@ import request from "supertest";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 const ligado = process.env.E2E === "1";
-const KC = process.env.KEYCLOAK_ISSUER ?? "http://localhost:8080/realms/trilha";
+const KC = process.env.KEYCLOAK_ISSUER ?? "http://localhost:8080/realms/musar";
 
 async function token(usuario: string) {
   const r = await fetch(`${KC}/protocol/openid-connect/token`, {
     method: "POST",
-    body: new URLSearchParams({ grant_type: "password", client_id: "trilha-web", client_secret: "trilha-web-local", username: `${usuario}@trilha.local`, password: "trilha-local", scope: "openid" }),
+    body: new URLSearchParams({ grant_type: "password", client_id: "musar-web", client_secret: "musar-web-local", username: `${usuario}@musar.local`, password: "musar-local", scope: "openid" }),
   });
   return ((await r.json()) as { access_token: string }).access_token;
 }
@@ -37,7 +37,7 @@ describe.skipIf(!ligado)("fluxo prova → alerta → reforço (ambiente local)",
     app = (await Test.createTestingModule({ imports: [AppModule] }).compile()).createNestApplication();
     app.setGlobalPrefix("api");
     await app.init();
-    for (const u of ["marta", "helena", "renato", "luiza", "joao", "beatriz", "admin"]) tokens[u] = await token(u);
+    for (const u of ["ana", "marta", "helena", "renato", "luiza", "joao", "beatriz", "admin"]) tokens[u] = await token(u);
   }, 120_000);
   afterAll(() => app?.close());
 
@@ -135,6 +135,21 @@ describe.skipIf(!ligado)("fluxo prova → alerta → reforço (ambiente local)",
     const bom = "nome;email;data_nascimento;turma;serie;turno\nNova Aluna;nova.aluna@alunos.exemplo.br;2014-01-01;6º ano E;6º ano;manhã\n";
     const ok = await como("admin").post("/admin/importar", { csv: bom }).expect(201);
     expect(ok.body).toMatchObject({ alunosCriados: 1, turmasCriadas: 1 });
+  });
+
+  it("direção vê a escola e indica um professor de reforço específico, fora dos sugeridos", async () => {
+    await como("marta").get("/gestao/visao-geral").expect(403);
+    const v = await como("ana").get("/gestao/visao-geral").expect(200);
+    expect(v.body.indicadores.alunos).toBeGreaterThan(90);
+    const r = await como("ana").get("/gestao/alertas").expect(200);
+    const alerta = r.body.alertas.find((a: { status: string }) => a.status === "ABERTO");
+    const sugeridos = new Set(alerta.sugeridos.map((x: { id: string }) => x.id));
+    const outro = r.body.tutores.find((t: { id: string }) => !sugeridos.has(t.id));
+    expect(outro).toBeDefined();
+    const e = await como("ana").post(`/alertas/${alerta.id}/encaminhar`, { tutorId: outro.id }).expect(201);
+    expect(e.body.tutor).toBe(outro.nome);
+    const lista = await como("ana").get("/gestao/reforcos").expect(200);
+    expect(lista.body.some((p: { tutor: string; indicadoPor: string }) => p.tutor === outro.nome && p.indicadoPor === "Ana Moura")).toBe(true);
   });
 
   it("conclui o reforço e o alerta é resolvido", async () => {

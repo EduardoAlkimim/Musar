@@ -16,7 +16,7 @@ export class CoordenacaoController {
   constructor(@Inject(PRISMA) private readonly prisma: PrismaClient) {}
 
   @Get("coordenacao")
-  @Papeis("COORDENADOR", "ADMIN")
+  @Papeis("DIRETOR", "COORDENADOR", "ADMIN")
   painel(@Usuario() s: Sessao) {
     return naEscola(this.prisma, s, async (tx) => {
       const turmas = await tx.schoolClass.findMany({ orderBy: { nome: "asc" } });
@@ -95,7 +95,7 @@ export class CoordenacaoController {
   }
 
   @Post("detector/rodar")
-  @Papeis("COORDENADOR", "ADMIN")
+  @Papeis("DIRETOR", "COORDENADOR", "ADMIN")
   rodar(@Usuario() s: Sessao) {
     return naEscola(this.prisma, s, (tx) => rodarDetector(tx, s.schoolId));
   }

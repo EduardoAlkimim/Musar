@@ -31,6 +31,7 @@ const slug = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCa
 
 /** Pessoas com login no Keycloak (mesmo e-mail do realm). */
 const COM_LOGIN = {
+  ana: { nome: "Ana Moura", papeis: ["DIRETOR"] },
   marta: { nome: "Marta Ribeiro", papeis: ["PROFESSOR"] },
   jorge: { nome: "Jorge Tavares", papeis: ["PROFESSOR"] },
   renato: { nome: "Renato Siqueira", papeis: ["PROFESSOR_REFORCO"] },
@@ -85,12 +86,12 @@ export async function semear(cliente: PrismaClient) {
   // Pessoas
   const pessoa: Record<string, string> = {};
   for (const [login, p] of Object.entries(COM_LOGIN)) {
-    const u = await usuario(`${login}@trilha.local`, p.nome);
+    const u = await usuario(`${login}@musar.local`, p.nome);
     pessoa[login] = u.id;
     await prisma.membership.create({ data: { schoolId: S, userId: u.id, papeis: p.papeis } });
   }
   const semLogin = async (nome: string, papeis: Papel[]) => {
-    const u = await usuario(`${slug(nome)}@equipe.trilha.local`, nome);
+    const u = await usuario(`${slug(nome)}@equipe.musar.local`, nome);
     await prisma.membership.create({ data: { schoolId: S, userId: u.id, papeis } });
     return u.id;
   };
@@ -114,7 +115,7 @@ export async function semear(cliente: PrismaClient) {
   for (const s of demo.STUDENTS) {
     const ehJoao = s.id === demo.GUARDIAN.childId;
     const nome = ehJoao ? "João Gomes" : s.name;
-    const u = await usuario(ehJoao ? "joao@trilha.local" : `${slug(nome)}.${s.id}@alunos.trilha.local`, nome, s.birthDate);
+    const u = await usuario(ehJoao ? "joao@musar.local" : `${slug(nome)}.${s.id}@alunos.musar.local`, nome, s.birthDate);
     aluno[s.id] = u.id;
     await prisma.membership.create({ data: { schoolId: S, userId: u.id, papeis: ["ALUNO"] } });
     await prisma.enrollment.create({ data: { schoolId: S, classId: turma[s.classId]!, studentId: u.id } });
@@ -246,10 +247,10 @@ export async function semear(cliente: PrismaClient) {
 
   // Segunda escola: existe só para provar o isolamento.
   const outra = await prisma.school.create({ data: { nome: "Colégio Horizonte", slug: "horizonte" } });
-  const carla = await usuario("carla@horizonte.trilha.local", "Carla Mendes");
+  const carla = await usuario("carla@horizonte.musar.local", "Carla Mendes");
   await prisma.membership.create({ data: { schoolId: outra.id, userId: carla.id, papeis: ["PROFESSOR"] } });
   const t7 = await prisma.schoolClass.create({ data: { schoolId: outra.id, nome: "7º ano A", serie: "7º ano", anoLetivo: 2026, turno: "MANHA" } });
-  const bia = await usuario("bia@alunos.horizonte.trilha.local", "Bia Horizonte", "2013-05-02");
+  const bia = await usuario("bia@alunos.horizonte.musar.local", "Bia Horizonte", "2013-05-02");
   await prisma.membership.create({ data: { schoolId: outra.id, userId: bia.id, papeis: ["ALUNO"] } });
   await prisma.enrollment.create({ data: { schoolId: outra.id, classId: t7.id, studentId: bia.id } });
 

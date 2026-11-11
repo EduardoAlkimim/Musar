@@ -17,8 +17,8 @@ export const CONFIG = {
   dbUrl: process.env.DATABASE_URL_APP ?? "postgresql://escola_app:escola_app@localhost:5442/escola",
   /** Conexão do job diário (superusuário local; em produção, um papel de job dedicado). */
   dbUrlJob: process.env.DATABASE_URL ?? "postgresql://escola:escola@localhost:5442/escola",
-  issuer: process.env.KEYCLOAK_ISSUER ?? "http://localhost:8080/realms/trilha",
-  clientId: process.env.KEYCLOAK_CLIENT_ID ?? "trilha-web",
+  issuer: process.env.KEYCLOAK_ISSUER ?? "http://localhost:8080/realms/musar",
+  clientId: process.env.KEYCLOAK_CLIENT_ID ?? "musar-web",
 };
 
 export const PRISMA = Symbol("Prisma");
@@ -110,7 +110,8 @@ export function naEscola<T>(prisma: PrismaClient, s: Sessao, fn: (tx: Tx) => Pro
   return comEscola(prisma, { userId: s.userId, schoolId: s.schoolId }, fn);
 }
 
-export const ehGestao = (s: Sessao) => s.papeis.includes("COORDENADOR") || s.papeis.includes("ADMIN");
+/** Direção, coordenação e secretaria enxergam a escola inteira. */
+export const ehGestao = (s: Sessao) => s.papeis.some((p) => p === "DIRETOR" || p === "COORDENADOR" || p === "ADMIN");
 
 /** Registro LGPD: quem viu qual aluno e quando. */
 export async function registrarAcesso(tx: Tx, s: Sessao, acao: string, studentIds: (string | null)[] = [null]) {

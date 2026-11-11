@@ -37,7 +37,7 @@ export class ProfessorController {
 
   /** "Quem precisa de você hoje": alertas, mapa da turma e última prova. */
   @Get("professor/painel")
-  @Papeis("PROFESSOR", "COORDENADOR", "ADMIN")
+  @Papeis("PROFESSOR", "DIRETOR", "COORDENADOR", "ADMIN")
   painel(@Usuario() s: Sessao, @Query("turma") turmaPedida?: string) {
     return naEscola(this.prisma, s, async (tx) => {
       const atribuicoes = await tx.classSubject.findMany({
@@ -194,7 +194,7 @@ export class ProfessorController {
   }
 
   @Get("provas/:id/relatorio")
-  @Papeis("PROFESSOR", "COORDENADOR", "ADMIN")
+  @Papeis("PROFESSOR", "DIRETOR", "COORDENADOR", "ADMIN")
   relatorio(@Usuario() s: Sessao, @Param("id", ParseUUIDPipe) id: string) {
     return naEscola(this.prisma, s, async (tx) => {
       const r = await relatorioDaProva(tx, id);
@@ -242,7 +242,7 @@ export class ProfessorController {
 
   /** Encaminhar ao reforço. Menor de idade fica aguardando o responsável. */
   @Post("alertas/:id/encaminhar")
-  @Papeis("PROFESSOR", "COORDENADOR")
+  @Papeis("PROFESSOR", "DIRETOR", "COORDENADOR")
   async encaminhar(@Usuario() s: Sessao, @Param("id", ParseUUIDPipe) id: string, @Body() corpo: unknown) {
     const p = CorpoEncaminhar.safeParse(corpo);
     if (!p.success) throw new BadRequestException({ erro: "Escolha o professor de reforço" });
@@ -274,7 +274,7 @@ export class ProfessorController {
   }
 
   @Post("alertas/:id/descartar")
-  @Papeis("PROFESSOR", "COORDENADOR")
+  @Papeis("PROFESSOR", "DIRETOR", "COORDENADOR")
   descartar(@Usuario() s: Sessao, @Param("id", ParseUUIDPipe) id: string) {
     return naEscola(this.prisma, s, async (tx) => {
       const alerta = await tx.alert.findUnique({ where: { id } });
