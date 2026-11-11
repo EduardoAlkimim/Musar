@@ -1,0 +1,14 @@
+{
+  "name": "@escola/db",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "validate": "prisma validate",
+    "generate": "prisma generate",
+    "migrate": "prisma migrate dev",
+    "rls": "psql \"$DATABASE_URL\" -f prisma/rls.sql"
+  },
+  "devDependencies": {
+    "prisma": "7.10.1"
+  }
+}
