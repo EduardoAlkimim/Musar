@@ -7,7 +7,6 @@ import { Decidir } from "@/components/decidir";
 import { NovaMensagem } from "@/components/mensagem";
 import { api } from "@/lib/api";
 import { dataCurta, decimal, pct, quando } from "@/lib/formato";
-import { aprovarReforco, consentir, recusarReforco } from "../acoes";
 
 export const metadata: Metadata = { title: "Acompanhamento" };
 
@@ -49,7 +48,7 @@ export default async function Familia() {
               <li className="text-xs text-suave">Termo {f.versaoTermo} · LGPD, art. 14</li>
             </ul>
             <div className="mt-6">
-              <Confirmar rotulo="Li e autorizo" carimbo="Autorizado" acao={consentir.bind(null, f.id, f.versaoTermo)} />
+              <Confirmar rotulo="Li e autorizo" carimbo="Autorizado" acao={{ nome: "consentir", args: [f.id, f.versaoTermo] }} />
             </div>
           </section>
         ) : (
@@ -82,8 +81,8 @@ function Resumo({ f, primeiro }: { f: Extract<Filho, { precisaConsentimento: fal
           {pendente.horarios.length > 0 && <p className="mt-1 text-sm text-suave">Horários: {pendente.horarios.join(", ")}</p>}
           <div className="mt-4">
             <Decidir
-              sim={{ rotulo: "Aprovar o reforço", carimbo: "Aprovado", depois: `${pendente.tutor.split(" ")[0]} vai marcar a primeira sessão.`, acao: aprovarReforco.bind(null, pendente.id) }}
-              nao={{ rotulo: "Agora não", carimbo: "Recusado", depois: "A escola vai combinar outro caminho.", acao: recusarReforco.bind(null, pendente.id), confirmar: "Recusar o reforço? A escola será avisada." }}
+              sim={{ rotulo: "Aprovar o reforço", carimbo: "Aprovado", depois: `${pendente.tutor.split(" ")[0]} vai marcar a primeira sessão.`, acao: { nome: "aprovarReforco", args: [pendente.id] } }}
+              nao={{ rotulo: "Agora não", carimbo: "Recusado", depois: "A escola vai combinar outro caminho.", acao: { nome: "recusarReforco", args: [pendente.id] }, confirmar: "Recusar o reforço? A escola será avisada." }}
             />
           </div>
         </Card>

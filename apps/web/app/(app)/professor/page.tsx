@@ -8,7 +8,6 @@ import { Encaminhar, type OpcaoTutor } from "@/components/encaminhar";
 import { MapaDeCalor } from "@/components/mapa-de-calor";
 import { api } from "@/lib/api";
 import { dataCurta, decimal } from "@/lib/formato";
-import { descartarAlerta } from "../acoes";
 
 export const metadata: Metadata = { title: "Minhas turmas" };
 
@@ -103,7 +102,7 @@ export default async function Professor({ searchParams }: { searchParams: Promis
                     <td className="max-w-[18rem]"><PorQue motivos={a.motivos} score={a.score} /></td>
                     <td>
                       <span className="flex items-center justify-end gap-3">
-                        <Confirmar rotulo="Descartar" carimbo="Descartado" variante="texto" acao={descartarAlerta.bind(null, a.id)} confirmar={`Descartar o alerta de ${a.aluno.nome.split(" ")[0]}? Ele não volta por 30 dias.`} />
+                        <Confirmar rotulo="Descartar" carimbo="Descartado" variante="texto" acao={{ nome: "descartarAlerta", args: [a.id] }} confirmar={`Descartar o alerta de ${a.aluno.nome.split(" ")[0]}? Ele não volta por 30 dias.`} />
                         <Encaminhar alertas={[{ id: a.id, nome: a.aluno.nome.split(" ")[0]! }]} habilidade={a.habilidade.nome} opcoes={p.sugestoes[a.habilidade.id] ?? []} variante="pequeno" />
                       </span>
                     </td>

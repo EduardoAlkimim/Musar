@@ -21,7 +21,7 @@ export default async function Admin() {
       </dl>
 
       <section data-demo="importar" className="card p-5" aria-labelledby="imp">
-        <TituloSecao nota={<a href="/modelo-alunos.csv" download className="link">Baixar planilha modelo</a>}><span id="imp">Importar planilha</span></TituloSecao>
+        <TituloSecao nota={<a href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/modelo-alunos.csv`} download className="link">Baixar planilha modelo</a>}><span id="imp">Importar planilha</span></TituloSecao>
         <Importar />
         <div className="rounded-[10px] bg-[#f7fafc] py-2 mt-8 px-5 text-sm">
           <p className="font-semibold">Colunas</p>

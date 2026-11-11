@@ -1,7 +1,15 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import * as acoes from "@/app/(app)/acoes";
 import type { Resultado } from "@/app/(app)/acoes";
+
+/**
+ * Ação a executar, pelo nome e argumentos (serializável: a página no servidor só descreve,
+ * o botão no navegador chama). Na versão local é a ação real; na demonstração estática, a simulada.
+ */
+export interface Acao { nome: Exclude<keyof typeof acoes, "Resultado">; args?: unknown[] }
+export const executar = (a: Acao) => (acoes as unknown as Record<string, (...x: unknown[]) => Promise<Resultado>>)[a.nome]!(...(a.args ?? []));
 
 /**
  * Botão de ação real: chama a server action e vira carimbo quando a API confirma.
@@ -18,7 +26,7 @@ export function Confirmar({
   rotulo: string;
   carimbo: string;
   depois?: string;
-  acao: () => Promise<Resultado>;
+  acao: Acao;
   variante?: "tinta" | "linha" | "texto";
   /** Pergunta antes de agir (ações que não se desfazem). */
   confirmar?: string;
@@ -42,7 +50,7 @@ export function Confirmar({
         className={(variante === "tinta" ? "btn btn-primario" : variante === "linha" ? "btn btn-secundario" : "link min-h-11 text-sm text-suave hover:text-marinho") + " disabled:opacity-60"}
         onClick={() => {
           if (confirmar && !window.confirm(confirmar)) return;
-          iniciar(async () => setEstado(await acao()));
+          iniciar(async () => setEstado(await executar(acao)));
         }}
       >
         {pendente ? "Enviando…" : rotulo}

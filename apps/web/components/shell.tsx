@@ -20,7 +20,7 @@ const ICONES: Record<ItemMenu["icone"], typeof LayoutDashboard> = {
 export interface Visao { papel: Papel; itens: ItemMenu[] }
 
 /** Estrutura do MUSAR: barra lateral azul-marinho com o menu da visão e barra do topo com o título. */
-export function Shell({ nome, escola, visoes, children }: { nome: string; escola: string; visoes: Visao[]; children: React.ReactNode }) {
+export function Shell({ nome, escola, visoes, children, sairHref = "/sair" }: { nome: string; escola: string; visoes: Visao[]; children: React.ReactNode; sairHref?: string }) {
   const caminho = usePathname();
   const router = useRouter();
   const [aberto, setAberto] = useState(false);
@@ -82,7 +82,7 @@ export function Shell({ nome, escola, visoes, children }: { nome: string; escola
         <div className="mt-2 flex items-center gap-3">
           <span className="grid size-9 shrink-0 place-items-center rounded-full bg-ouro font-titulo text-xs font-bold text-marinho">{iniciais(nome)}</span>
           <span className="min-w-0 flex-1 truncate text-sm font-semibold text-white">{nome}</span>
-          <a href="/sair" className="rounded-md p-2 text-white/60 hover:bg-white/10 hover:text-white" aria-label="Sair" title="Sair"><LogOut className="size-4" /></a>
+          <a href={sairHref} className="rounded-md p-2 text-white/60 hover:bg-white/10 hover:text-white" aria-label="Sair" title="Sair"><LogOut className="size-4" /></a>
         </div>
       </div>
     </div>

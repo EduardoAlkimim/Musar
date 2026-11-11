@@ -5,7 +5,6 @@ import { Card, Pagina, Titulo } from "@/components/ui";
 import { Confirmar } from "@/components/confirmar";
 import { api } from "@/lib/api";
 import { decimal } from "@/lib/formato";
-import { rodarDetector } from "../../acoes";
 
 export const metadata: Metadata = { title: "Relatórios" };
 
@@ -24,7 +23,7 @@ export default async function Relatorios() {
   return (
     <Pagina>
       <Titulo titulo="Relatórios" subtitulo={`${c.bimestre}º bimestre comparado ao ${c.bimestre - 1}º`}>
-        <Confirmar rotulo="Atualizar alertas agora" carimbo="Atualizado" variante="linha" acao={rodarDetector} />
+        <Confirmar rotulo="Atualizar alertas agora" carimbo="Atualizado" variante="linha" acao={{ nome: "rodarDetector" }} />
       </Titulo>
 
       <Card titulo="Média por turma e matéria" icone={BarChart3} semPadding>

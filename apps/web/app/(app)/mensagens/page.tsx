@@ -4,7 +4,6 @@ import { Decisao, Pagina } from "@/components/ui";
 import { Confirmar } from "@/components/confirmar";
 import { NovaMensagem } from "@/components/mensagem";
 import { api } from "@/lib/api";
-import { marcarLida } from "../acoes";
 
 export const metadata: Metadata = { title: "Mensagens" };
 
@@ -48,7 +47,7 @@ export default async function Mensagens() {
                   <li key={m.id} className={clsx("max-w-[85%] rounded-[10px] px-4 py-3", m.recebida ? "bg-[#f7fafc]" : "ml-auto bg-azul-fundo")}>
                     <p>{m.texto}</p>
                     <p className="mt-1 font-mono text-[0.7rem] text-suave">{m.recebida ? m.de.nome?.split(" ")[0] : "Você"} · {quando(m.em)}</p>
-                    {m.recebida && !m.lidaEm && <div className="mt-2"><Confirmar rotulo="Marcar como lida" carimbo="Lida" variante="linha" acao={marcarLida.bind(null, m.id)} /></div>}
+                    {m.recebida && !m.lidaEm && <div className="mt-2"><Confirmar rotulo="Marcar como lida" carimbo="Lida" variante="linha" acao={{ nome: "marcarLida", args: [m.id] }} /></div>}
                   </li>
                 ))}
               </ol>

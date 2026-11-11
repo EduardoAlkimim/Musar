@@ -2,21 +2,22 @@
 
 import { useState, useTransition } from "react";
 import type { Resultado } from "@/app/(app)/acoes";
+import { executar, type Acao } from "@/components/confirmar";
 
 /** Duas saídas para a mesma pergunta (aprovar ou recusar): escolhida uma, a outra some. */
 export function Decidir({
   sim,
   nao,
 }: {
-  sim: { rotulo: string; carimbo: string; depois?: string; acao: () => Promise<Resultado> };
-  nao: { rotulo: string; carimbo: string; depois?: string; acao: () => Promise<Resultado>; confirmar?: string };
+  sim: { rotulo: string; carimbo: string; depois?: string; acao: Acao };
+  nao: { rotulo: string; carimbo: string; depois?: string; acao: Acao; confirmar?: string };
 }) {
   const [feito, setFeito] = useState<{ r: Resultado; qual: "sim" | "nao" } | null>(null);
   const [pendente, iniciar] = useTransition();
   const rodar = (qual: "sim" | "nao") => {
     const o = qual === "sim" ? sim : nao;
     if (qual === "nao" && nao.confirmar && !window.confirm(nao.confirmar)) return;
-    iniciar(async () => setFeito({ r: await o.acao(), qual }));
+    iniciar(async () => setFeito({ r: await executar(o.acao), qual }));
   };
 
   if (feito?.r.ok) {
