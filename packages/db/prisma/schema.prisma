@@ -5,6 +5,7 @@ generator client {
   provider        = "prisma-client"
   output          = "../src/generated"
   previewFeatures = ["postgresqlExtensions"]
+  moduleFormat    = "cjs"
 }
 
 datasource db {
@@ -66,13 +67,15 @@ model School {
   @@map("school")
 }
 
-/// Identidade global (vem do Keycloak). Papéis valem por escola, em Membership.
+/// Identidade global. keycloakId é preenchido no primeiro login (casando pelo e-mail);
+/// alunos pequenos podem existir sem conta de acesso. Papéis valem por escola, em Membership.
 model User {
-  id         String   @id @default(uuid()) @db.Uuid
-  keycloakId String   @unique @map("keycloak_id")
-  nome       String
-  email      String   @unique
-  createdAt  DateTime @default(now()) @map("created_at")
+  id             String    @id @default(uuid()) @db.Uuid
+  keycloakId     String?   @unique @map("keycloak_id")
+  nome           String
+  email          String    @unique
+  dataNascimento DateTime? @map("data_nascimento") @db.Date
+  createdAt      DateTime  @default(now()) @map("created_at")
 
   vinculos Membership[]
 
@@ -145,8 +148,9 @@ model ClassSubject {
   subjectId String @map("subject_id") @db.Uuid
   teacherId String @map("teacher_id") @db.Uuid
 
-  turma   SchoolClass @relation(fields: [classId], references: [id], onDelete: Cascade)
-  materia Subject     @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  turma      SchoolClass  @relation(fields: [classId], references: [id], onDelete: Cascade)
+  materia    Subject      @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  avaliacoes Assessment[]
 
   @@unique([classId, subjectId])
   @@map("class_subject")
@@ -175,8 +179,9 @@ model Assessment {
   data           DateTime      @db.Date
   tipo           TipoAvaliacao
 
-  school   School     @relation(fields: [schoolId], references: [id], onDelete: Cascade)
-  questoes Question[]
+  school       School       @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  classSubject ClassSubject @relation(fields: [classSubjectId], references: [id], onDelete: Cascade)
+  questoes     Question[]
 
   @@index([schoolId, classSubjectId, data])
   @@map("assessment")
@@ -342,4 +347,48 @@ model AccessLog {
 
   @@index([schoolId, studentId, em])
   @@map("access_log")
+}
+
+/// Perfil do professor de reforço: base do matching (especialidade × agenda × histórico).
+model TutorProfile {
+  id             String   @id @default(uuid()) @db.Uuid
+  schoolId       String   @map("school_id") @db.Uuid
+  userId         String   @map("user_id") @db.Uuid
+  especialidades String[]
+  /// Horários livres na semana, ex.: "ter 14:00".
+  horarios       String[]
+  modo           String   @default("presencial")
+  /// Por habilidade: { "EF06MA07": { "closed": 17, "total": 19 } }
+  historico      Json     @default("{}")
+
+  @@unique([schoolId, userId])
+  @@map("tutor_profile")
+}
+
+model Attendance {
+  id        String   @id @default(uuid()) @db.Uuid
+  schoolId  String   @map("school_id") @db.Uuid
+  classId   String   @map("class_id") @db.Uuid
+  studentId String   @map("student_id") @db.Uuid
+  data      DateTime @db.Date
+  presente  Boolean
+
+  @@unique([classId, studentId, data])
+  @@index([schoolId, studentId, data])
+  @@map("attendance")
+}
+
+/// Mensagem entre família e professor, sempre sobre um aluno.
+model Message {
+  id         String    @id @default(uuid()) @db.Uuid
+  schoolId   String    @map("school_id") @db.Uuid
+  fromUserId String    @map("from_user_id") @db.Uuid
+  toUserId   String    @map("to_user_id") @db.Uuid
+  studentId  String    @map("student_id") @db.Uuid
+  texto      String
+  lidaEm     DateTime? @map("lida_em")
+  createdAt  DateTime  @default(now()) @map("created_at")
+
+  @@index([schoolId, toUserId, createdAt])
+  @@map("message")
 }
