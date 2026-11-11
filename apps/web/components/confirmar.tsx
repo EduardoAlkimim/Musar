@@ -1,31 +1,53 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
+import type { Resultado } from "@/app/(app)/acoes";
 
-/** Botão que vira carimbo depois de confirmado. Usado para aprovar, registrar e agendar. */
+/**
+ * Botão de ação real: chama a server action e vira carimbo quando a API confirma.
+ * Se der erro, mostra a mensagem da API e deixa tentar de novo.
+ */
 export function Confirmar({
   rotulo,
   carimbo,
   depois,
+  acao,
   variante = "tinta",
+  confirmar,
 }: {
   rotulo: string;
   carimbo: string;
   depois?: string;
-  variante?: "tinta" | "linha";
+  acao: () => Promise<Resultado>;
+  variante?: "tinta" | "linha" | "texto";
+  /** Pergunta antes de agir (ações que não se desfazem). */
+  confirmar?: string;
 }) {
-  const [feito, setFeito] = useState(false);
-  if (feito) {
+  const [estado, setEstado] = useState<Resultado | null>(null);
+  const [pendente, iniciar] = useTransition();
+
+  if (estado?.ok) {
     return (
-      <span className="inline-flex items-center gap-3" role="status">
+      <span className="inline-flex flex-wrap items-center gap-3" role="status">
         <span className="carimbo">{carimbo}</span>
-        {depois && <span className="text-sm text-grafite">{depois}</span>}
+        {(estado.mensagem ?? depois) && <span className="text-sm text-grafite">{estado.mensagem ?? depois}</span>}
       </span>
     );
   }
   return (
-    <button type="button" className={variante === "tinta" ? "botao-tinta" : "botao-linha"} onClick={() => setFeito(true)}>
-      {rotulo}
-    </button>
+    <span className="inline-flex flex-col items-start gap-2">
+      <button
+        type="button"
+        disabled={pendente}
+        className={(variante === "tinta" ? "botao-tinta" : variante === "linha" ? "botao-linha" : "link-sublinhado min-h-11 text-sm text-grafite hover:text-tinta") + " disabled:opacity-60"}
+        onClick={() => {
+          if (confirmar && !window.confirm(confirmar)) return;
+          iniciar(async () => setEstado(await acao()));
+        }}
+      >
+        {pendente ? "Enviando…" : rotulo}
+      </button>
+      {estado && !estado.ok && <span role="alert" className="text-sm text-alerta">{estado.erro}</span>}
+    </span>
   );
 }

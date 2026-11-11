@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { masteryBand, type Skill } from "@escola/domain";
+import { masteryBand } from "@escola/domain";
 
 /**
  * Mapa de calor alunos × habilidades.
@@ -12,7 +12,7 @@ export function MapaDeCalor({
   destaque,
 }: {
   alunos: { id: string; nome: string }[];
-  habilidades: Skill[];
+  habilidades: { id: string; codigo: string; nome: string }[];
   dominio: Record<string, Record<string, number>>;
   destaque: Set<string>;
 }) {
@@ -22,7 +22,7 @@ export function MapaDeCalor({
         <caption className="sr-only">Domínio de cada aluno em cada habilidade, de 0 a 100</caption>
         <colgroup>
           <col className="w-[13rem]" />
-          {habilidades.map((h) => <col key={h.code} />)}
+          {habilidades.map((h) => <col key={h.id} />)}
         </colgroup>
         <thead>
           <tr className="border-b border-pauta">
@@ -30,9 +30,9 @@ export function MapaDeCalor({
               <span className="rotulo">Aluno</span>
             </th>
             {habilidades.map((h) => (
-              <th key={h.code} scope="col" className="px-1 py-3 text-center font-normal">
-                <span className="block text-[0.82rem] font-semibold leading-tight">{h.shortName}</span>
-                <span className="block font-mono text-[0.66rem] text-grafite">{h.code}</span>
+              <th key={h.id} scope="col" className="px-1 py-3 text-center font-normal">
+                <span className="block text-[0.82rem] font-semibold leading-tight">{h.nome}</span>
+                <span className="block font-mono text-[0.66rem] text-grafite">{h.codigo}</span>
               </th>
             ))}
           </tr>
@@ -44,10 +44,10 @@ export function MapaDeCalor({
                 <span className={clsx(destaque.has(a.id) && "marcado font-semibold")}>{a.nome}</span>
               </th>
               {habilidades.map((h) => {
-                const v = dominio[a.id]?.[h.code];
+                const v = dominio[a.id]?.[h.id];
                 const faixa = masteryBand(v);
                 return (
-                  <td key={h.code} className="p-[3px]">
+                  <td key={h.id} className="p-[3px]">
                     <span
                       className={clsx(
                         "num flex h-8 items-center justify-center rounded-[2px] font-mono text-[0.78rem]",
@@ -60,7 +60,7 @@ export function MapaDeCalor({
                           ? { backgroundImage: "repeating-linear-gradient(135deg, transparent 0 5px, rgba(33,31,28,.13) 5px 6px)" }
                           : undefined
                       }
-                      title={`${a.nome} · ${h.shortName}: ${v ?? "sem dados"}`}
+                      title={`${a.nome} · ${h.nome}: ${v ?? "sem dados"}`}
                     >
                       {v ?? "–"}
                     </span>

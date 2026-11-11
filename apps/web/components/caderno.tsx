@@ -39,7 +39,7 @@ export function TituloSecao({ children, nota }: { children: React.ReactNode; not
 }
 
 /** "Por que estou vendo isso": os dados que geraram o alerta, com o peso de cada um. */
-export function PorQue({ motivos, score }: { motivos: AlertReason[]; score: number }) {
+export function PorQue({ motivos, score, pontos = true }: { motivos: AlertReason[]; score: number; pontos?: boolean }) {
   return (
     <details className="group mt-2 text-sm">
       <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 text-grafite hover:text-tinta [&::-webkit-details-marker]:hidden">
@@ -50,13 +50,15 @@ export function PorQue({ motivos, score }: { motivos: AlertReason[]; score: numb
         {motivos.map((m) => (
           <li key={m.text} className="flex items-baseline justify-between gap-6">
             <span>{m.text}</span>
-            <span className="num shrink-0 font-mono text-xs text-grafite">+{m.points}</span>
+            {pontos && <span className="num shrink-0 font-mono text-xs text-grafite">+{m.points}</span>}
           </li>
         ))}
-        <li className="flex items-baseline justify-between gap-6 border-t border-dashed border-pauta-forte pt-1.5 font-medium">
-          <span>Pontuação de atenção (alerta a partir de 50)</span>
-          <span className="num font-mono text-xs">{score}</span>
-        </li>
+        {pontos && (
+          <li className="flex items-baseline justify-between gap-6 border-t border-dashed border-pauta-forte pt-1.5 font-medium">
+            <span>Pontuação de atenção (alerta a partir de 50)</span>
+            <span className="num font-mono text-xs">{score}</span>
+          </li>
+        )}
       </ul>
     </details>
   );
@@ -78,13 +80,5 @@ export function Regua({ valor, rotulo }: { valor: number; rotulo: string }) {
       </div>
       <span className="num w-7 font-mono text-xs text-grafite">{valor}</span>
     </div>
-  );
-}
-
-export function SeloDemo() {
-  return (
-    <p className="mt-16 border-t border-pauta pt-4 text-xs text-grafite">
-      Dados fictícios da <strong>Escola de demonstração</strong>, calculados pelas mesmas regras de correção e de alerta do produto.
-    </p>
   );
 }
