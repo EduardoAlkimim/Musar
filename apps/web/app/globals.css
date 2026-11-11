@@ -193,6 +193,18 @@
   mix-blend-mode: multiply;
 }
 
+/* Demonstração guiada: o ponto da tela que o passo pede. */
+@keyframes apontar {
+  0%, 100% { box-shadow: 0 0 0 3px var(--color-marca), 0 0 0 9px color-mix(in oklab, var(--color-marca) 0%, transparent); }
+  50% { box-shadow: 0 0 0 3px var(--color-marca), 0 0 0 9px color-mix(in oklab, var(--color-marca) 45%, transparent); }
+}
+.demo-alvo {
+  border-radius: 4px;
+  animation: apontar 1.6s var(--ease-lapis) 3;
+  box-shadow: 0 0 0 3px var(--color-marca);
+  scroll-margin: 8rem 0 10rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .entra, .entra-lista > *, .carimbo { animation: none; }
+  .entra, .entra-lista > *, .carimbo, .demo-alvo { animation: none; }
 }

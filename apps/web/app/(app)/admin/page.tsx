@@ -20,7 +20,7 @@ export default async function Admin() {
         ))}
       </dl>
 
-      <section className="mt-14" aria-labelledby="imp">
+      <section data-demo="importar" className="mt-14" aria-labelledby="imp">
         <TituloSecao nota={<a href="/modelo-alunos.csv" download className="link-sublinhado">Baixar planilha modelo</a>}><span id="imp">Importar planilha</span></TituloSecao>
         <Importar />
         <div className="pauta mt-8 px-5 text-sm">

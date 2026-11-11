@@ -47,7 +47,7 @@ export default async function Coordenacao() {
       </Decisao>
 
       <div className="mt-16 grid gap-12 lg:grid-cols-12">
-        <section className="lg:col-span-8" aria-labelledby="ranking">
+        <section data-demo="ranking" className="lg:col-span-8" aria-labelledby="ranking">
           <TituloSecao nota={`Média de 0 a 10 · seta = variação sobre o ${c.bimestre - 1}º bimestre`}><span id="ranking">Turmas e matérias</span></TituloSecao>
           <div className="folha overflow-x-auto">
             <table className="w-full min-w-[36rem] text-sm">

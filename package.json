@@ -6,7 +6,7 @@
     "preparar": "docker compose up -d && pnpm --filter @escola/db preparar",
     "dev": "turbo run dev --filter=@escola/web --filter=@escola/api",
     "build": "turbo run build",
-    "start": "pnpm --filter @escola/db exec tsx src/aplicar-rls.ts && turbo run start --filter=@escola/web --filter=@escola/api",
+    "start": "pnpm --filter @escola/db exec tsx src/aplicar-rls.ts && cross-env DEMO_MODE=1 turbo run start --filter=@escola/web --filter=@escola/api",
     "seed": "pnpm --filter @escola/db seed",
     "test": "turbo run test",
     "test:e2e": "cross-env E2E=1 pnpm --filter @escola/api test",

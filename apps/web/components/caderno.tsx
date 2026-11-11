@@ -26,7 +26,9 @@ export function Decisao({
 }
 
 export function Pagina({ children, className }: { children: React.ReactNode; className?: string }) {
-  return <main className={clsx("mx-auto max-w-[76rem] px-5 pb-24 pt-10 sm:px-8 sm:pt-14", className)}>{children}</main>;
+  // Largura própria (ex.: max-w-[34rem] nas telas de celular) substitui a padrão, sem as duas competirem.
+  const largura = className?.includes("max-w-") ? "" : "max-w-[76rem]";
+  return <main className={clsx("mx-auto px-5 pb-24 pt-10 sm:px-8 sm:pt-14", largura, className)}>{children}</main>;
 }
 
 export function TituloSecao({ children, nota }: { children: React.ReactNode; nota?: React.ReactNode }) {

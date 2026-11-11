@@ -5,10 +5,11 @@
  *   pnpm --filter @escola/db seed
  */
 import { demo } from "@escola/domain";
-import { criarPrisma, rodarDetector, type Papel, type Tx } from "./index";
+import { rodarDetector, type Papel, type PrismaClient, type Tx } from "./index";
 
-const prisma = criarPrisma(process.env.DATABASE_URL ?? "postgresql://escola:escola@localhost:5442/escola");
+/** Data de referência da demonstração: o dia em que os alertas foram gerados. */
 const HOJE = new Date("2026-11-11T12:00:00Z");
+let prisma: PrismaClient;
 const dia = (iso: string) => new Date(`${iso}T00:00:00Z`);
 
 function rng(seed: number) {
@@ -74,7 +75,9 @@ async function usuario(email: string, nome: string, dataNascimento?: string) {
   });
 }
 
-async function main() {
+/** Recria a escola de demonstração do zero. Precisa de uma conexão de superusuário (ignora o RLS). */
+export async function semear(cliente: PrismaClient) {
+  prisma = cliente;
   await limpar();
   const escola = await prisma.school.create({ data: { nome: demo.DEMO_SCHOOL.name, slug: "demo" } });
   const S = escola.id;
@@ -250,12 +253,5 @@ async function main() {
   await prisma.membership.create({ data: { schoolId: outra.id, userId: bia.id, papeis: ["ALUNO"] } });
   await prisma.enrollment.create({ data: { schoolId: outra.id, classId: t7.id, studentId: bia.id } });
 
-  console.log("Seed concluído:", { escola: escola.slug, alunos: demo.STUDENTS.length, detector: resumo });
+  return { escola: escola.slug, alunos: demo.STUDENTS.length, detector: resumo };
 }
-
-main()
-  .catch((e) => {
-    console.error(e);
-    process.exitCode = 1;
-  })
-  .finally(() => prisma.$disconnect());

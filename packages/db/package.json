@@ -8,9 +8,9 @@
     "migrate": "prisma migrate deploy",
     "migrate:dev": "prisma migrate dev",
     "rls": "tsx src/aplicar-rls.ts",
-    "seed": "tsx src/seed.ts",
+    "seed": "tsx src/seed-cli.ts",
     "typecheck": "tsc --noEmit",
-    "preparar": "prisma migrate deploy && tsx src/aplicar-rls.ts && tsx src/seed.ts"
+    "preparar": "prisma migrate deploy && tsx src/aplicar-rls.ts && tsx src/seed-cli.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",

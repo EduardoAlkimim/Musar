@@ -89,7 +89,7 @@ export default async function Reforco() {
           {f.itens.map((i) => {
             const pendente = i.sessoes.find((s) => !s.registro && new Date(s.inicio) <= new Date());
             return (
-              <li key={i.id} id={`aluno-${i.id}`} className="folha grid scroll-mt-28 gap-8 p-6 lg:grid-cols-12">
+              <li key={i.id} id={`aluno-${i.id}`} data-demo={i.status === "APROVADO" ? "pedido-aprovado" : undefined} className="folha grid scroll-mt-28 gap-8 p-6 lg:grid-cols-12">
                 <div className="lg:col-span-5">
                   <p className="rotulo">{STATUS[i.status]}</p>
                   <h3 className="mt-2 text-[1.6rem]">{i.aluno.nome}</h3>

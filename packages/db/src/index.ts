@@ -3,6 +3,7 @@ import { PrismaClient } from "./generated/client";
 
 export * from "./generated/client";
 export { rodarDetector } from "./detector";
+export { semear } from "./seed";
 
 export function criarPrisma(url = process.env.DATABASE_URL) {
   if (!url) throw new Error("DATABASE_URL não definida");

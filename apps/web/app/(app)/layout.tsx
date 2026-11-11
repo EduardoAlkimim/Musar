@@ -1,4 +1,7 @@
+import { cookies } from "next/headers";
 import { Cabecalho } from "@/components/cabecalho";
+import { GuiaDemo } from "@/components/guia-demo";
+import { COOKIE_DEMO, demoLigado, passo, PASSOS } from "@/lib/demo";
 import { Pagina } from "@/components/caderno";
 import { api, ErroApi } from "@/lib/api";
 import { areasDe, type Me } from "@/lib/marca";
@@ -20,10 +23,12 @@ export default async function LayoutApp({ children }: { children: React.ReactNod
     throw e;
   }
   const extras = me.papeis.includes("PROFESSOR") || me.papeis.includes("RESPONSAVEL") ? [{ href: "/mensagens", rotulo: "Mensagens" }] : [];
+  const passoDemo = demoLigado() ? passo(Number((await cookies()).get(COOKIE_DEMO)?.value)) : undefined;
   return (
     <>
       <Cabecalho areas={areasDe(me.papeis)} nome={me.nome} escola={me.escola.nome} extras={extras} />
-      {children}
+      <div className={passoDemo ? "pb-56 sm:pb-36" : undefined}>{children}</div>
+      {passoDemo && <GuiaDemo passo={passoDemo} total={PASSOS.length} />}
     </>
   );
 }

@@ -38,7 +38,7 @@ export default async function Familia() {
       {filhos.length === 0 && <p className="text-grafite">Nenhum aluno vinculado a você. Fale com a secretaria da escola.</p>}
       {filhos.map((f) =>
         f.precisaConsentimento ? (
-          <section key={f.id} className="entra" aria-labelledby={`termo-${f.id}`}>
+          <section key={f.id} data-demo="familia" className="entra" aria-labelledby={`termo-${f.id}`}>
             <p className="rotulo">Olá, {primeiro} · primeiro acesso</p>
             <h1 id={`termo-${f.id}`} className="mt-4 text-[2.2rem]">Antes de ver os dados de {f.nome.split(" ")[0]}, precisamos da sua autorização.</h1>
             <div className="pauta mt-6 px-5 text-[0.98rem]">
@@ -68,7 +68,7 @@ function Resumo({ f, primeiro }: { f: Extract<Filho, { precisaConsentimento: fal
   const mat = f.professores.find((p) => p.materia === "Matemática");
 
   return (
-    <article className="mb-16">
+    <article data-demo="familia" className="mb-16">
       <p className="rotulo entra">Olá, {primeiro} · {f.turma}</p>
       <h1 className="entra mt-4 text-[2.4rem]">{alerta ? `${alerta.frase}.` : `${nome} está indo bem.`}</h1>
       {alerta && (

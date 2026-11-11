@@ -39,7 +39,7 @@ export default async function PaginaAluno() {
       )}
 
       {a.prova && (
-        <section className="folha entra mt-8 overflow-hidden" aria-labelledby="prova">
+        <section data-demo="revisao" className="folha entra mt-8 overflow-hidden" aria-labelledby="prova">
           <div className="border-b border-pauta px-5 py-4">
             <p className="rotulo">{a.prova.titulo}</p>
             <h2 id="prova" className="mt-2 text-[1.35rem]">Sua nota: <span className="num">{decimal(a.prova.nota)}</span></h2>

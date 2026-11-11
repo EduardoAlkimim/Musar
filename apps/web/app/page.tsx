@@ -41,7 +41,10 @@ export default async function Inicio({ searchParams }: { searchParams: Promise<{
             {erro === "login-expirado" ? "O login demorou demais. Tente de novo." : "Não foi possível entrar. Tente de novo."}
           </p>
         )}
-        <a href="/entrar" className="botao-tinta mt-8">Entrar</a>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a href="/entrar" className="botao-tinta">Entrar</a>
+          {process.env.DEMO_MODE === "1" && <a href="/demo" className="botao-linha">Ver a demonstração guiada</a>}
+        </div>
       </section>
 
       {contas && (

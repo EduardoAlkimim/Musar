@@ -23,6 +23,7 @@ interface Painel {
   mensagensNaoLidas: number;
 }
 
+const semAcento = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 const listaNomes = (n: string[]) => (n.length <= 1 ? n.join("") : `${n.slice(0, -1).join(", ")} e ${n.at(-1)}`);
 
 export default async function Professor({ searchParams }: { searchParams: Promise<{ turma?: string }> }) {
@@ -69,7 +70,7 @@ export default async function Professor({ searchParams }: { searchParams: Promis
         }
       >
         {r && <Encaminhar alertas={alertasDoResumo.map((a) => ({ id: a.id, nome: a.aluno.nome.split(" ")[0]! }))} habilidade={r.habilidade} opcoes={p.sugestoes[r.skill] ?? []} rotulo={`Encaminhar ${r.count > 1 ? `os ${r.count}` : ""}`.trim()} />}
-        {p.prova && <Link href={`/professor/provas/${p.prova.id}`} className="botao-linha">Ver a prova corrigida</Link>}
+        {p.prova && <Link href={`/professor/provas/${p.prova.id}`} data-demo="ver-prova" className="botao-linha">Ver a prova corrigida</Link>}
       </Decisao>
 
       <div className="mt-16 grid gap-12 lg:grid-cols-12">
@@ -80,7 +81,7 @@ export default async function Professor({ searchParams }: { searchParams: Promis
           {p.alertas.length === 0 && <p className="text-grafite">Nenhum alerta aberto nesta turma.</p>}
           <ol className="entra-lista divide-y divide-pauta">
             {p.alertas.map((a) => (
-              <li key={a.id} className="grid gap-x-6 gap-y-2 py-5 sm:grid-cols-[1fr_auto]">
+              <li key={a.id} data-demo={`alerta-${semAcento(a.aluno.nome.split(" ")[0]!)}`} className="grid gap-x-6 gap-y-2 py-5 sm:grid-cols-[1fr_auto]">
                 <div>
                   <p className="font-serif text-[1.35rem] leading-snug">{a.frase}</p>
                   <p className="mt-1 text-sm text-grafite">

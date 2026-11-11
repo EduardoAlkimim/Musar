@@ -42,5 +42,13 @@
         "src/generated/**"
       ]
     }
-  }
+  },
+  "globalPassThroughEnv": [
+    "DEMO_MODE",
+    "DATABASE_URL",
+    "DATABASE_URL_APP",
+    "KEYCLOAK_ISSUER",
+    "KEYCLOAK_CLIENT_ID",
+    "PORT"
+  ]
 }

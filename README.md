@@ -23,6 +23,12 @@ Para desenvolver com recarga automática, use `pnpm dev` no lugar de `pnpm build
 
 Copie `apps/web/.env.example` para `apps/web/.env.local` e gere um `SESSION_SECRET` (o arquivo explica como).
 
+### Demonstração guiada (para apresentar)
+
+Abra **http://localhost:3000/demo**. São 7 passos, cerca de 10 minutos: cada passo entra sozinho como a pessoa certa (professora, mãe, reforço, aluno, coordenação, secretaria), abre a tela e mostra numa barra no rodapé o que fazer e o que dizer. Antes de cada apresentação, clique em **Reiniciar os dados**.
+
+Precisa de `DEMO_MODE=1` no `apps/web/.env.local` e na API (`pnpm start` já liga os dois). Nunca ligar em produção: o modo demonstração entra nas contas de teste sem senha.
+
 ### Contas de teste
 
 Senha de todas: `trilha-local`. A página inicial mostra atalhos para cada uma.
