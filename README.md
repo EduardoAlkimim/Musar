@@ -21,6 +21,10 @@ Para desenvolver com recarga automática, use `pnpm dev` no lugar de `pnpm build
 
 Copie `apps/web/.env.example` para `apps/web/.env.local` e gere um `SESSION_SECRET` (o arquivo explica como).
 
+### Demonstração online
+
+**https://eduardoalkimim.github.io/Musar/** — a mesma demonstração guiada, publicada no GitHub Pages a cada push na `main`. É estática: escola e pessoas fictícias, ações simuladas no navegador, nada é gravado. Os dados vêm de `apps/web/estatico/dados.json`, capturados do ambiente local com `pnpm --filter @escola/web capturar:estatico` (com a API rodando). Para montar à mão: `BASE_PATH=/Musar pnpm --filter @escola/web build:estatico` → `apps/web/out-estatico/`.
+
 ### Demonstração guiada (para apresentar)
 
 Abra **http://localhost:3000/demo**. São 7 passos, cerca de 10 minutos. Cada passo entra sozinho como a pessoa certa, abre a tela e mostra numa barra no rodapé o que fazer e o que dizer:
