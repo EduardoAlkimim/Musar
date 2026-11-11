@@ -1,74 +1,52 @@
-/* Login no visual caderno. Mesmos tokens de apps/web/app/globals.css. */
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&display=swap");
+/* Login no visual MUSAR: arara, azul-marinho e dourado. Mesmos tokens de apps/web/app/globals.css. */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap");
 
-:root {
-  --papel: #f5f0e6; --folha: #fbf8f2; --pauta: #e2d9c8; --pauta-forte: #cbbfa8;
-  --grafite: #57534b; --tinta: #211f1c; --escola: #2d6a4f; --escola-escuro: #1f4d39; --alerta: #b23a2e;
-}
+:root { --marinho: #143150; --azul: #2d6b8d; --azul-claro: #539fbb; --ouro: #daa241; --creme: #f3efe4; --borda: #d5e1e8; --texto: #143150; --suave: #64748b; }
 
 html, body, .login-pf, .login-pf body {
-  background: var(--papel) !important;
-  background-image: none !important;
-  color: var(--tinta);
-  font-family: Geist, ui-sans-serif, system-ui, sans-serif !important;
+  background: var(--creme) !important;
+  background-image: radial-gradient(1200px 500px at 50% -10%, rgba(45,107,141,.10), transparent 60%) !important;
+  color: var(--texto); font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif !important;
 }
-body::before {
-  content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .35;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.45  0 0 0 0 0.38  0 0 0 0 0.25  0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-}
-.login-pf-page { padding-top: 9vh !important; }
+.login-pf-page { padding-top: 6vh !important; }
 
-/* Marca */
 #kc-header, #kc-header-wrapper {
-  font-family: Newsreader, Georgia, serif !important; font-style: italic; font-weight: 500 !important;
-  font-size: 3.2rem !important; letter-spacing: -.02em !important; text-transform: none !important;
-  color: var(--tinta) !important; padding: 0 0 1.5rem !important; line-height: 1 !important;
+  font-family: Sora, sans-serif !important; font-weight: 700 !important; font-size: 1.9rem !important;
+  letter-spacing: .14em !important; text-transform: uppercase !important; color: var(--marinho) !important;
+  padding: 0 0 1.75rem !important; line-height: 1.1 !important; display: flex; flex-direction: column; align-items: center; gap: .6rem;
 }
-.trilha-marca { display: inline-flex; align-items: center; gap: .6rem; }
-.trilha-marca svg { width: 2.6rem; height: 2.6rem; }
-
-/* Folha */
-.card-pf, .login-pf-page .card-pf {
-  background: var(--folha) !important; border: 1px solid var(--pauta) !important; border-top: 1px solid var(--pauta) !important;
-  border-radius: 3px !important; box-shadow: 0 1px 0 rgba(33,31,28,.04), 0 18px 40px -26px rgba(64,48,20,.45) !important;
-  max-width: 27rem !important; padding: 2.25rem 2.5rem 2rem !important; position: relative;
-}
-.card-pf::before { content: ""; position: absolute; inset-block: 0; left: 1.35rem; width: 2px; background: var(--escola); opacity: .55; }
-#kc-page-title {
-  font-family: Newsreader, Georgia, serif !important; font-weight: 500 !important; font-size: 2rem !important;
-  letter-spacing: -.02em; color: var(--tinta) !important; text-align: left !important; margin-bottom: 1.25rem !important;
-}
-.login-pf-page .login-pf-header { margin-bottom: 0 !important; }
-
-/* Campos */
-label, .pf-c-form__label, .control-label {
-  font-size: .72rem !important; letter-spacing: .09em; text-transform: uppercase; font-weight: 600 !important; color: var(--grafite) !important;
-}
-input.pf-c-form-control, input.form-control, .pf-c-input-group input {
-  background: var(--papel) !important; border: 1px solid var(--pauta) !important; border-radius: 3px !important;
-  height: 2.9rem !important; font-size: 1rem !important; color: var(--tinta) !important; box-shadow: none !important; padding: 0 .9rem !important;
-}
-input.pf-c-form-control:focus, input.form-control:focus { border-color: var(--escola) !important; outline: 2px solid var(--escola) !important; outline-offset: 2px; }
-.pf-c-input-group .pf-c-button.pf-m-control { background: var(--papel) !important; border: 1px solid var(--pauta) !important; border-left: 0 !important; color: var(--grafite) !important; }
-.pf-c-input-group .pf-c-button.pf-m-control::after { border: 0 !important; }
-
-/* Botão tinta */
-#kc-login, .pf-c-button.pf-m-primary, .btn-primary {
-  background: var(--tinta) !important; border: 0 !important; border-radius: 3px !important; color: var(--folha) !important;
-  height: 2.9rem !important; font-weight: 600 !important; font-size: .98rem !important; box-shadow: 0 2px 0 var(--escola-escuro) !important;
-  transition: transform .16s cubic-bezier(.22,1,.36,1), background .16s;
-}
-#kc-login:hover { background: #34312c !important; transform: translateY(-1px); }
-
-a, #kc-form-options a, #kc-registration a { color: var(--tinta) !important; text-decoration: underline; text-decoration-color: var(--pauta-forte); text-underline-offset: .22em; }
-a:hover { text-decoration-color: var(--escola); }
-.alert-error, .pf-c-alert.pf-m-danger { background: #f6e1dc !important; border: 0 !important; border-left: 2px solid var(--alerta) !important; color: var(--tinta) !important; box-shadow: none !important; }
-.alert-error .pficon, .pf-c-alert__icon { color: var(--alerta) !important; }
-#kc-info, #kc-info-wrapper { background: transparent !important; border-top: 1px solid var(--pauta) !important; color: var(--grafite) !important; }
-::selection { background: #f2d774; }
-
-/* Símbolo da trilha antes do nome (o Keycloak remove SVG do nome em HTML). */
 #kc-header-wrapper::before {
-  content: ""; display: inline-block; width: 2.4rem; height: 2.4rem; margin-right: .55rem; vertical-align: -0.2rem;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M5 26.5c6.5 0 5.5-10 11-10s4.5-10 11-10' fill='none' stroke='%23211f1c' stroke-width='2.2' stroke-linecap='round' stroke-dasharray='0.1 4.4'/><circle cx='5' cy='26.5' r='2.6' fill='%23f5f0e6' stroke='%23211f1c' stroke-width='1.6'/><circle cx='27' cy='6.5' r='3.6' fill='%232d6a4f'/></svg>") no-repeat center / contain;
+  content: ""; display: block; width: 92px; height: 108px;
+  background: url("../img/arara.png") no-repeat center / contain;
 }
+#kc-header-wrapper::after {
+  content: "A evolução da educação"; font-family: "DM Sans", sans-serif; font-weight: 500; font-size: .88rem;
+  letter-spacing: 0; text-transform: none; color: var(--suave);
+}
+
+.card-pf, .login-pf-page .card-pf {
+  background: #fff !important; border: 1px solid var(--borda) !important; border-top: 1px solid var(--borda) !important;
+  border-radius: 16px !important; box-shadow: 0 20px 50px -30px rgba(20,49,80,.45) !important;
+  max-width: 26rem !important; padding: 2.25rem 2.25rem 2rem !important;
+}
+#kc-page-title { font-family: Sora, sans-serif !important; font-weight: 600 !important; font-size: 1.5rem !important; color: var(--marinho) !important; text-align: center !important; margin-bottom: 1.25rem !important; }
+
+label, .pf-c-form__label, .control-label { font-size: .85rem !important; font-weight: 600 !important; color: var(--marinho) !important; }
+input.pf-c-form-control, input.form-control, .pf-c-input-group input {
+  background: #fff !important; border: 1px solid var(--borda) !important; border-radius: 12px !important;
+  height: 3rem !important; font-size: 1rem !important; color: var(--texto) !important; box-shadow: none !important; padding: 0 1rem !important;
+}
+input.pf-c-form-control:focus, input.form-control:focus { border-color: var(--azul) !important; box-shadow: 0 0 0 3px rgba(45,107,141,.18) !important; }
+.pf-c-input-group .pf-c-button.pf-m-control { background: #fff !important; border: 1px solid var(--borda) !important; border-left: 0 !important; border-radius: 0 12px 12px 0 !important; color: var(--suave) !important; }
+.pf-c-input-group .pf-c-button.pf-m-control::after { border: 0 !important; }
+.pf-c-input-group input { border-radius: 12px 0 0 12px !important; }
+
+#kc-login, .pf-c-button.pf-m-primary, .btn-primary {
+  background: var(--marinho) !important; border: 0 !important; border-radius: 12px !important; color: #fff !important;
+  height: 3rem !important; font-weight: 600 !important; font-size: 1rem !important; box-shadow: 0 10px 24px -12px rgba(20,49,80,.7) !important;
+}
+#kc-login:hover { background: #1b416a !important; }
+
+a { color: var(--azul) !important; font-weight: 600; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.alert-error, .pf-c-alert.pf-m-danger { background: #fef2f2 !important; border: 1px solid #fecaca !important; border-radius: 12px !important; color: #991b1b !important; box-shadow: none !important; }

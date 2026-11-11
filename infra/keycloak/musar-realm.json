@@ -1,8 +1,8 @@
 {
-  "realm": "trilha",
+  "realm": "musar",
   "enabled": true,
   "sslRequired": "none",
-  "displayName": "Trilha",
+  "displayName": "MUSAR",
   "internationalizationEnabled": true,
   "supportedLocales": [
     "pt-BR"
@@ -16,12 +16,12 @@
   "bruteForceProtected": true,
   "clients": [
     {
-      "clientId": "trilha-web",
-      "name": "Trilha (web)",
+      "clientId": "musar-web",
+      "name": "MUSAR (web)",
       "enabled": true,
       "publicClient": false,
       "clientAuthenticatorType": "client-secret",
-      "secret": "trilha-web-local",
+      "secret": "musar-web-local",
       "redirectUris": [
         "http://localhost:3000/auth/callback"
       ],
@@ -39,8 +39,23 @@
   ],
   "users": [
     {
+      "username": "ana",
+      "email": "ana@musar.local",
+      "firstName": "Ana",
+      "lastName": "Moura",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "musar-local",
+          "temporary": false
+        }
+      ]
+    },
+    {
       "username": "marta",
-      "email": "marta@trilha.local",
+      "email": "marta@musar.local",
       "firstName": "Marta",
       "lastName": "Ribeiro",
       "enabled": true,
@@ -48,14 +63,14 @@
       "credentials": [
         {
           "type": "password",
-          "value": "trilha-local",
+          "value": "musar-local",
           "temporary": false
         }
       ]
     },
     {
       "username": "renato",
-      "email": "renato@trilha.local",
+      "email": "renato@musar.local",
       "firstName": "Renato",
       "lastName": "Siqueira",
       "enabled": true,
@@ -63,14 +78,14 @@
       "credentials": [
         {
           "type": "password",
-          "value": "trilha-local",
+          "value": "musar-local",
           "temporary": false
         }
       ]
     },
     {
       "username": "beatriz",
-      "email": "beatriz@trilha.local",
+      "email": "beatriz@musar.local",
       "firstName": "Beatriz",
       "lastName": "Lemos",
       "enabled": true,
@@ -78,14 +93,14 @@
       "credentials": [
         {
           "type": "password",
-          "value": "trilha-local",
+          "value": "musar-local",
           "temporary": false
         }
       ]
     },
     {
       "username": "helena",
-      "email": "helena@trilha.local",
+      "email": "helena@musar.local",
       "firstName": "Helena",
       "lastName": "Gomes",
       "enabled": true,
@@ -93,14 +108,14 @@
       "credentials": [
         {
           "type": "password",
-          "value": "trilha-local",
+          "value": "musar-local",
           "temporary": false
         }
       ]
     },
     {
       "username": "joao",
-      "email": "joao@trilha.local",
+      "email": "joao@musar.local",
       "firstName": "João",
       "lastName": "Gomes",
       "enabled": true,
@@ -108,14 +123,14 @@
       "credentials": [
         {
           "type": "password",
-          "value": "trilha-local",
+          "value": "musar-local",
           "temporary": false
         }
       ]
     },
     {
       "username": "admin",
-      "email": "admin@trilha.local",
+      "email": "admin@musar.local",
       "firstName": "Admin",
       "lastName": "Escola",
       "enabled": true,
@@ -123,14 +138,14 @@
       "credentials": [
         {
           "type": "password",
-          "value": "trilha-local",
+          "value": "musar-local",
           "temporary": false
         }
       ]
     },
     {
       "username": "luiza",
-      "email": "luiza@trilha.local",
+      "email": "luiza@musar.local",
       "firstName": "Luíza",
       "lastName": "Carvalho",
       "enabled": true,
@@ -138,14 +153,14 @@
       "credentials": [
         {
           "type": "password",
-          "value": "trilha-local",
+          "value": "musar-local",
           "temporary": false
         }
       ]
     },
     {
       "username": "jorge",
-      "email": "jorge@trilha.local",
+      "email": "jorge@musar.local",
       "firstName": "Jorge",
       "lastName": "Tavares",
       "enabled": true,
@@ -153,12 +168,12 @@
       "credentials": [
         {
           "type": "password",
-          "value": "trilha-local",
+          "value": "musar-local",
           "temporary": false
         }
       ]
     }
   ],
-  "loginTheme": "trilha",
-  "displayNameHtml": "Trilha"
+  "loginTheme": "musar",
+  "displayNameHtml": "MUSAR"
 }

@@ -31,8 +31,8 @@ services:
       KC_HEALTH_ENABLED: "true"
     ports: ["8080:8080"]
     volumes:
-      - ./infra/keycloak/trilha-realm.json:/opt/keycloak/data/import/trilha-realm.json:ro
-      - ./infra/keycloak/themes/trilha:/opt/keycloak/themes/trilha:ro
+      - ./infra/keycloak/musar-realm.json:/opt/keycloak/data/import/musar-realm.json:ro
+      - ./infra/keycloak/themes/musar:/opt/keycloak/themes/musar:ro
 
 volumes:
   pgdata:
