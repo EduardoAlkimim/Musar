@@ -1,23 +1,24 @@
-import { Controller, Get, Module } from "@nestjs/common";
-import { REPOSITORIO, RepositorioDemo } from "./dados/repositorio";
+import { Module } from "@nestjs/common";
+import { APP_GUARD } from "@nestjs/core";
+import { GuardaDeAcesso, prismaProvider } from "./base";
+import { DetectorJob } from "./detector.job";
 import { CamadaLlm, configDoAmbiente, LLM, ProvedorBedrock } from "./ia/llm";
-import { AlertasController } from "./alertas/alertas.controller";
-import { ProvasController } from "./provas/provas.controller";
-import { ReforcoController } from "./reforco/reforco.controller";
-
-@Controller("saude")
-class SaudeController {
-  @Get()
-  saude() {
-    return { ok: true };
-  }
-}
+import { AdminController } from "./rotas/admin.controller";
+import { AlunoController } from "./rotas/aluno.controller";
+import { CoordenacaoController } from "./rotas/coordenacao.controller";
+import { FamiliaController } from "./rotas/familia.controller";
+import { MeController } from "./rotas/me.controller";
+import { MensagensController } from "./rotas/mensagens.controller";
+import { ProfessorController } from "./rotas/professor.controller";
+import { ReforcoController } from "./rotas/reforco.controller";
 
 @Module({
-  controllers: [SaudeController, ProvasController, AlertasController, ReforcoController],
+  controllers: [MeController, ProfessorController, ReforcoController, FamiliaController, MensagensController, AlunoController, CoordenacaoController, AdminController],
   providers: [
-    { provide: REPOSITORIO, useClass: RepositorioDemo },
+    prismaProvider,
+    { provide: APP_GUARD, useClass: GuardaDeAcesso },
     { provide: LLM, useFactory: () => new CamadaLlm(new ProvedorBedrock(), configDoAmbiente()) },
+    DetectorJob,
   ],
 })
 export class AppModule {}

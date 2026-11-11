@@ -9,5 +9,5 @@ export default defineConfig({
   platform: "node",
   sourcemap: true,
   clean: true,
-  noExternal: ["@escola/domain"],
+  noExternal: ["@escola/domain", "@escola/db"],
 });

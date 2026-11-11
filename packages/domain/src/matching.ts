@@ -59,3 +59,18 @@ export function matchTutors(
     .sort((a, b) => b.score - a.score)
     .slice(0, limit);
 }
+
+/** Plano sugerido: sessões de 50 minutos até o domínio chegar a 70, entre 2 e 6. */
+export function sessoesDoPlano(dominio: number) {
+  return Math.min(6, Math.max(2, Math.ceil((70 - dominio) / 8)));
+}
+
+/** Menor de idade precisa da aprovação de um responsável para o reforço. */
+export function ehMenor(dataNascimento: Date | string | null | undefined, hoje = new Date()) {
+  if (!dataNascimento) return true; // sem data, trata como menor: falha do lado seguro
+  const d = new Date(dataNascimento);
+  let idade = hoje.getUTCFullYear() - d.getUTCFullYear();
+  const m = hoje.getUTCMonth() - d.getUTCMonth();
+  if (m < 0 || (m === 0 && hoje.getUTCDate() < d.getUTCDate())) idade -= 1;
+  return idade < 18;
+}
