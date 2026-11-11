@@ -6,33 +6,62 @@ Corrige provas, encontra a habilidade de cada aluno que ficou para trás e encam
 
 ## Estado atual
 
-Protótipo funcional da Fase 1. As telas e a API rodam com uma **escola de demonstração** (dados fictícios, processados pelas regras reais de correção e alerta). Ainda não há login, gravação no banco nem publicação na nuvem. O que falta está em [docs/requisitos.md](docs/requisitos.md).
+Funciona de ponta a ponta na máquina local, com login real, banco real e isolamento por escola no PostgreSQL. A escola de demonstração vem do seed (dados fictícios). Publicação na nuvem ainda não foi feita. O que falta está em [docs/requisitos.md](docs/requisitos.md).
 
-## Rodar
+## Rodar na sua máquina
+
+Precisa de Docker Desktop, Node 24+ e pnpm.
 
 ```bash
 pnpm install
-pnpm --filter @escola/web dev     # telas em http://localhost:3000
-pnpm --filter @escola/api dev     # API em http://localhost:4000/api
-pnpm test                         # domínio + API
+pnpm preparar    # sobe Postgres, Redis e Keycloak; migra o banco, aplica o RLS e cria a escola de demonstração
+pnpm build
+pnpm start        # web em http://localhost:3000 · API em http://localhost:4000/api
 ```
 
-Banco local (opcional por enquanto): `docker compose up -d`, depois `pnpm --filter @escola/db migrate` e `pnpm --filter @escola/db rls`.
+Para desenvolver com recarga automática, use `pnpm dev` no lugar de `pnpm build && pnpm start`.
+
+Copie `apps/web/.env.example` para `apps/web/.env.local` e gere um `SESSION_SECRET` (o arquivo explica como).
+
+### Contas de teste
+
+Senha de todas: `trilha-local`. A página inicial mostra atalhos para cada uma.
+
+| Conta | Quem é |
+| --- | --- |
+| marta@trilha.local | Professora de Matemática do 6º A e B |
+| jorge@trilha.local | Professor de Matemática do 6º C e D |
+| renato@trilha.local | Professor de reforço |
+| luiza@trilha.local | Professora de reforço |
+| beatriz@trilha.local | Coordenação pedagógica |
+| admin@trilha.local | Secretaria (cadastros e planilhas) e coordenação |
+| helena@trilha.local | Mãe do João, 6º B |
+| joao@trilha.local | Aluno do 6º B |
+
+Para voltar a escola de demonstração ao estado inicial: `pnpm seed`. Painel do Keycloak: http://localhost:8080 (admin / admin).
+
+## Testes
+
+```bash
+pnpm test         # regras do produto e da API
+pnpm test:e2e     # fluxo completo contra o banco e o Keycloak locais (refaz o seed)
+```
 
 ## Onde está cada coisa
 
 | Pasta | O que tem |
 | --- | --- |
-| `packages/domain` | Regras do produto, sem framework: correção por gabarito, domínio por habilidade, detector de alertas, escolha do professor de reforço, escola de demonstração |
-| `apps/web` | Next.js. Telas da professora, prova corrigida, reforço, coordenação, família e aluno |
-| `apps/api` | NestJS. Correção, alertas, sugestões de reforço e a camada de IA (Bedrock com fallback e limite por escola) |
-| `packages/db` | Prisma: modelo de dados completo e `rls.sql` (isolamento por escola no PostgreSQL) |
+| `packages/domain` | Regras do produto, sem framework: correção por gabarito, domínio por habilidade, detector de alertas, escolha do professor de reforço |
+| `packages/db` | Prisma (modelo de dados), `rls.sql` (isolamento por escola), detector persistido e seed |
+| `apps/api` | NestJS: login pelo Keycloak, papéis por escola, rotas de cada perfil e camada de IA (Bedrock com fallback e limite por escola) |
+| `apps/web` | Next.js: login OIDC com sessão cifrada e as telas de cada perfil |
+| `infra/` | Realm do Keycloak e papel do banco usado pela API |
 | `.claude/skills` | `design-caderno` (sistema visual) e `texto-de-escola` (linguagem). Use antes de mexer em tela ou texto |
-| `docs/` | Requisitos atendidos e o que falta |
 
 ## Regras que não mudam
 
 - A IA sugere; quem decide é uma pessoa. Nenhuma nota, turma ou reprovação muda sozinha.
 - A correção de múltipla escolha é determinística, sem IA.
 - Todo alerta mostra "por que estou vendo isso".
-- Toda consulta tem escola. A IA nunca recebe nome nem documento do aluno.
+- Toda consulta passa pelo RLS da escola. A IA nunca recebe nome nem documento do aluno.
+- Responsável aceita o termo (LGPD, art. 14) antes de ver dados ou aprovar reforço.
