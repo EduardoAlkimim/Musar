@@ -1,4 +1,4 @@
-# Requisitos do documento de produto × estado do código
+# MUSAR — requisitos × estado do código
 
 Atualizado em 11/11/2026. Documento de origem: "Plataforma Escolar — Documento de Produto". Tudo abaixo roda na máquina local; a publicação na nuvem vem depois.
 
@@ -14,7 +14,8 @@ Atualizado em 11/11/2026. Documento de origem: "Plataforma Escolar — Documento
 | Mapa de calor alunos × habilidades | Feito | `/professor` |
 | Encaminhar ao reforço, top 3 com o porquê | Feito; menor de idade aguarda o responsável | `POST /api/alertas/:id/encaminhar` |
 | Fila do reforço, plano, agenda, registro, conclusão | Feito; concluir atualiza o histórico do professor (usado no matching) | `/reforco` |
-| Ranking e comparação de turmas e professores, alertas da escola | Feito | `/coordenacao` |
+| Gestão da direção: visão geral, alertas da escola, turmas, equipe, reforços, relatórios | Feito | `/gestao`, `GET /api/gestao/*` |
+| Direção indica professor de reforço específico (qualquer um da equipe, sugeridos marcados) | Feito e testado | `/gestao/alertas` |
 | Pais: acompanhar, aprovar ou recusar reforço, falar com o professor | Feito | `/familia`, `/mensagens` |
 | Consentimento LGPD do responsável (data e versão do termo) | Feito; sem termo aceito, nenhum dado do aluno aparece | `POST /api/familia/consentimento` |
 | Log de acesso (quem viu qual aluno) | Feito | tabela `access_log` |
@@ -31,7 +32,7 @@ Atualizado em 11/11/2026. Documento de origem: "Plataforma Escolar — Documento
 ## Testes
 
 - `pnpm test`: 10 testes de regras do produto e 6 da API (rodam no CI).
-- `pnpm test:e2e`: 12 testes do fluxo completo contra o banco e o Keycloak locais, incluindo cada recusa de permissão.
+- `pnpm test:e2e`: 13 testes do fluxo completo contra o banco e o Keycloak locais, incluindo cada recusa de permissão.
 
 ## Ambiente
 
