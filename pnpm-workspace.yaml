@@ -1,0 +1,9 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+allowBuilds:
+  esbuild: true
+  # Binário nativo bloqueado pelo Controle de Aplicativo do Windows; a API não depende dele.
+  "@swc/core": false
+  "@prisma/engines": true
+  prisma: true
