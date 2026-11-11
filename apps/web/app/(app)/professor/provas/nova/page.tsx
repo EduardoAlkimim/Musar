@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Decisao, Pagina } from "@/components/caderno";
+import { Decisao, Pagina } from "@/components/ui";
 import { NovaProva } from "@/components/nova-prova";
 import { api } from "@/lib/api";
 import type { Atribuicoes } from "../page";

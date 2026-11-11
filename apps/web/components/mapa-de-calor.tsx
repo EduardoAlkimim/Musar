@@ -3,7 +3,7 @@ import { masteryBand } from "@escola/domain";
 
 /**
  * Mapa de calor alunos × habilidades.
- * Sem semáforo: verde-escola para consolidada, areia para em progresso, hachura para "precisa de apoio".
+ * Semáforo do MUSAR: verde para consolidada, âmbar para em progresso, vermelho para "precisa de apoio".
  */
 export function MapaDeCalor({
   alunos,
@@ -17,7 +17,7 @@ export function MapaDeCalor({
   destaque: Set<string>;
 }) {
   return (
-    <div className="folha overflow-x-auto">
+    <div className="overflow-x-auto">
       <table className="w-full min-w-[44rem] table-fixed border-collapse text-sm">
         <caption className="sr-only">Domínio de cada aluno em cada habilidade, de 0 a 100</caption>
         <colgroup>
@@ -25,23 +25,23 @@ export function MapaDeCalor({
           {habilidades.map((h) => <col key={h.id} />)}
         </colgroup>
         <thead>
-          <tr className="border-b border-pauta">
-            <th scope="col" className="sticky left-0 bg-folha px-4 py-3 text-left font-normal">
+          <tr className="border-b border-borda">
+            <th scope="col" className="sticky left-0 bg-white px-4 py-3 text-left font-normal">
               <span className="rotulo">Aluno</span>
             </th>
             {habilidades.map((h) => (
               <th key={h.id} scope="col" className="px-1 py-3 text-center font-normal">
                 <span className="block text-[0.82rem] font-semibold leading-tight">{h.nome}</span>
-                <span className="block font-mono text-[0.66rem] text-grafite">{h.codigo}</span>
+                <span className="block font-mono text-[0.66rem] text-suave">{h.codigo}</span>
               </th>
             ))}
           </tr>
         </thead>
         <tbody>
           {alunos.map((a) => (
-            <tr key={a.id} className="border-b border-pauta/70 last:border-0">
-              <th scope="row" className="sticky left-0 bg-folha px-4 py-1.5 text-left font-normal whitespace-nowrap">
-                <span className={clsx(destaque.has(a.id) && "marcado font-semibold")}>{a.nome}</span>
+            <tr key={a.id} className="border-b border-borda/70 last:border-0">
+              <th scope="row" className="sticky left-0 bg-white px-4 py-1.5 text-left font-normal whitespace-nowrap">
+                <span className={clsx(destaque.has(a.id) && "font-semibold text-perigo")}>{a.nome}{destaque.has(a.id) && " •"}</span>
               </th>
               {habilidades.map((h) => {
                 const v = dominio[a.id]?.[h.id];
@@ -50,16 +50,11 @@ export function MapaDeCalor({
                   <td key={h.id} className="p-[3px]">
                     <span
                       className={clsx(
-                        "num flex h-8 items-center justify-center rounded-[2px] font-mono text-[0.78rem]",
-                        faixa === "consolidada" && "bg-escola-claro text-escola-escuro",
-                        faixa === "em-progresso" && "bg-areia text-tinta",
-                        faixa === "precisa-de-apoio" && "text-tinta ring-1 ring-inset ring-pauta-forte",
+                        "num flex h-8 items-center justify-center rounded-[6px] font-mono text-[0.78rem]",
+                        faixa === "consolidada" && "bg-sucesso-claro text-[#15803d]",
+                        faixa === "em-progresso" && "bg-atencao-claro text-[#b45309]",
+                        faixa === "precisa-de-apoio" && "bg-perigo-claro font-semibold text-[#b91c1c]",
                       )}
-                      style={
-                        faixa === "precisa-de-apoio"
-                          ? { backgroundImage: "repeating-linear-gradient(135deg, transparent 0 5px, rgba(33,31,28,.13) 5px 6px)" }
-                          : undefined
-                      }
                       title={`${a.nome} · ${h.nome}: ${v ?? "sem dados"}`}
                     >
                       {v ?? "–"}
@@ -71,16 +66,11 @@ export function MapaDeCalor({
           ))}
         </tbody>
       </table>
-      <div className="flex flex-wrap items-center gap-5 border-t border-pauta px-4 py-3 text-xs text-grafite">
-        <Legenda className="bg-escola-claro">consolidada (70+)</Legenda>
-        <Legenda className="bg-areia">em progresso (50–69)</Legenda>
-        <Legenda
-          className="ring-1 ring-inset ring-pauta-forte"
-          style={{ backgroundImage: "repeating-linear-gradient(135deg, transparent 0 3px, rgba(33,31,28,.2) 3px 4px)" }}
-        >
-          precisa de apoio (abaixo de 50)
-        </Legenda>
-        <span className="ml-auto"><span className="marcado font-semibold text-tinta">Nome marcado</span> = alerta aberto</span>
+      <div className="flex flex-wrap items-center gap-5 border-t border-borda px-4 py-3 text-xs text-suave">
+        <Legenda className="bg-sucesso-claro ring-1 ring-[#bbf7d0]">consolidada (70+)</Legenda>
+        <Legenda className="bg-atencao-claro ring-1 ring-[#fde68a]">em progresso (50–69)</Legenda>
+        <Legenda className="bg-perigo-claro ring-1 ring-[#fecaca]">precisa de apoio (abaixo de 50)</Legenda>
+        <span className="ml-auto"><span className="font-semibold text-perigo">Nome em vermelho</span> = alerta aberto</span>
       </div>
     </div>
   );
@@ -89,7 +79,7 @@ export function MapaDeCalor({
 function Legenda({ className, style, children }: { className: string; style?: React.CSSProperties; children: React.ReactNode }) {
   return (
     <span className="inline-flex items-center gap-2">
-      <span className={clsx("inline-block size-3.5 rounded-[2px]", className)} style={style} />
+      <span className={clsx("inline-block size-3.5 rounded-[6px]", className)} style={style} />
       {children}
     </span>
   );

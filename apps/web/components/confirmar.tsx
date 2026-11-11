@@ -30,7 +30,7 @@ export function Confirmar({
     return (
       <span className="inline-flex flex-wrap items-center gap-3" role="status">
         <span className="carimbo">{carimbo}</span>
-        {(estado.mensagem ?? depois) && <span className="text-sm text-grafite">{estado.mensagem ?? depois}</span>}
+        {(estado.mensagem ?? depois) && <span className="text-sm text-suave">{estado.mensagem ?? depois}</span>}
       </span>
     );
   }
@@ -39,7 +39,7 @@ export function Confirmar({
       <button
         type="button"
         disabled={pendente}
-        className={(variante === "tinta" ? "botao-tinta" : variante === "linha" ? "botao-linha" : "link-sublinhado min-h-11 text-sm text-grafite hover:text-tinta") + " disabled:opacity-60"}
+        className={(variante === "tinta" ? "btn btn-primario" : variante === "linha" ? "btn btn-secundario" : "link min-h-11 text-sm text-suave hover:text-marinho") + " disabled:opacity-60"}
         onClick={() => {
           if (confirmar && !window.confirm(confirmar)) return;
           iniciar(async () => setEstado(await acao()));
@@ -47,7 +47,7 @@ export function Confirmar({
       >
         {pendente ? "Enviando…" : rotulo}
       </button>
-      {estado && !estado.ok && <span role="alert" className="text-sm text-alerta">{estado.erro}</span>}
+      {estado && !estado.ok && <span role="alert" className="text-sm text-perigo">{estado.erro}</span>}
     </span>
   );
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import clsx from "clsx";
-import { Decisao, Pagina } from "@/components/caderno";
+import { Decisao, Pagina } from "@/components/ui";
 import { Confirmar } from "@/components/confirmar";
 import { NovaMensagem } from "@/components/mensagem";
 import { api } from "@/lib/api";
@@ -40,14 +40,14 @@ export default async function Mensagens() {
           const m0 = c[0]!;
           const outro = m0.recebida ? m0.de : m0.para;
           return (
-            <section key={chave} className="folha p-6" aria-label={`Conversa com ${outro.nome} sobre ${m0.aluno.nome}`}>
+            <section key={chave} className="card p-6" aria-label={`Conversa com ${outro.nome} sobre ${m0.aluno.nome}`}>
               <p className="rotulo">Sobre {m0.aluno.nome}</p>
               <h2 className="mt-1 text-[1.35rem]">{outro.nome}</h2>
               <ol className="mt-4 space-y-3">
                 {[...c].reverse().map((m) => (
-                  <li key={m.id} className={clsx("max-w-[85%] rounded-[3px] px-4 py-3", m.recebida ? "bg-papel" : "ml-auto bg-escola-claro")}>
+                  <li key={m.id} className={clsx("max-w-[85%] rounded-[10px] px-4 py-3", m.recebida ? "bg-[#f7fafc]" : "ml-auto bg-azul-fundo")}>
                     <p>{m.texto}</p>
-                    <p className="mt-1 font-mono text-[0.7rem] text-grafite">{m.recebida ? m.de.nome?.split(" ")[0] : "Você"} · {quando(m.em)}</p>
+                    <p className="mt-1 font-mono text-[0.7rem] text-suave">{m.recebida ? m.de.nome?.split(" ")[0] : "Você"} · {quando(m.em)}</p>
                     {m.recebida && !m.lidaEm && <div className="mt-2"><Confirmar rotulo="Marcar como lida" carimbo="Lida" variante="linha" acao={marcarLida.bind(null, m.id)} /></div>}
                   </li>
                 ))}

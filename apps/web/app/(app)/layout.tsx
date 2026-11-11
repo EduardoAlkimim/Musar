@@ -1,10 +1,10 @@
 import { cookies } from "next/headers";
-import { Cabecalho } from "@/components/cabecalho";
 import { GuiaDemo } from "@/components/guia-demo";
-import { COOKIE_DEMO, demoLigado, passo, PASSOS } from "@/lib/demo";
-import { Pagina } from "@/components/caderno";
+import { Shell } from "@/components/shell";
+import { Pagina } from "@/components/ui";
 import { api, ErroApi } from "@/lib/api";
-import { areasDe, type Me } from "@/lib/marca";
+import { COOKIE_DEMO, demoLigado, passo, PASSOS } from "@/lib/demo";
+import { visoesDe, type Me } from "@/lib/marca";
 
 export default async function LayoutApp({ children }: { children: React.ReactNode }) {
   let me: Me;
@@ -13,21 +13,23 @@ export default async function LayoutApp({ children }: { children: React.ReactNod
   } catch (e) {
     if (e instanceof ErroApi && e.status === 403) {
       return (
-        <Pagina>
-          <h1 className="text-[2.4rem]">Seu acesso ainda não foi liberado.</h1>
-          <p className="mt-4 max-w-[52ch] text-grafite">{e.corpo.erro}. Peça para a secretaria da escola cadastrar o seu e-mail.</p>
-          <a href="/sair" className="botao-linha mt-6">Sair</a>
+        <Pagina className="mx-auto max-w-xl pt-24">
+          <div className="card p-8">
+            <h1 className="text-2xl font-semibold">Seu acesso ainda não foi liberado</h1>
+            <p className="mt-3 text-suave">{e.corpo.erro}. Peça para a secretaria da escola cadastrar o seu e-mail.</p>
+            <a href="/sair" className="btn btn-secundario mt-6">Sair</a>
+          </div>
         </Pagina>
       );
     }
     throw e;
   }
-  const extras = me.papeis.includes("PROFESSOR") || me.papeis.includes("RESPONSAVEL") ? [{ href: "/mensagens", rotulo: "Mensagens" }] : [];
   const passoDemo = demoLigado() ? passo(Number((await cookies()).get(COOKIE_DEMO)?.value)) : undefined;
   return (
     <>
-      <Cabecalho areas={areasDe(me.papeis)} nome={me.nome} escola={me.escola.nome} extras={extras} />
-      <div className={passoDemo ? "pb-56 sm:pb-36" : undefined}>{children}</div>
+      <Shell nome={me.nome} escola={me.escola.nome} visoes={visoesDe(me.papeis)}>
+        <div className={passoDemo ? "pb-44" : undefined}>{children}</div>
+      </Shell>
       {passoDemo && <GuiaDemo passo={passoDemo} total={PASSOS.length} />}
     </>
   );

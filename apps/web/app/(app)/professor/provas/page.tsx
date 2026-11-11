@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Decisao, Pagina, TituloSecao } from "@/components/caderno";
+import { Decisao, Pagina, TituloSecao } from "@/components/ui";
 import { api } from "@/lib/api";
 import { dataCurta } from "@/lib/formato";
 
@@ -16,21 +16,21 @@ export default async function Provas() {
   return (
     <Pagina>
       <Decisao sobre="Provas e simulados" frase="Crie a prova com o gabarito. A correção é automática." detalhe="Depois de aplicar, lance as letras que cada aluno marcou. Notas, relatório por questão e alertas saem na hora.">
-        <Link href="/professor/provas/nova" className="botao-tinta">Nova prova</Link>
+        <Link href="/professor/provas/nova" className="btn btn-primario">Nova prova</Link>
       </Decisao>
       <section className="mt-14" aria-labelledby="lista">
         <TituloSecao nota={`${a.provas.length} provas`}><span id="lista">Provas recentes</span></TituloSecao>
-        {a.provas.length === 0 && <p className="text-grafite">Nenhuma prova ainda.</p>}
-        <ul className="divide-y divide-pauta">
+        {a.provas.length === 0 && <p className="text-suave">Nenhuma prova ainda.</p>}
+        <ul className="divide-y divide-borda">
           {a.provas.map((p) => (
             <li key={p.id} className="flex flex-wrap items-baseline justify-between gap-4 py-4">
               <div>
-                <Link href={`/professor/provas/${p.id}`} className="font-serif text-[1.25rem] hover:text-escola">{p.titulo}</Link>
-                <p className="text-sm text-grafite">{p.turma} · {dataCurta(p.data.slice(0, 10))}</p>
+                <Link href={`/professor/provas/${p.id}`} className="font-titulo text-[1.25rem] hover:text-azul">{p.titulo}</Link>
+                <p className="text-sm text-suave">{p.turma} · {dataCurta(p.data.slice(0, 10))}</p>
               </div>
               <div className="flex gap-3 text-sm">
-                <Link href={`/professor/provas/${p.id}`} className="link-sublinhado">Relatório</Link>
-                <Link href={`/professor/provas/${p.id}/respostas`} className="link-sublinhado">Lançar respostas</Link>
+                <Link href={`/professor/provas/${p.id}`} className="link">Relatório</Link>
+                <Link href={`/professor/provas/${p.id}/respostas`} className="link">Lançar respostas</Link>
               </div>
             </li>
           ))}

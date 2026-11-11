@@ -24,17 +24,17 @@ export function Decidir({
     return (
       <span className="inline-flex flex-wrap items-center gap-3" role="status">
         <span className="carimbo">{o.carimbo}</span>
-        {o.depois && <span className="text-sm text-grafite">{o.depois}</span>}
+        {o.depois && <span className="text-sm text-suave">{o.depois}</span>}
       </span>
     );
   }
   return (
     <span className="flex flex-col items-start gap-2">
       <span className="flex flex-wrap gap-3">
-        <button type="button" className="botao-tinta disabled:opacity-60" disabled={pendente} onClick={() => rodar("sim")}>{pendente ? "Enviando…" : sim.rotulo}</button>
-        <button type="button" className="botao-linha disabled:opacity-60" disabled={pendente} onClick={() => rodar("nao")}>{nao.rotulo}</button>
+        <button type="button" className="btn btn-primario disabled:opacity-60" disabled={pendente} onClick={() => rodar("sim")}>{pendente ? "Enviando…" : sim.rotulo}</button>
+        <button type="button" className="btn btn-secundario disabled:opacity-60" disabled={pendente} onClick={() => rodar("nao")}>{nao.rotulo}</button>
       </span>
-      {feito && !feito.r.ok && <span role="alert" className="text-sm text-alerta">{feito.r.erro}</span>}
+      {feito && !feito.r.ok && <span role="alert" className="text-sm text-perigo">{feito.r.erro}</span>}
     </span>
   );
 }

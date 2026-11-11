@@ -57,14 +57,14 @@ export function LancarRespostas({
 
   return (
     <div>
-      <div className="folha overflow-x-auto">
+      <div className="card overflow-x-auto">
         <table className="w-full min-w-[34rem] text-sm">
           <thead>
-            <tr className="border-b border-pauta">
+            <tr className="border-b border-borda">
               <th className="px-4 py-3 text-left font-normal"><span className="rotulo">Aluno</span></th>
               <th className="px-4 py-3 text-left font-normal">
                 <span className="rotulo">Respostas, questão 1 a {questoes.length}</span>
-                <span className="mt-1 block font-mono text-xs tracking-[0.35em] text-escola" title="Gabarito">{gabarito}</span>
+                <span className="mt-1 block font-mono text-xs tracking-[0.35em] text-azul" title="Gabarito">{gabarito}</span>
               </th>
               <th className="px-4 py-3 text-right font-normal"><span className="rotulo">Acertos</span></th>
             </tr>
@@ -75,7 +75,7 @@ export function LancarRespostas({
               const ruim = invalida(t);
               const acertos = [...t].filter((c, j) => LETRAS.indexOf(c) === questoes[j]?.gabarito).length;
               return (
-                <tr key={a.id} className="border-b border-pauta/70 last:border-0">
+                <tr key={a.id} className="border-b border-borda/70 last:border-0">
                   <td className="px-4 py-2"><label htmlFor={`r-${a.id}`}>{a.nome}</label></td>
                   <td className="px-4 py-2">
                     <input
@@ -93,10 +93,10 @@ export function LancarRespostas({
                           document.getElementById(`r-${alunos[i + 1]?.id}`)?.focus();
                         }
                       }}
-                      className={clsx("h-10 w-full rounded-[3px] border bg-papel px-3 font-mono text-base tracking-[0.35em] uppercase focus:outline-none focus-visible:border-escola", ruim ? "border-alerta" : "border-pauta")}
+                      className={clsx("h-10 w-full rounded-[10px] border bg-[#f7fafc] px-3 font-mono text-base tracking-[0.35em] uppercase focus:outline-none focus-visible:border-azul", ruim ? "border-perigo" : "border-borda")}
                     />
                   </td>
-                  <td className="num px-4 py-2 text-right font-mono text-grafite">{t ? `${acertos}/${questoes.length}` : "—"}</td>
+                  <td className="num px-4 py-2 text-right font-mono text-suave">{t ? `${acertos}/${questoes.length}` : "—"}</td>
                 </tr>
               );
             })}
@@ -104,12 +104,12 @@ export function LancarRespostas({
         </table>
       </div>
       <div className="mt-6 flex flex-wrap items-center gap-4">
-        <button type="button" className="botao-tinta disabled:opacity-60" disabled={pendente || alunos.some((a) => invalida(linhas[a.id] ?? ""))} onClick={salvar}>
+        <button type="button" className="btn btn-primario disabled:opacity-60" disabled={pendente || alunos.some((a) => invalida(linhas[a.id] ?? ""))} onClick={salvar}>
           {pendente ? "Corrigindo…" : "Salvar e corrigir"}
         </button>
-        <span className="text-sm text-grafite">{preenchidas} de {alunos.length} alunos com respostas · traço (-) = em branco · Enter vai para o próximo</span>
+        <span className="text-sm text-suave">{preenchidas} de {alunos.length} alunos com respostas · traço (-) = em branco · Enter vai para o próximo</span>
       </div>
-      {erro && <p role="alert" className="mt-3 text-sm text-alerta">{erro}</p>}
+      {erro && <p role="alert" className="mt-3 text-sm text-perigo">{erro}</p>}
     </div>
   );
 }

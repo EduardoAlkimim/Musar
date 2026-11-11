@@ -1,67 +1,59 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { PlayCircle, RotateCcw } from "lucide-react";
 import { Marca } from "@/components/marca";
 import { demoLigado, PASSOS } from "@/lib/demo";
+import { iniciais } from "@/lib/formato";
 
 export const metadata: Metadata = { title: "Demonstração" };
-
-const CICLO = ["Prova", "Diagnóstico", "Alerta", "Reforço", "Evolução"];
 
 export default async function Demo({ searchParams }: { searchParams: Promise<{ reiniciada?: string; erro?: string }> }) {
   if (!demoLigado()) notFound();
   const { reiniciada, erro } = await searchParams;
 
   return (
-    <main className="mx-auto grid min-h-dvh max-w-[76rem] grid-cols-1 gap-14 px-5 py-12 sm:px-8 lg:grid-cols-12 lg:py-16">
-      <section className="entra lg:col-span-5">
-        <Marca />
-        <p className="rotulo mt-12">Demonstração guiada · 7 passos · 10 minutos</p>
-        <h1 className="mt-4 text-[2.9rem] sm:text-[3.6rem]">
-          Do alerta ao reforço, <span className="marcado">sem ninguém precisar pedir.</span>
-        </h1>
-        <p className="mt-6 max-w-[44ch] text-[1.05rem] text-grafite">
-          Você vai ver a mesma história pelos olhos de cada pessoa da escola: a professora percebe a queda, a mãe aprova, o reforço começa e a coordenação acompanha.
-        </p>
-
-        <ol aria-label="O ciclo" className="mt-10 flex flex-wrap items-center gap-x-2 gap-y-3 font-mono text-[0.78rem] uppercase tracking-[0.1em]">
-          {CICLO.map((c, i) => (
-            <li key={c} className="flex items-center gap-2">
-              <span className={i === 2 ? "rounded-[2px] bg-escola px-2 py-1 text-folha" : "rounded-[2px] border border-pauta-forte px-2 py-1"}>{c}</span>
-              {i < CICLO.length - 1 && <span aria-hidden className="text-grafite">→</span>}
-            </li>
-          ))}
-        </ol>
-
-        <div className="mt-12 flex flex-wrap items-center gap-3">
-          <a href="/demo/passo/1" className="botao-tinta">Começar a demonstração</a>
-          <form action="/demo/reiniciar" method="post">
-            <button className="botao-linha">Reiniciar os dados</button>
-          </form>
+    <div className="min-h-dvh lg:grid lg:grid-cols-[minmax(22rem,30rem)_1fr]">
+      <aside className="relative overflow-hidden bg-marinho px-8 py-10 text-white lg:min-h-dvh lg:px-10 lg:py-14">
+        <div aria-hidden className="pointer-events-none absolute -right-24 -top-24 size-80 rounded-full bg-azul/40 blur-3xl" />
+        <div className="relative">
+          <Marca variante="clara" />
+          <p className="mt-14 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-ouro">Demonstração guiada · 7 passos · 10 minutos</p>
+          <h1 className="mt-3 text-[2.2rem] font-semibold leading-tight text-white">Gestão escolar que encaminha cada aluno para o reforço certo.</h1>
+          <p className="mt-4 text-white/70">
+            Uma história real em sete telas: a direção enxerga a escola, indica o professor de reforço, a professora acompanha a turma, a família aprova e o reforço começa.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-3">
+            <a href="/demo/passo/1" className="btn btn-ouro h-12 px-5 text-base"><PlayCircle className="size-5" /> Começar a demonstração</a>
+            <form action="/demo/reiniciar" method="post">
+              <button className="btn h-12 border border-white/25 px-5 text-base text-white hover:bg-white/10"><RotateCcw className="size-4" /> Reiniciar os dados</button>
+            </form>
+          </div>
+          {reiniciada && <p role="status" className="mt-4 text-sm text-white/80"><span className="carimbo mr-2">Pronto</span>Escola de demonstração do zero, pronta para apresentar.</p>}
+          {erro && <p role="alert" className="mt-4 text-sm text-[#fecaca]">Não foi possível reiniciar. A API está rodando com DEMO_MODE=1?</p>}
+          <p className="mt-12 text-xs text-white/50">Escola fictícia com 96 alunos, 4 turmas de 6º ano e dois meses de atividades. Os números são calculados pelas regras do produto.</p>
         </div>
-        {reiniciada && <p role="status" className="mt-4 inline-flex items-center gap-3"><span className="carimbo">Pronto</span><span className="text-sm text-grafite">Escola de demonstração do zero, pronta para apresentar.</span></p>}
-        {erro && <p role="alert" className="mt-4 text-sm text-alerta">Não foi possível reiniciar. A API está rodando com DEMO_MODE=1?</p>}
-        <p className="mt-10 max-w-[46ch] text-xs text-grafite">
-          Escola fictícia, com 96 alunos, quatro turmas de 6º ano e dois meses de atividades. Os números são calculados pelas mesmas regras do produto.
-        </p>
-      </section>
+      </aside>
 
-      <nav aria-label="Roteiro" className="folha pauta self-start px-6 pb-4 pt-8 sm:px-10 lg:col-span-7">
-        <h2 className="font-serif text-[1.8rem] leading-[2rem]">Roteiro</h2>
-        <ol className="entra-lista">
+      <main className="px-5 py-10 sm:px-10 lg:py-14">
+        <h2 className="text-[1.3rem] font-semibold">Roteiro</h2>
+        <ol className="mt-5 space-y-3">
           {PASSOS.map((p) => (
             <li key={p.n}>
-              <a href={`/demo/passo/${p.n}`} className="group grid grid-cols-[2rem_1fr_auto] items-baseline gap-x-3 py-[1rem] leading-[2rem]">
-                <span className="num font-mono text-sm text-grafite">{String(p.n).padStart(2, "0")}</span>
-                <span className="min-w-0">
-                  <span className="block font-semibold group-hover:text-escola">{p.titulo}</span>
-                  <span className="block truncate font-serif text-[1.08rem] italic text-grafite">{p.pessoa} · {p.papel}</span>
+              <a href={`/demo/passo/${p.n}`} className="card entra group flex items-center gap-4 p-4 transition-shadow hover:shadow-[0_14px_30px_-20px_rgba(20,49,80,.5)]">
+                <span className="num grid size-10 shrink-0 place-items-center rounded-full bg-azul-fundo font-titulo text-sm font-bold text-azul">{p.n}</span>
+                <span className="min-w-0 flex-1">
+                  <span className="block font-semibold text-marinho group-hover:text-azul">{p.titulo}</span>
+                  <span className="mt-0.5 flex items-center gap-2 text-sm text-suave">
+                    <span className="grid size-5 place-items-center rounded-full bg-ouro-claro text-[0.55rem] font-bold text-[#8a6417]">{iniciais(p.pessoa)}</span>
+                    {p.pessoa} · {p.papel}
+                  </span>
                 </span>
-                <span className="font-mono text-xs text-grafite opacity-0 transition-opacity group-hover:opacity-100">ir →</span>
+                <span className="text-sm font-semibold text-azul opacity-0 transition-opacity group-hover:opacity-100">Ir →</span>
               </a>
             </li>
           ))}
         </ol>
-      </nav>
-    </main>
+      </main>
+    </div>
   );
 }

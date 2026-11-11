@@ -30,31 +30,31 @@ export function Importar() {
 
   return (
     <div className="space-y-5">
-      <label className="folha flex cursor-pointer flex-col items-start gap-2 border-dashed p-6 hover:border-pauta-forte">
+      <label className="card flex cursor-pointer flex-col items-start gap-2 border-dashed p-6 hover:border-azul-claro">
         <span className="font-semibold">{arquivo ?? "Escolher a planilha (.csv)"}</span>
-        <span className="text-sm text-grafite">No Excel ou Google Planilhas: Arquivo → Salvar como / Fazer download → CSV.</span>
+        <span className="text-sm text-suave">No Excel ou Google Planilhas: Arquivo → Salvar como / Fazer download → CSV.</span>
         <input type="file" accept=".csv,text/csv" className="sr-only" onChange={(e) => e.target.files?.[0] && ler(e.target.files[0])} />
       </label>
 
       {csv && (
         <div className="flex flex-wrap items-center gap-3">
-          <button type="button" className="botao-linha disabled:opacity-60" disabled={pendente} onClick={() => iniciar(async () => setConferido(await importarPlanilha(csv, true)))}>
+          <button type="button" className="btn btn-secundario disabled:opacity-60" disabled={pendente} onClick={() => iniciar(async () => setConferido(await importarPlanilha(csv, true)))}>
             {pendente && !conferido ? "Conferindo…" : "1. Conferir"}
           </button>
-          <button type="button" className="botao-tinta disabled:opacity-60" disabled={pendente || !conferido?.ok} onClick={() => iniciar(async () => setFinal(await importarPlanilha(csv, false)))}>
+          <button type="button" className="btn btn-primario disabled:opacity-60" disabled={pendente || !conferido?.ok} onClick={() => iniciar(async () => setFinal(await importarPlanilha(csv, false)))}>
             {pendente && conferido?.ok ? "Importando…" : "2. Importar"}
           </button>
-          {conferido?.ok && <span className="text-sm text-escola">{conferido.mensagem}</span>}
+          {conferido?.ok && <span className="text-sm text-azul">{conferido.mensagem}</span>}
         </div>
       )}
 
       {erro && (
-        <div role="alert" className="border-l-2 border-alerta pl-4">
+        <div role="alert" className="border-l-2 border-perigo pl-4">
           <p className="font-semibold">{erro.erro}</p>
           {erro.erros && (
             <ul className="mt-2 space-y-1 text-sm">
               {erro.erros.slice(0, 30).map((e, i) => <li key={i}>{e.linha > 0 ? `Linha ${e.linha}: ` : ""}{e.erro}</li>)}
-              {erro.erros.length > 30 && <li className="text-grafite">e mais {erro.erros.length - 30}…</li>}
+              {erro.erros.length > 30 && <li className="text-suave">e mais {erro.erros.length - 30}…</li>}
             </ul>
           )}
         </div>

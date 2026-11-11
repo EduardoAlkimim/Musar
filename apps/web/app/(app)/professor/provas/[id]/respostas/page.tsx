@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Decisao, Pagina } from "@/components/caderno";
+import { Decisao, Pagina } from "@/components/ui";
 import { LancarRespostas } from "@/components/lancar-respostas";
 import { api } from "@/lib/api";
 import { dataCurta } from "@/lib/formato";

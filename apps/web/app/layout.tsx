@@ -1,25 +1,23 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Newsreader } from "next/font/google";
-import { MARCA } from "@/lib/marca";
+import { DM_Sans, Sora } from "next/font/google";
+import { MARCA, SLOGAN } from "@/lib/marca";
 import "./globals.css";
 
-const newsreader = Newsreader({ subsets: ["latin"], variable: "--font-newsreader", style: ["normal", "italic"], axes: ["opsz"] });
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
-const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
+const sora = Sora({ subsets: ["latin"], variable: "--font-sora", weight: ["400", "500", "600", "700"] });
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
 
 export const metadata: Metadata = {
-  title: { default: MARCA, template: `%s · ${MARCA}` },
-  description: "Corrige provas, encontra a lacuna de cada aluno e encaminha para o reforço certo.",
+  title: { default: `${MARCA} — ${SLOGAN}`, template: `%s · ${MARCA}` },
+  description: "Gestão escolar com acompanhamento de desempenho e reforço.",
+  icons: { icon: "/arara.png" },
 };
 
-export const viewport: Viewport = { themeColor: "#f5f0e6" };
+export const viewport: Viewport = { themeColor: "#143150" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${newsreader.variable} ${geist.variable} ${geistMono.variable}`}>
-      <body>
-        <div className="relative z-10">{children}</div>
-      </body>
+    <html lang="pt-BR" className={`${sora.variable} ${dmSans.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

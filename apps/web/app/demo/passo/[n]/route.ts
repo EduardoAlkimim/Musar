@@ -14,8 +14,8 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ n: 
 
   const config = await configuracaoOidc();
   const r = await oidc.genericGrantRequest(config, "password", {
-    username: `${p.conta}@trilha.local`,
-    password: process.env.DEMO_SENHA ?? "trilha-local",
+    username: `${p.conta}@musar.local`,
+    password: process.env.DEMO_SENHA ?? "musar-local",
     scope: "openid email profile",
   });
   const res = NextResponse.redirect(`${ENV.appUrl}${p.rota}`);

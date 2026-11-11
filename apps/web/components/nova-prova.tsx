@@ -23,7 +23,7 @@ export function NovaProva({ atribuicoes }: { atribuicoes: Atrib[] }) {
   const [pendente, iniciar] = useTransition();
   const router = useRouter();
 
-  if (!atrib) return <p className="text-grafite">Você ainda não tem turmas atribuídas.</p>;
+  if (!atrib) return <p className="text-suave">Você ainda não tem turmas atribuídas.</p>;
   const muda = (i: number, p: Partial<Q>) => setQs(qs.map((q, j) => (j === i ? { ...q, ...p } : q)));
 
   function salvar() {
@@ -48,7 +48,7 @@ export function NovaProva({ atribuicoes }: { atribuicoes: Atrib[] }) {
     });
   }
 
-  const campo = "h-11 rounded-[3px] border border-pauta bg-folha px-3 text-base focus:outline-none focus-visible:border-escola";
+  const campo = "h-11 rounded-[10px] border border-borda bg-white px-3 text-base focus:outline-none focus-visible:border-azul";
   return (
     <div className="space-y-10">
       <div className="grid gap-4 sm:grid-cols-[1.2fr_2fr_auto_auto]">
@@ -76,10 +76,10 @@ export function NovaProva({ atribuicoes }: { atribuicoes: Atrib[] }) {
         </label>
       </div>
 
-      <ol className="divide-y divide-pauta border-y border-pauta">
+      <ol className="divide-y divide-borda border-y border-borda">
         {qs.map((q, i) => (
           <li key={i} className="grid gap-4 py-5 lg:grid-cols-[2.5rem_1fr_14rem_auto]">
-            <span className="num font-serif text-[1.8rem] leading-none">{i + 1}</span>
+            <span className="num font-titulo text-[1.8rem] leading-none">{i + 1}</span>
             <div className="grid gap-2">
               <input aria-label={`Enunciado da questão ${i + 1}`} className={campo} value={q.enunciado} onChange={(e) => muda(i, { enunciado: e.target.value })} placeholder="Enunciado (opcional)" />
               {q.aberta && (
@@ -94,7 +94,7 @@ export function NovaProva({ atribuicoes }: { atribuicoes: Atrib[] }) {
                   ))}
                 </div>
               )}
-              <button type="button" className="link-sublinhado justify-self-start text-sm text-grafite" onClick={() => muda(i, { aberta: !q.aberta })}>
+              <button type="button" className="link justify-self-start text-sm text-suave" onClick={() => muda(i, { aberta: !q.aberta })}>
                 {q.aberta ? "Esconder alternativas" : "Escrever alternativas e o que cada erro revela"}
               </button>
             </div>
@@ -104,7 +104,7 @@ export function NovaProva({ atribuicoes }: { atribuicoes: Atrib[] }) {
             <fieldset className="flex items-center gap-1">
               <legend className="sr-only">Gabarito da questão {i + 1}</legend>
               {LETRAS.map((l, j) => (
-                <label key={l} className={clsx("grid size-11 cursor-pointer place-items-center rounded-[3px] border font-mono", q.gabarito === j ? "border-escola bg-escola text-folha" : "border-pauta hover:border-pauta-forte")}>
+                <label key={l} className={clsx("grid size-11 cursor-pointer place-items-center rounded-[10px] border font-mono", q.gabarito === j ? "border-azul bg-azul text-white" : "border-borda hover:border-azul-claro")}>
                   <input type="radio" className="sr-only" name={`g-${i}`} checked={q.gabarito === j} onChange={() => muda(i, { gabarito: j })} />
                   {l}
                 </label>
@@ -115,15 +115,15 @@ export function NovaProva({ atribuicoes }: { atribuicoes: Atrib[] }) {
       </ol>
 
       <div className="flex flex-wrap items-center gap-3">
-        <button type="button" className="botao-linha" onClick={() => setQs([...qs, vazia(primeira)])}>+ 1 questão</button>
-        <button type="button" className="botao-linha" onClick={() => setQs([...qs, ...Array.from({ length: 5 }, () => vazia(primeira))])}>+ 5 questões</button>
-        {qs.length > 1 && <button type="button" className="botao-linha" onClick={() => setQs(qs.slice(0, -1))}>Tirar a última</button>}
+        <button type="button" className="btn btn-secundario" onClick={() => setQs([...qs, vazia(primeira)])}>+ 1 questão</button>
+        <button type="button" className="btn btn-secundario" onClick={() => setQs([...qs, ...Array.from({ length: 5 }, () => vazia(primeira))])}>+ 5 questões</button>
+        {qs.length > 1 && <button type="button" className="btn btn-secundario" onClick={() => setQs(qs.slice(0, -1))}>Tirar a última</button>}
         <span className="ml-auto" />
-        <button type="button" className="botao-tinta disabled:opacity-60" disabled={pendente} onClick={salvar}>
+        <button type="button" className="btn btn-primario disabled:opacity-60" disabled={pendente} onClick={salvar}>
           {pendente ? "Salvando…" : `Salvar prova com ${qs.length} questões`}
         </button>
       </div>
-      {erro && <p role="alert" className="text-sm text-alerta">{erro}</p>}
+      {erro && <p role="alert" className="text-sm text-perigo">{erro}</p>}
     </div>
   );
 }

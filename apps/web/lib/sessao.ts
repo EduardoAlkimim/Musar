@@ -6,14 +6,14 @@ import * as oidc from "openid-client";
  * Sessão: tokens do Keycloak num cookie httpOnly, cifrado (JWE A256GCM).
  * O navegador nunca vê o token em texto; só o servidor do Next fala com a API.
  */
-export const COOKIE = "trilha_sessao";
-export const COOKIE_LOGIN = "trilha_login";
+export const COOKIE = "musar_sessao";
+export const COOKIE_LOGIN = "musar_login";
 
 export const ENV = {
   appUrl: process.env.APP_URL ?? "http://localhost:3000",
   apiUrl: process.env.API_URL ?? "http://localhost:4000/api",
-  issuer: process.env.KEYCLOAK_ISSUER ?? "http://localhost:8080/realms/trilha",
-  clientId: process.env.KEYCLOAK_CLIENT_ID ?? "trilha-web",
+  issuer: process.env.KEYCLOAK_ISSUER ?? "http://localhost:8080/realms/musar",
+  clientId: process.env.KEYCLOAK_CLIENT_ID ?? "musar-web",
 };
 
 function segredo() {

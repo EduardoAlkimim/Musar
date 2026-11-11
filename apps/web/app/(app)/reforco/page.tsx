@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { AlertReason } from "@escola/domain";
-import { CodigoBncc, Decisao, Pagina, PorQue, Regua, TituloSecao } from "@/components/caderno";
+import { CodigoBncc, Decisao, Pagina, PorQue, Regua, TituloSecao } from "@/components/ui";
 import { Agendar, Concluir, Registrar } from "@/components/reforco-acoes";
 import { api } from "@/lib/api";
 import { dataCurta } from "@/lib/formato";
@@ -56,26 +56,26 @@ export default async function Reforco() {
         frase={novos.length ? <>{novos.length} aluno{novos.length > 1 ? "s" : ""} novo{novos.length > 1 ? "s" : ""} chegou{novos.length > 1 ? "aram" : ""} com o diagnóstico pronto.</> : "Nenhum aluno novo na fila."}
         detalhe={pronto ? <>A família de {pronto.aluno.nome.split(" ")[0]} já aprovou. O plano sugerido tem {pronto.plano.sessoes} sessões de {pronto.habilidade.nome}.</> : f.itens.length ? "Seus alunos em andamento estão logo abaixo, com a agenda da semana." : "Quando uma professora encaminhar um aluno para você, ele aparece aqui."}
       >
-        {pronto && <a href={`#aluno-${pronto.id}`} className="botao-tinta">Montar o plano de {pronto.aluno.nome.split(" ")[0]}</a>}
+        {pronto && <a href={`#aluno-${pronto.id}`} className="btn btn-primario">Montar o plano de {pronto.aluno.nome.split(" ")[0]}</a>}
       </Decisao>
 
       <section className="mt-16" aria-labelledby="agenda">
         <TituloSecao nota={`Semana de ${dataCurta(semana[0]!)} a ${dataCurta(semana[4]!)}`}><span id="agenda">Agenda</span></TituloSecao>
-        <div className="folha grid grid-cols-1 sm:grid-cols-5">
+        <div className="card grid grid-cols-1 sm:grid-cols-5">
           {semana.map((d) => {
             const doDia = sessoes.filter((s) => diaSP(s.inicio) === d);
             return (
-              <div key={d} className="min-h-36 border-b border-pauta p-4 last:border-0 sm:border-b-0 sm:border-r">
+              <div key={d} className="min-h-36 border-b border-borda p-4 last:border-0 sm:border-b-0 sm:border-r">
                 <p className="rotulo">{dataCurta(d)}</p>
                 <ul className="mt-3 space-y-3">
                   {doDia.map((s) => (
-                    <li key={s.id} className="border-l-2 border-escola pl-3">
-                      <p className="num font-mono text-xs text-grafite">{hora(s.inicio)} · {s.modo}</p>
+                    <li key={s.id} className="border-l-2 border-azul pl-3">
+                      <p className="num font-mono text-xs text-suave">{hora(s.inicio)} · {s.modo}</p>
                       <p className="font-semibold">{s.aluno}</p>
-                      <p className="text-sm text-grafite">{s.habilidade}, sessão {s.ordem}{s.total ? ` de ${s.total}` : ""}</p>
+                      <p className="text-sm text-suave">{s.habilidade}, sessão {s.ordem}{s.total ? ` de ${s.total}` : ""}</p>
                     </li>
                   ))}
-                  {doDia.length === 0 && <li className="text-sm text-grafite/70">Livre</li>}
+                  {doDia.length === 0 && <li className="text-sm text-suave/70">Livre</li>}
                 </ul>
               </div>
             );
@@ -89,39 +89,39 @@ export default async function Reforco() {
           {f.itens.map((i) => {
             const pendente = i.sessoes.find((s) => !s.registro && new Date(s.inicio) <= new Date());
             return (
-              <li key={i.id} id={`aluno-${i.id}`} data-demo={i.status === "APROVADO" ? "pedido-aprovado" : undefined} className="folha grid scroll-mt-28 gap-8 p-6 lg:grid-cols-12">
+              <li key={i.id} id={`aluno-${i.id}`} data-demo={i.status === "APROVADO" ? "pedido-aprovado" : undefined} className="card grid scroll-mt-28 gap-8 p-6 lg:grid-cols-12">
                 <div className="lg:col-span-5">
                   <p className="rotulo">{STATUS[i.status]}</p>
                   <h3 className="mt-2 text-[1.6rem]">{i.aluno.nome}</h3>
-                  <p className="text-sm text-grafite">{i.aluno.turma} · encaminhado por {i.pedidoPor} em {dataCurta(i.pedidoEm.slice(0, 10))}</p>
+                  <p className="text-sm text-suave">{i.aluno.turma} · encaminhado por {i.pedidoPor} em {dataCurta(i.pedidoEm.slice(0, 10))}</p>
                   <div className="mt-4"><Regua valor={i.dominio} rotulo={`Domínio em ${i.habilidade.nome}`} /></div>
                   <PorQue motivos={i.motivos} score={i.score} />
                 </div>
                 <div className="lg:col-span-7">
-                  <div className="pauta px-5">
+                  <div className="rounded-[10px] bg-[#f7fafc] py-2 px-5">
                     <p className="font-semibold">Plano sugerido</p>
                     <p>{i.plano.sessoes} sessões de {i.plano.minutos ?? 50} minutos em {i.habilidade.nome} <CodigoBncc codigo={i.habilidade.codigo} /></p>
-                    <p className="text-grafite">{i.habilidade.descricao}</p>
+                    <p className="text-suave">{i.habilidade.descricao}</p>
                     <p>Fecha com {i.plano.saida ?? "a mini-avaliação de saída"}.</p>
                   </div>
                   {i.sessoes.length > 0 && (
                     <ul className="mt-4 space-y-2 text-sm">
                       {i.sessoes.map((s, n) => (
-                        <li key={s.id} className="border-l-2 border-pauta-forte pl-3">
-                          <span className="font-mono text-xs text-grafite">Sessão {n + 1} · {dataCurta(diaSP(s.inicio))} {hora(s.inicio)} · {s.modo}</span>
+                        <li key={s.id} className="border-l-2 border-azul-claro pl-3">
+                          <span className="font-mono text-xs text-suave">Sessão {n + 1} · {dataCurta(diaSP(s.inicio))} {hora(s.inicio)} · {s.modo}</span>
                           {s.registro && <p>{s.registro}</p>}
                         </li>
                       ))}
                     </ul>
                   )}
                   <div className="mt-5 space-y-4">
-                    {i.status === "AGUARDANDO_RESPONSAVEL" && <p className="text-sm text-grafite">O plano fica disponível quando a família aprovar.</p>}
+                    {i.status === "AGUARDANDO_RESPONSAVEL" && <p className="text-sm text-suave">O plano fica disponível quando a família aprovar.</p>}
                     {i.status === "APROVADO" && <Agendar pedidoId={i.id} sugestao={proximoHorario(f.horarios)} primeira />}
                     {i.status === "EM_ANDAMENTO" && (
                       <>
                         {pendente && <Registrar sessaoId={pendente.id} />}
                         <details className="group">
-                          <summary className="link-sublinhado cursor-pointer list-none text-sm [&::-webkit-details-marker]:hidden">Agendar a próxima sessão</summary>
+                          <summary className="link cursor-pointer list-none text-sm [&::-webkit-details-marker]:hidden">Agendar a próxima sessão</summary>
                           <div className="mt-3"><Agendar pedidoId={i.id} sugestao={proximoHorario(f.horarios)} primeira={false} /></div>
                         </details>
                         <Concluir pedidoId={i.id} />
