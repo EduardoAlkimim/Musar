@@ -1,0 +1,164 @@
+{
+  "realm": "trilha",
+  "enabled": true,
+  "sslRequired": "none",
+  "displayName": "Trilha",
+  "internationalizationEnabled": true,
+  "supportedLocales": [
+    "pt-BR"
+  ],
+  "defaultLocale": "pt-BR",
+  "accessTokenLifespan": 1800,
+  "ssoSessionIdleTimeout": 28800,
+  "ssoSessionMaxLifespan": 43200,
+  "loginWithEmailAllowed": true,
+  "registrationAllowed": false,
+  "bruteForceProtected": true,
+  "clients": [
+    {
+      "clientId": "trilha-web",
+      "name": "Trilha (web)",
+      "enabled": true,
+      "publicClient": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "trilha-web-local",
+      "redirectUris": [
+        "http://localhost:3000/auth/callback"
+      ],
+      "webOrigins": [
+        "http://localhost:3000"
+      ],
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "implicitFlowEnabled": false,
+      "attributes": {
+        "pkce.code.challenge.method": "S256",
+        "post.logout.redirect.uris": "http://localhost:3000/*"
+      }
+    }
+  ],
+  "users": [
+    {
+      "username": "marta",
+      "email": "marta@trilha.local",
+      "firstName": "Marta",
+      "lastName": "Ribeiro",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "trilha-local",
+          "temporary": false
+        }
+      ]
+    },
+    {
+      "username": "renato",
+      "email": "renato@trilha.local",
+      "firstName": "Renato",
+      "lastName": "Siqueira",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "trilha-local",
+          "temporary": false
+        }
+      ]
+    },
+    {
+      "username": "beatriz",
+      "email": "beatriz@trilha.local",
+      "firstName": "Beatriz",
+      "lastName": "Lemos",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "trilha-local",
+          "temporary": false
+        }
+      ]
+    },
+    {
+      "username": "helena",
+      "email": "helena@trilha.local",
+      "firstName": "Helena",
+      "lastName": "Gomes",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "trilha-local",
+          "temporary": false
+        }
+      ]
+    },
+    {
+      "username": "joao",
+      "email": "joao@trilha.local",
+      "firstName": "João",
+      "lastName": "Gomes",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "trilha-local",
+          "temporary": false
+        }
+      ]
+    },
+    {
+      "username": "admin",
+      "email": "admin@trilha.local",
+      "firstName": "Admin",
+      "lastName": "Escola",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "trilha-local",
+          "temporary": false
+        }
+      ]
+    },
+    {
+      "username": "luiza",
+      "email": "luiza@trilha.local",
+      "firstName": "Luíza",
+      "lastName": "Carvalho",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "trilha-local",
+          "temporary": false
+        }
+      ]
+    },
+    {
+      "username": "jorge",
+      "email": "jorge@trilha.local",
+      "firstName": "Jorge",
+      "lastName": "Tavares",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "trilha-local",
+          "temporary": false
+        }
+      ]
+    }
+  ],
+  "loginTheme": "trilha",
+  "displayNameHtml": "Trilha"
+}
